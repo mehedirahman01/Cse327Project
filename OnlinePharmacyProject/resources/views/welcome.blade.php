@@ -1,5 +1,6 @@
-@extends("layouts.app")
+@extends('layouts.app')
 @section('content')
+
 
 
 <nav class="navbar navbar-inverse" >
@@ -120,12 +121,18 @@
     </div>
   </div>
 </div><br>
-
+<br>
+<br>
+<br>
 
 
 <footer class="container-fluid text-center">
- 
+  <p>Online Pharmacy Copyright</p>  
+  
 </footer>
+<br>
+<br>
+
 
 </body>
 </html>
