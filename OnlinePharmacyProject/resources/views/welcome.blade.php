@@ -9,7 +9,7 @@
       <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
         <span class="icon-bar"></span>
         <span class="icon-bar"></span>
-        <span class="icon-bar"></span>                        
+        <span class="icon-bar"></span>
       </button>
       <a class="navbar-brand" href="#">Online Pharmacy</a>
     </div>
@@ -31,10 +31,23 @@
     </div>
   </div>
 </form>
-
+      @csrf
       <ul class="nav navbar-nav navbar-right">
-        <li><a href="#"><span class="glyphicon glyphicon-user"></span> Your Account</a></li>
-        <li><a href="#"><span class="glyphicon glyphicon-shopping-cart"></span> Cart</a></li>
+        @auth
+        <li><a href="#"><span class="glyphicon glyphicon-user"></span> Hello {{ Auth::user()->firstName }}</a></li>
+        @endauth
+        <li class="dropdown"><a href="#"><span class="glyphicon glyphicon-user"></span> Your Account</a>
+          <div class="dropdown-content" aria-label="submenu">
+            @auth
+            <a href="{{ route('logout') }}"> {{ __('Logout') }}</a>
+            @endauth
+            @guest
+            <a href="{{ route('new-register') }}">Register</a>
+            <a href="{{ route('new-login') }}">Login</a>
+            @endguest
+          </div>
+        </li>
+        <li><a href="#" onclick="return false";><span class="glyphicon glyphicon-shopping-cart"></span> Cart</a></li>
       </ul>
     </div>
   </div>
@@ -55,24 +68,24 @@
         <div class="carousel-caption">
           <h3>get your daily need medicines at 10% discount</h3>
           <p>Save Money</p>
-        </div>      
+        </div>
       </div>
       <div class="item">
         <img src="/images/med.jpg" style="width: 50%; height: 60%" alt="Image">
-        
+
         <div class="carousel-caption">
           <h3>Get Vitamins at 25% discount</h3>
           <p></p>
-        </div>      
+        </div>
       </div>
-      
+
       <div class="item">
         <img src="/images/doctor.jpg" style="width: 50%; height: 60%" alt="Image">
-        
+
         <div class="carousel-caption">
           <h3>Need Doctors? </h3>
           <p>Coming soon..</p>
-        </div>      
+        </div>
       </div>
 
 
@@ -92,31 +105,31 @@
 <br>
 <br>
 <br>
-<div class="container"> 
-    
-    
+<div class="container">
+
+
   <div class="row">
-      
-      
+
+
     <div class="col-sm-4">
       <div class="panel panel-primary">
         <div class="panel-heading">Our top selling products</div>
         <div class="panel-body"><img src="/images/med3.jpg" class="img-responsive" style="width:100%; height:30%" alt="Image"></div>
-        
+
       </div>
     </div>
-    <div class="col-sm-4"> 
+    <div class="col-sm-4">
       <div class="panel panel-danger">
         <div class="panel-heading">Best Deal</div>
         <div class="panel-body"><img src="/images/med4.jpg"" class="img-responsive" style="width:100%; height:30%" alt="Image"></div>
-        
+
       </div>
     </div>
-    <div class="col-sm-4"> 
+    <div class="col-sm-4">
       <div class="panel panel-success">
         <div class="panel-heading">Offered products</div>
         <div class="panel-body"><img src="/images/med5.jpg"" class="img-responsive" style="width:100%; height:30%" alt="Image"></div>
-       
+
       </div>
     </div>
   </div>
@@ -127,8 +140,8 @@
 
 
 <footer class="container-fluid text-center">
-  <p>Online Pharmacy Copyright</p>  
-  
+  <p>Online Pharmacy Copyright</p>
+
 </footer>
 <br>
 <br>
