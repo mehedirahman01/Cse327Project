@@ -42,8 +42,8 @@
             <a href="{{ route('logout') }}"> {{ __('Logout') }}</a>
             @endauth
             @guest
-            <a href="{{ route('register') }}">Register</a>
-            <a href="{{ route('login') }}">Login</a>
+            <a href="{{ route('new-register') }}">Register</a>
+            <a href="{{ route('new-login') }}">Login</a>
             @endguest
           </div>
         </li>
