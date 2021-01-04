@@ -13,24 +13,20 @@ use App\Http\Controllers\AuthController;
 
 
 
-Route::get('/login',[AuthController::class,'login'])
-          ->name('login');
 
-Route::get('/register',[AuthController::class,'register'])
-          ->name('register');
 
-Route::get('/new-register', [RegisteredUserController::class, 'create'])
+Route::get('/register', [RegisteredUserController::class, 'create'])
                 ->middleware('guest')
                 ->name('register');
 
-Route::post('/new-register', [RegisteredUserController::class, 'store'])
+Route::post('/register', [RegisteredUserController::class, 'store'])
                 ->middleware('guest');
 
-Route::get('/new-login', [AuthenticatedSessionController::class, 'create'])
+Route::get('/login', [AuthenticatedSessionController::class, 'create'])
                 ->middleware('guest')
-                ->name('newLogin');
+                ->name('login');
 
-Route::post('/new-login', [AuthenticatedSessionController::class, 'store'])
+Route::post('/login', [AuthenticatedSessionController::class, 'store'])
                 ->middleware('guest');
 
 Route::get('/forgot-password', [PasswordResetLinkController::class, 'create'])

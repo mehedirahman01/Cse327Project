@@ -1,6 +1,7 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\AuthController;
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -12,6 +13,21 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
+/*
+Route::get('/new-login',[AuthController::class, 'login']){
+            ->name('new-login');
+
+Route::get('/new-register',[AuthController::class, 'register']){
+            ->name('new-register');
+*/
+
+Route::get('/new-login',function(){
+    return view("auth.newLogin");
+})->name('new-login');
+
+Route::get('/new-register',function(){
+    return view("auth.newRegister");
+})->name("new-register");
 
 
 Route::get('/new-forget',function(){
