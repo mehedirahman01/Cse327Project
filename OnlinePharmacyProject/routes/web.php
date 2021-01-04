@@ -1,7 +1,6 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
-
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -13,13 +12,7 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/new-login',function(){
-    return view("newLogin");
-})->name('new-login');
 
-Route::get('/new-register',function(){
-    return view("newRegister");
-})->name('new-register');
 
 Route::get('/new-forget',function(){
     return view("newForget");

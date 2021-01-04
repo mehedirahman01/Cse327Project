@@ -90,7 +90,7 @@
                             </form>
                             <hr>
                             <div class="text-center">
-                                <a class="small" href="{{ route('new-login') }}">{{ __('Already registered?') }}</a>
+                                <a class="small" href="{{ route('login') }}">{{ __('Already registered?') }}</a>
                             </div>
                         </div>
                     </div>
