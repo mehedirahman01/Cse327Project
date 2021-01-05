@@ -2,6 +2,9 @@
 
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\AuthController;
+use App\Http\Controllers\Admin\AdminController;
+use App\Http\Controllers\Admin\ManufacturerController;
+use App\Http\Controllers\Admin\MedicinesController;
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -38,8 +41,24 @@ Route::get('/', function () {
     return view('welcome');
 });
 
-Route::get('/dashboard', function () {
-    return view('dashboard');
-})->middleware(['auth'])->name('dashboard');
 
-require __DIR__.'/auth.php';
+
+Route::prefix('admin')->group(function(){
+    Route::match(['get','post'],'/',[AdminController::class,'admin_login'])
+              ->name('admin_login');
+    Route::middleware(['admin'])->group(function(){
+        Route::get('/admin_dashboard',[AdminController::class,'admin_dashboard'])
+                ->name('admin_dashboard');
+        Route::get('/logout',[AdminController::class,'admin_logout']);
+
+
+        //Manufacturer
+        Route::get('/manufacturers',[ManufacturerController::class,'manufacturers']);
+
+        //Medicines
+        Route::get('/medicines',[MedicinesController::class,'medicines']);
+        Route::match(['get','post'],'add-edit-medicine/{id?}',[MedicinesController::class,'addEditMedicine']);
+        });
+
+
+    });
