@@ -5,6 +5,7 @@ use App\Http\Controllers\AuthController;
 use App\Http\Controllers\Admin\AdminController;
 use App\Http\Controllers\Admin\ManufacturerController;
 use App\Http\Controllers\Admin\MedicinesController;
+use App\Http\Controllers\Front\UsersController;
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -24,11 +25,11 @@ Route::get('/new-register',[AuthController::class, 'register']){
             ->name('new-register');
 */
 
-Route::get('/new-login',function(){
+Route::post('/new-login',function(){
     return view("auth.newLogin");
 })->name('new-login');
 
-Route::get('/new-register',function(){
+Route::post('/new-register',function(){
     return view("auth.newRegister");
 })->name("new-register");
 
@@ -39,7 +40,7 @@ Route::get('/new-forget',function(){
 
 Route::get('/', function () {
     return view('welcome');
-});
+})->name('homepage');
 
 
 
@@ -62,3 +63,9 @@ Route::prefix('admin')->group(function(){
 
 
     });
+
+Route::get('/login-page',[UsersController::class,'loginPage']);
+Route::get('/registration-page',[UsersController::class,'registrationPage']);
+Route::post('/clogin',[UsersController::class,'loginUser']);
+Route::post('/cregister',[UsersController::class,'registerUser']);
+Route::get('/logout',[UsersController::class,'logout']);

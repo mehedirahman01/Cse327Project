@@ -9,7 +9,7 @@
     <meta name="description" content="">
     <meta name="author" content="">
 
-    <title>SB Admin 2 - Register</title>
+    <title>Register</title>
 
     <!-- Custom fonts for this template-->
     <link href="{{asset('/customAuth/vendor/fontawesome-free/css/all.min.css')}}" rel="stylesheet" type="text/css">
@@ -24,11 +24,14 @@
 
 <body class="bg-gradient-primary">
 
+
+
     <div class="container">
 
         <div class="card o-hidden border-0 shadow-lg my-5">
             <div class="card-body p-0">
                 <!-- Nested Row within Card Body -->
+
                 <div class="row">
                     <div class="col-lg-5 d-none d-lg-block bg-register-image"></div>
                     <div class="col-lg-7">
@@ -36,7 +39,16 @@
                             <div class="text-center">
                                 <h1 class="h4 text-gray-900 mb-4">Create an Account!</h1>
                             </div>
-                            <form class="user" method="post" action="{{ route('register') }}">
+
+                            @if(Session::has('error_message'))
+                            <div class="alert alert-danger alert-dismissible fade show" role="alert">
+                              {{Session::get('error_message')}}
+                              <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+                                <span aria-hidden="true">&times;</span>
+                              </button>
+                            </div>
+                            @endif
+                            <form class="user" method="post" action="{{ url('/cregister') }}">
                               @csrf
                                 <div class="form-group row">
                                     <div class="col-sm-6 mb-3 mb-sm-0">
@@ -90,7 +102,7 @@
                             </form>
                             <hr>
                             <div class="text-center">
-                                <a class="small" href="{{ route('login') }}">{{ __('Already registered?') }}</a>
+                                <a class="small" href="{{ route('new-login') }}">{{ __('Already registered?') }}</a>
                             </div>
                         </div>
                     </div>
