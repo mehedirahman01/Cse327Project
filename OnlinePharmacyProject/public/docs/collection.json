@@ -10,24 +10,24 @@
     ],
     "info": {
         "name": "Laravel",
-        "_postman_id": "689be61a-2dc6-48a1-a8ce-a2a0b19ff3e2",
+        "_postman_id": "c1665dec-237b-4913-aba0-277e86b34935",
         "description": "",
         "schema": "https:\/\/schema.getpostman.com\/json\/collection\/v2.1.0\/collection.json"
     },
     "item": [
         {
-            "name": "Auth endpoints",
-            "description": "",
+            "name": "Admin Controller",
+            "description": "\nHandle Medicine Stock for the application.",
             "item": [
                 {
-                    "name": "Shows authenticated user information",
+                    "name": "Medicine View",
                     "request": {
                         "url": {
                             "protocol": "http",
                             "host": "{{baseUrl}}",
-                            "path": "login",
+                            "path": "admin\/medicines",
                             "query": [],
-                            "raw": "http:\/\/{{baseUrl}}\/login"
+                            "raw": "http:\/\/{{baseUrl}}\/admin\/medicines"
                         },
                         "method": "GET",
                         "header": [
@@ -41,230 +41,29 @@
                             }
                         ],
                         "body": null,
-                        "description": ""
+                        "description": "This returns the view of medicine"
                     },
                     "response": []
                 },
                 {
-                    "name": "register",
+                    "name": "Add or Edit Medicine",
                     "request": {
                         "url": {
                             "protocol": "http",
                             "host": "{{baseUrl}}",
-                            "path": "register",
+                            "path": "admin\/add-edit-medicine\/:id",
                             "query": [],
-                            "raw": "http:\/\/{{baseUrl}}\/register"
+                            "raw": "http:\/\/{{baseUrl}}\/admin\/add-edit-medicine\/:id",
+                            "variable": [
+                                {
+                                    "id": "id",
+                                    "key": "id",
+                                    "value": "necessitatibus",
+                                    "description": ""
+                                }
+                            ]
                         },
                         "method": "GET",
-                        "header": [
-                            {
-                                "key": "Content-Type",
-                                "value": "application\/json"
-                            },
-                            {
-                                "key": "Accept",
-                                "value": "application\/json"
-                            }
-                        ],
-                        "body": null,
-                        "description": "",
-                        "auth": {
-                            "type": "noauth"
-                        }
-                    },
-                    "response": []
-                }
-            ]
-        },
-        {
-            "name": "Endpoints",
-            "description": "",
-            "item": [
-                {
-                    "name": "api\/user",
-                    "request": {
-                        "url": {
-                            "protocol": "http",
-                            "host": "{{baseUrl}}",
-                            "path": "api\/user",
-                            "query": [],
-                            "raw": "http:\/\/{{baseUrl}}\/api\/user"
-                        },
-                        "method": "GET",
-                        "header": [
-                            {
-                                "key": "Content-Type",
-                                "value": "application\/json"
-                            },
-                            {
-                                "key": "Accept",
-                                "value": "application\/json"
-                            }
-                        ],
-                        "body": null,
-                        "description": "",
-                        "auth": {
-                            "type": "noauth"
-                        }
-                    },
-                    "response": []
-                },
-                {
-                    "name": "new-forget",
-                    "request": {
-                        "url": {
-                            "protocol": "http",
-                            "host": "{{baseUrl}}",
-                            "path": "new-forget",
-                            "query": [],
-                            "raw": "http:\/\/{{baseUrl}}\/new-forget"
-                        },
-                        "method": "GET",
-                        "header": [
-                            {
-                                "key": "Content-Type",
-                                "value": "application\/json"
-                            },
-                            {
-                                "key": "Accept",
-                                "value": "application\/json"
-                            }
-                        ],
-                        "body": null,
-                        "description": "",
-                        "auth": {
-                            "type": "noauth"
-                        }
-                    },
-                    "response": []
-                },
-                {
-                    "name": "\/",
-                    "request": {
-                        "url": {
-                            "protocol": "http",
-                            "host": "{{baseUrl}}",
-                            "path": "\/",
-                            "query": [],
-                            "raw": "http:\/\/{{baseUrl}}\/\/"
-                        },
-                        "method": "GET",
-                        "header": [
-                            {
-                                "key": "Content-Type",
-                                "value": "application\/json"
-                            },
-                            {
-                                "key": "Accept",
-                                "value": "application\/json"
-                            }
-                        ],
-                        "body": null,
-                        "description": "",
-                        "auth": {
-                            "type": "noauth"
-                        }
-                    },
-                    "response": []
-                },
-                {
-                    "name": "Display the registration view.",
-                    "request": {
-                        "url": {
-                            "protocol": "http",
-                            "host": "{{baseUrl}}",
-                            "path": "new-register",
-                            "query": [],
-                            "raw": "http:\/\/{{baseUrl}}\/new-register"
-                        },
-                        "method": "GET",
-                        "header": [
-                            {
-                                "key": "Content-Type",
-                                "value": "application\/json"
-                            },
-                            {
-                                "key": "Accept",
-                                "value": "application\/json"
-                            }
-                        ],
-                        "body": null,
-                        "description": "",
-                        "auth": {
-                            "type": "noauth"
-                        }
-                    },
-                    "response": []
-                },
-                {
-                    "name": "Handle an incoming registration request.",
-                    "request": {
-                        "url": {
-                            "protocol": "http",
-                            "host": "{{baseUrl}}",
-                            "path": "new-register",
-                            "query": [],
-                            "raw": "http:\/\/{{baseUrl}}\/new-register"
-                        },
-                        "method": "POST",
-                        "header": [
-                            {
-                                "key": "Content-Type",
-                                "value": "application\/json"
-                            },
-                            {
-                                "key": "Accept",
-                                "value": "application\/json"
-                            }
-                        ],
-                        "body": null,
-                        "description": "",
-                        "auth": {
-                            "type": "noauth"
-                        }
-                    },
-                    "response": []
-                },
-                {
-                    "name": "Display the login view.",
-                    "request": {
-                        "url": {
-                            "protocol": "http",
-                            "host": "{{baseUrl}}",
-                            "path": "new-login",
-                            "query": [],
-                            "raw": "http:\/\/{{baseUrl}}\/new-login"
-                        },
-                        "method": "GET",
-                        "header": [
-                            {
-                                "key": "Content-Type",
-                                "value": "application\/json"
-                            },
-                            {
-                                "key": "Accept",
-                                "value": "application\/json"
-                            }
-                        ],
-                        "body": null,
-                        "description": "",
-                        "auth": {
-                            "type": "noauth"
-                        }
-                    },
-                    "response": []
-                },
-                {
-                    "name": "Handle an incoming authentication request.",
-                    "request": {
-                        "url": {
-                            "protocol": "http",
-                            "host": "{{baseUrl}}",
-                            "path": "new-login",
-                            "query": [],
-                            "raw": "http:\/\/{{baseUrl}}\/new-login"
-                        },
-                        "method": "POST",
                         "header": [
                             {
                                 "key": "Content-Type",
@@ -277,90 +76,27 @@
                         ],
                         "body": {
                             "mode": "raw",
-                            "raw": "{\n    \"userName\": \"reprehenderit\",\n    \"password\": \"est\"\n}"
+                            "raw": "{\n    \"manufacturerId\": 1,\n    \"medicineName\": \"Alatrol\",\n    \"generic\": \"Cetirizine Hydrochloride\",\n    \"type\": \"Tablet\",\n    \"quantity\": 10,\n    \"dose\": \"2.5 mg\",\n    \"medicinePrice\": 35,\n    \"stock\": 100\n}"
                         },
-                        "description": "",
-                        "auth": {
-                            "type": "noauth"
-                        }
+                        "description": "Can add or edit or delete medicine"
                     },
                     "response": []
-                },
+                }
+            ]
+        },
+        {
+            "name": "Endpoints",
+            "description": "",
+            "item": [
                 {
-                    "name": "Display the password reset link request view.",
+                    "name": "admin\/admin_dashboard",
                     "request": {
                         "url": {
                             "protocol": "http",
                             "host": "{{baseUrl}}",
-                            "path": "forgot-password",
+                            "path": "admin\/admin_dashboard",
                             "query": [],
-                            "raw": "http:\/\/{{baseUrl}}\/forgot-password"
-                        },
-                        "method": "GET",
-                        "header": [
-                            {
-                                "key": "Content-Type",
-                                "value": "application\/json"
-                            },
-                            {
-                                "key": "Accept",
-                                "value": "application\/json"
-                            }
-                        ],
-                        "body": null,
-                        "description": "",
-                        "auth": {
-                            "type": "noauth"
-                        }
-                    },
-                    "response": []
-                },
-                {
-                    "name": "Handle an incoming password reset link request.",
-                    "request": {
-                        "url": {
-                            "protocol": "http",
-                            "host": "{{baseUrl}}",
-                            "path": "forgot-password",
-                            "query": [],
-                            "raw": "http:\/\/{{baseUrl}}\/forgot-password"
-                        },
-                        "method": "POST",
-                        "header": [
-                            {
-                                "key": "Content-Type",
-                                "value": "application\/json"
-                            },
-                            {
-                                "key": "Accept",
-                                "value": "application\/json"
-                            }
-                        ],
-                        "body": null,
-                        "description": "",
-                        "auth": {
-                            "type": "noauth"
-                        }
-                    },
-                    "response": []
-                },
-                {
-                    "name": "Display the password reset view.",
-                    "request": {
-                        "url": {
-                            "protocol": "http",
-                            "host": "{{baseUrl}}",
-                            "path": "reset-password\/:token",
-                            "query": [],
-                            "raw": "http:\/\/{{baseUrl}}\/reset-password\/:token",
-                            "variable": [
-                                {
-                                    "id": "token",
-                                    "key": "token",
-                                    "value": "adipisci",
-                                    "description": ""
-                                }
-                            ]
+                            "raw": "http:\/\/{{baseUrl}}\/admin\/admin_dashboard"
                         },
                         "method": "GET",
                         "header": [
@@ -382,43 +118,14 @@
                     "response": []
                 },
                 {
-                    "name": "Handle an incoming new password request.",
+                    "name": "admin\/logout",
                     "request": {
                         "url": {
                             "protocol": "http",
                             "host": "{{baseUrl}}",
-                            "path": "reset-password",
+                            "path": "admin\/logout",
                             "query": [],
-                            "raw": "http:\/\/{{baseUrl}}\/reset-password"
-                        },
-                        "method": "POST",
-                        "header": [
-                            {
-                                "key": "Content-Type",
-                                "value": "application\/json"
-                            },
-                            {
-                                "key": "Accept",
-                                "value": "application\/json"
-                            }
-                        ],
-                        "body": null,
-                        "description": "",
-                        "auth": {
-                            "type": "noauth"
-                        }
-                    },
-                    "response": []
-                },
-                {
-                    "name": "Display the email verification prompt.",
-                    "request": {
-                        "url": {
-                            "protocol": "http",
-                            "host": "{{baseUrl}}",
-                            "path": "verify-email",
-                            "query": [],
-                            "raw": "http:\/\/{{baseUrl}}\/verify-email"
+                            "raw": "http:\/\/{{baseUrl}}\/admin\/logout"
                         },
                         "method": "GET",
                         "header": [
@@ -440,144 +147,14 @@
                     "response": []
                 },
                 {
-                    "name": "Mark the authenticated user's email address as verified.",
+                    "name": "admin\/manufacturers",
                     "request": {
                         "url": {
                             "protocol": "http",
                             "host": "{{baseUrl}}",
-                            "path": "verify-email\/:id\/:hash",
+                            "path": "admin\/manufacturers",
                             "query": [],
-                            "raw": "http:\/\/{{baseUrl}}\/verify-email\/:id\/:hash",
-                            "variable": [
-                                {
-                                    "id": "id",
-                                    "key": "id",
-                                    "value": "quod",
-                                    "description": ""
-                                },
-                                {
-                                    "id": "hash",
-                                    "key": "hash",
-                                    "value": "reprehenderit",
-                                    "description": ""
-                                }
-                            ]
-                        },
-                        "method": "GET",
-                        "header": [
-                            {
-                                "key": "Content-Type",
-                                "value": "application\/json"
-                            },
-                            {
-                                "key": "Accept",
-                                "value": "application\/json"
-                            }
-                        ],
-                        "body": null,
-                        "description": "",
-                        "auth": {
-                            "type": "noauth"
-                        }
-                    },
-                    "response": []
-                },
-                {
-                    "name": "Send a new email verification notification.",
-                    "request": {
-                        "url": {
-                            "protocol": "http",
-                            "host": "{{baseUrl}}",
-                            "path": "email\/verification-notification",
-                            "query": [],
-                            "raw": "http:\/\/{{baseUrl}}\/email\/verification-notification"
-                        },
-                        "method": "POST",
-                        "header": [
-                            {
-                                "key": "Content-Type",
-                                "value": "application\/json"
-                            },
-                            {
-                                "key": "Accept",
-                                "value": "application\/json"
-                            }
-                        ],
-                        "body": null,
-                        "description": "",
-                        "auth": {
-                            "type": "noauth"
-                        }
-                    },
-                    "response": []
-                },
-                {
-                    "name": "Show the confirm password view.",
-                    "request": {
-                        "url": {
-                            "protocol": "http",
-                            "host": "{{baseUrl}}",
-                            "path": "confirm-password",
-                            "query": [],
-                            "raw": "http:\/\/{{baseUrl}}\/confirm-password"
-                        },
-                        "method": "GET",
-                        "header": [
-                            {
-                                "key": "Content-Type",
-                                "value": "application\/json"
-                            },
-                            {
-                                "key": "Accept",
-                                "value": "application\/json"
-                            }
-                        ],
-                        "body": null,
-                        "description": "",
-                        "auth": {
-                            "type": "noauth"
-                        }
-                    },
-                    "response": []
-                },
-                {
-                    "name": "Confirm the user's password.",
-                    "request": {
-                        "url": {
-                            "protocol": "http",
-                            "host": "{{baseUrl}}",
-                            "path": "confirm-password",
-                            "query": [],
-                            "raw": "http:\/\/{{baseUrl}}\/confirm-password"
-                        },
-                        "method": "POST",
-                        "header": [
-                            {
-                                "key": "Content-Type",
-                                "value": "application\/json"
-                            },
-                            {
-                                "key": "Accept",
-                                "value": "application\/json"
-                            }
-                        ],
-                        "body": null,
-                        "description": "",
-                        "auth": {
-                            "type": "noauth"
-                        }
-                    },
-                    "response": []
-                },
-                {
-                    "name": "Destroy an authenticated session.",
-                    "request": {
-                        "url": {
-                            "protocol": "http",
-                            "host": "{{baseUrl}}",
-                            "path": "logout",
-                            "query": [],
-                            "raw": "http:\/\/{{baseUrl}}\/logout"
+                            "raw": "http:\/\/{{baseUrl}}\/admin\/manufacturers"
                         },
                         "method": "GET",
                         "header": [
@@ -602,6 +179,6 @@
         }
     ],
     "auth": {
-        "type": "bearer"
+        "type": "noauth"
     }
 }
