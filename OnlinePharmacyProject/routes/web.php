@@ -71,8 +71,7 @@ Route::post('/clogin',[UsersController::class,'loginUser']);
 Route::post('/cregister',[UsersController::class,'registerUser']);
 Route::get('/logout',[UsersController::class,'logout']);
 
-
 //user account
-   Route::match(['GET', 'POST'],'/account',[UsersController::class,'account']);   
+Route::match(['GET', 'POST'],'/account',[UsersController::class,'account']);   
 
 
