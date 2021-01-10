@@ -49,8 +49,7 @@
                             </div>
                             @endif
                             <form id="accountForm" action="{{ url('/account')}}" method="post"> @csrf
-                            <form class="user" method="post" action="{{ url('/cregister') }}">
-                              @csrf
+                           
                                 <div class="form-group row">
                                    <div class="col-sm-6 mb-3 mb-sm-0">
                                     <input type="text" class="form-control form-control-user" id="firstName" name="firstName" :value="old('firstName')" placeholder="Enter Name" value="{{ $userDetails['firstName' ]}}"required autofocus />

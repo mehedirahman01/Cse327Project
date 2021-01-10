@@ -71,7 +71,7 @@ class UsersController extends Controller
           return redirect("/");
         } else{
           $message="Invalid Email or Password";
-          session::flash('error_message',$message);
+          Session::flash('error_message',$message);
           return redirect()->back();
         }
       }
