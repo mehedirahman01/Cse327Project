@@ -4,6 +4,7 @@ title: Laravel Documentation
 language_tabs:
 - bash
 - javascript
+- php
 
 includes:
 - "./prepend.md"
