@@ -35,7 +35,7 @@ paths:
                                 type: string
                                 example: "<!DOCTYPE html>\n<html>\n    <head>\n        <meta charset=\"UTF-8\" />\n        <meta http-equiv=\"refresh\" content=\"0;url='http://localhost/admin/login'\" />\n\n        <title>Redirecting to http://localhost/admin/login</title>\n    </head>\n    <body>\n        Redirecting to <a href=\"http://localhost/admin/login\">http://localhost/admin/login</a>.\n    </body>\n</html>"
             tags:
-                - 'Admin Controller'
+                - 'Medicines Controller'
     '/admin/add-edit-medicine/{id}':
         get:
             summary: 'Add or Edit Medicine'
@@ -64,7 +64,7 @@ paths:
                                 type: string
                                 example: "<!DOCTYPE html>\n<html>\n    <head>\n        <meta charset=\"UTF-8\" />\n        <meta http-equiv=\"refresh\" content=\"0;url='http://localhost/admin/login'\" />\n\n        <title>Redirecting to http://localhost/admin/login</title>\n    </head>\n    <body>\n        Redirecting to <a href=\"http://localhost/admin/login\">http://localhost/admin/login</a>.\n    </body>\n</html>"
             tags:
-                - 'Admin Controller'
+                - 'Medicines Controller'
             requestBody:
                 required: true
                 content:
@@ -104,6 +104,14 @@ paths:
                                     type: number
                                     description: 'Stock of the Medicine.'
                                     example: !!float 100
+                                description:
+                                    type: string
+                                    description: 'Description of the Medicine.'
+                                    example: 'This medicine.....'
+                                medicineImage:
+                                    type: image
+                                    description: 'Image of the Medicine.'
+                                    example: omnis
                             required:
                                 - medicineName
                                 - generic
@@ -112,6 +120,8 @@ paths:
                                 - dose
                                 - medicinePrice
                                 - stock
+                                - description
+                                - medicineImage
         parameters:
             -
                 in: path
@@ -126,94 +136,4 @@ paths:
                         value: ''
                     present:
                         summary: 'When the value is present'
-                        value: necessitatibus
-    /admin/admin_dashboard:
-        get:
-            summary: ''
-            description: ''
-            parameters:
-                -
-                    in: header
-                    name: Content-Type
-                    description: ''
-                    example: application/json
-                    schema:
-                        type: string
-                -
-                    in: header
-                    name: Accept
-                    description: ''
-                    example: application/json
-                    schema:
-                        type: string
-            responses:
-                302:
-                    description: ''
-                    content:
-                        text/plain:
-                            schema:
-                                type: string
-                                example: "<!DOCTYPE html>\n<html>\n    <head>\n        <meta charset=\"UTF-8\" />\n        <meta http-equiv=\"refresh\" content=\"0;url='http://localhost/admin/login'\" />\n\n        <title>Redirecting to http://localhost/admin/login</title>\n    </head>\n    <body>\n        Redirecting to <a href=\"http://localhost/admin/login\">http://localhost/admin/login</a>.\n    </body>\n</html>"
-            tags:
-                - Endpoints
-            security: []
-    /admin/logout:
-        get:
-            summary: ''
-            description: ''
-            parameters:
-                -
-                    in: header
-                    name: Content-Type
-                    description: ''
-                    example: application/json
-                    schema:
-                        type: string
-                -
-                    in: header
-                    name: Accept
-                    description: ''
-                    example: application/json
-                    schema:
-                        type: string
-            responses:
-                302:
-                    description: ''
-                    content:
-                        text/plain:
-                            schema:
-                                type: string
-                                example: "<!DOCTYPE html>\n<html>\n    <head>\n        <meta charset=\"UTF-8\" />\n        <meta http-equiv=\"refresh\" content=\"0;url='http://localhost/admin/login'\" />\n\n        <title>Redirecting to http://localhost/admin/login</title>\n    </head>\n    <body>\n        Redirecting to <a href=\"http://localhost/admin/login\">http://localhost/admin/login</a>.\n    </body>\n</html>"
-            tags:
-                - Endpoints
-            security: []
-    /admin/manufacturers:
-        get:
-            summary: ''
-            description: ''
-            parameters:
-                -
-                    in: header
-                    name: Content-Type
-                    description: ''
-                    example: application/json
-                    schema:
-                        type: string
-                -
-                    in: header
-                    name: Accept
-                    description: ''
-                    example: application/json
-                    schema:
-                        type: string
-            responses:
-                302:
-                    description: ''
-                    content:
-                        text/plain:
-                            schema:
-                                type: string
-                                example: "<!DOCTYPE html>\n<html>\n    <head>\n        <meta charset=\"UTF-8\" />\n        <meta http-equiv=\"refresh\" content=\"0;url='http://localhost/admin/login'\" />\n\n        <title>Redirecting to http://localhost/admin/login</title>\n    </head>\n    <body>\n        Redirecting to <a href=\"http://localhost/admin/login\">http://localhost/admin/login</a>.\n    </body>\n</html>"
-            tags:
-                - Endpoints
-            security: []
+                        value: qui

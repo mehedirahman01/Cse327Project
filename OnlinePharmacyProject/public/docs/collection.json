@@ -10,13 +10,13 @@
     ],
     "info": {
         "name": "Laravel",
-        "_postman_id": "c1665dec-237b-4913-aba0-277e86b34935",
+        "_postman_id": "c4e5288f-d7ea-4e16-ac36-4ae0c4062647",
         "description": "",
         "schema": "https:\/\/schema.getpostman.com\/json\/collection\/v2.1.0\/collection.json"
     },
     "item": [
         {
-            "name": "Admin Controller",
+            "name": "Medicines Controller",
             "description": "\nHandle Medicine Stock for the application.",
             "item": [
                 {
@@ -58,7 +58,7 @@
                                 {
                                     "id": "id",
                                     "key": "id",
-                                    "value": "necessitatibus",
+                                    "value": "qui",
                                     "description": ""
                                 }
                             ]
@@ -76,102 +76,9 @@
                         ],
                         "body": {
                             "mode": "raw",
-                            "raw": "{\n    \"manufacturerId\": 1,\n    \"medicineName\": \"Alatrol\",\n    \"generic\": \"Cetirizine Hydrochloride\",\n    \"type\": \"Tablet\",\n    \"quantity\": 10,\n    \"dose\": \"2.5 mg\",\n    \"medicinePrice\": 35,\n    \"stock\": 100\n}"
+                            "raw": "{\n    \"manufacturerId\": 1,\n    \"medicineName\": \"Alatrol\",\n    \"generic\": \"Cetirizine Hydrochloride\",\n    \"type\": \"Tablet\",\n    \"quantity\": 10,\n    \"dose\": \"2.5 mg\",\n    \"medicinePrice\": 35,\n    \"stock\": 100,\n    \"description\": \"This medicine.....\",\n    \"medicineImage\": \"omnis\"\n}"
                         },
                         "description": "Can add or edit or delete medicine"
-                    },
-                    "response": []
-                }
-            ]
-        },
-        {
-            "name": "Endpoints",
-            "description": "",
-            "item": [
-                {
-                    "name": "admin\/admin_dashboard",
-                    "request": {
-                        "url": {
-                            "protocol": "http",
-                            "host": "{{baseUrl}}",
-                            "path": "admin\/admin_dashboard",
-                            "query": [],
-                            "raw": "http:\/\/{{baseUrl}}\/admin\/admin_dashboard"
-                        },
-                        "method": "GET",
-                        "header": [
-                            {
-                                "key": "Content-Type",
-                                "value": "application\/json"
-                            },
-                            {
-                                "key": "Accept",
-                                "value": "application\/json"
-                            }
-                        ],
-                        "body": null,
-                        "description": "",
-                        "auth": {
-                            "type": "noauth"
-                        }
-                    },
-                    "response": []
-                },
-                {
-                    "name": "admin\/logout",
-                    "request": {
-                        "url": {
-                            "protocol": "http",
-                            "host": "{{baseUrl}}",
-                            "path": "admin\/logout",
-                            "query": [],
-                            "raw": "http:\/\/{{baseUrl}}\/admin\/logout"
-                        },
-                        "method": "GET",
-                        "header": [
-                            {
-                                "key": "Content-Type",
-                                "value": "application\/json"
-                            },
-                            {
-                                "key": "Accept",
-                                "value": "application\/json"
-                            }
-                        ],
-                        "body": null,
-                        "description": "",
-                        "auth": {
-                            "type": "noauth"
-                        }
-                    },
-                    "response": []
-                },
-                {
-                    "name": "admin\/manufacturers",
-                    "request": {
-                        "url": {
-                            "protocol": "http",
-                            "host": "{{baseUrl}}",
-                            "path": "admin\/manufacturers",
-                            "query": [],
-                            "raw": "http:\/\/{{baseUrl}}\/admin\/manufacturers"
-                        },
-                        "method": "GET",
-                        "header": [
-                            {
-                                "key": "Content-Type",
-                                "value": "application\/json"
-                            },
-                            {
-                                "key": "Accept",
-                                "value": "application\/json"
-                            }
-                        ],
-                        "body": null,
-                        "description": "",
-                        "auth": {
-                            "type": "noauth"
-                        }
                     },
                     "response": []
                 }

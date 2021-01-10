@@ -62,7 +62,11 @@ Route::prefix('admin')->group(function(){
         Route::match(['get','post'],'add-edit-medicine/{id?}',[MedicinesController::class,'addEditMedicine']);
 
     });
-      
+  });
+
+
+
+
 
 Route::get('/login-page',[UsersController::class,'loginPage']);
 Route::get('/registration-page',[UsersController::class,'registrationPage']);
@@ -71,7 +75,7 @@ Route::post('/cregister',[UsersController::class,'registerUser']);
 Route::get('/logout',[UsersController::class,'logout']);
 
 //user account
-Route::match(['GET', 'POST'],'/account',[UsersController::class,'account']);   
+Route::match(['GET', 'POST'],'/account',[UsersController::class,'account']);
 
 
 

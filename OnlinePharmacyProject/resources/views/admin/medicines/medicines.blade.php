@@ -42,6 +42,8 @@
                     <th>Type</th>
                     <th>Quantity</th>
                     <th>Dose</th>
+                    <th>Description</th>
+                    <th>Medicine Image</th>
                     <th>Medicine Price</th>
                     <th>Stock</th>
                   </tr>
@@ -55,6 +57,8 @@
                     <td>{{$medicine->type}}</td>
                     <td>{{$medicine->quantity}}</td>
                     <td>{{$medicine->dose}}</td>
+                    <td>{{$medicine->description}}</td>
+                    <td> <img src="{{asset('images/medicine_images/'.$medicine->medicineImage)}}" alt=""> </td>
                     <td>{{$medicine->medicinePrice}}</td>
                     <td>{{$medicine->stock}}</td>
 

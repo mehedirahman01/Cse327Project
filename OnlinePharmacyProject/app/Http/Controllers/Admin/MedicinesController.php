@@ -6,10 +6,11 @@ use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
 use App\Models\Medicine;
 use App\Models\Manufacturer;
+use Intervention\Image\ImageManagerStatic as Image;
 
 
 /**
- * @group Admin Controller
+ * @group Medicines Controller
  *
  * Handle Medicine Stock for the application.
  */
@@ -53,7 +54,10 @@ class MedicinesController extends Controller
    * @bodyParam dose string required Dosage of the Medicine per unit. Example: 2.5 mg
    * @bodyParam medicinePrice float required Price of the Medicine. Example: 35
    * @bodyParam stock number required Stock of the Medicine. Example: 100
+   * @bodyParam description string required Description of the Medicine. Example: This medicine.....
+   * @bodyParam medicineImage image required Image of the Medicine. 
    */
+
   public function addEditMedicine(Request $request,$id=null){
     if($id=""){
       $title= "Add Medicine";
@@ -65,17 +69,31 @@ class MedicinesController extends Controller
     if($request->isMethod('post')){
       $medicine= new Medicine;
       $data= $request->all();
-        $medicine->manufacturerId=$request->input('manufacturerId');
-        $medicine->medicineName=$data['medicineName'];
-        $medicine->generic=$data['generic'];
-        $medicine->type=$data['type'];
-        $medicine->quantity=$data['quantity'];
-        $medicine->dose=$data['dose'];
-        $medicine->medicinePrice=$data['medicinePrice'];
-        $medicine->stock=$data['stock'];
-        $medicine->save();
+      #echo "<pre>"; print_r($data);die;
+      if($request->hasFile('medicineImage')){
+        $image_tmp=$request->file('medicineImage');
+        if($image_tmp->isValid()){
+          $image_name=$image_tmp->getClientOriginalName();
+          $extension= $image_tmp->getClientOriginalExtension();
+          $imageName= $image_name.'-'.rand(111,999999).'.'.$extension;
+          $image_path='images/medicine_images/'.$imageName;
+          Image::make($image_tmp)->resize(200,231)->save($image_path);
+          $medicine->medicineImage=$imageName;
+        }
+      }
 
-        return redirect('./admin/admin_dashboard');
+      $medicine->manufacturerId=$request->input('manufacturerId');
+      $medicine->medicineName=$data['medicineName'];
+      $medicine->generic=$data['generic'];
+      $medicine->type=$data['type'];
+      $medicine->quantity=$data['quantity'];
+      $medicine->dose=$data['dose'];
+      $medicine->medicinePrice=$data['medicinePrice'];
+      $medicine->stock=$data['stock'];
+      $medicine->description=$data['description'];
+      $medicine->save();
+
+      return redirect('./admin/admin_dashboard');
 
     }
 

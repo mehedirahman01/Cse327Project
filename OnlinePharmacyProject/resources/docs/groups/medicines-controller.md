@@ -1,4 +1,4 @@
-# Admin Controller
+# Medicines Controller
 
 Handle Medicine Stock for the application.
 
@@ -103,16 +103,16 @@ Can add or edit or delete medicine
 
 ```bash
 curl -X GET \
-    -G "http://localhost/admin/add-edit-medicine/necessitatibus" \
+    -G "http://localhost/admin/add-edit-medicine/qui" \
     -H "Content-Type: application/json" \
     -H "Accept: application/json" \
-    -d '{"manufacturerId":1,"medicineName":"Alatrol","generic":"Cetirizine Hydrochloride","type":"Tablet","quantity":10,"dose":"2.5 mg","medicinePrice":35,"stock":100}'
+    -d '{"manufacturerId":1,"medicineName":"Alatrol","generic":"Cetirizine Hydrochloride","type":"Tablet","quantity":10,"dose":"2.5 mg","medicinePrice":35,"stock":100,"description":"This medicine.....","medicineImage":"omnis"}'
 
 ```
 
 ```javascript
 const url = new URL(
-    "http://localhost/admin/add-edit-medicine/necessitatibus"
+    "http://localhost/admin/add-edit-medicine/qui"
 );
 
 let headers = {
@@ -128,7 +128,9 @@ let body = {
     "quantity": 10,
     "dose": "2.5 mg",
     "medicinePrice": 35,
-    "stock": 100
+    "stock": 100,
+    "description": "This medicine.....",
+    "medicineImage": "omnis"
 }
 
 fetch(url, {
@@ -142,7 +144,7 @@ fetch(url, {
 
 $client = new \GuzzleHttp\Client();
 $response = $client->get(
-    'http://localhost/admin/add-edit-medicine/necessitatibus',
+    'http://localhost/admin/add-edit-medicine/qui',
     [
         'headers' => [
             'Content-Type' => 'application/json',
@@ -157,6 +159,8 @@ $response = $client->get(
             'dose' => '2.5 mg',
             'medicinePrice' => 35.0,
             'stock' => 100.0,
+            'description' => 'This medicine.....',
+            'medicineImage' => 'omnis',
         ],
     ]
 );
@@ -255,6 +259,16 @@ Price of the Medicine.</p>
 <input type="number" name="stock" data-endpoint="GETadmin-add-edit-medicine--id--" data-component="body" required  hidden>
 <br>
 Stock of the Medicine.</p>
+<p>
+<b><code>description</code></b>&nbsp;&nbsp;<small>string</small>  &nbsp;
+<input type="text" name="description" data-endpoint="GETadmin-add-edit-medicine--id--" data-component="body" required  hidden>
+<br>
+Description of the Medicine.</p>
+<p>
+<b><code>medicineImage</code></b>&nbsp;&nbsp;<small>image</small>  &nbsp;
+<input type="text" name="medicineImage" data-endpoint="GETadmin-add-edit-medicine--id--" data-component="body" required  hidden>
+<br>
+Image of the Medicine.</p>
 
 </form>
 
