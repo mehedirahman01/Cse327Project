@@ -6,6 +6,10 @@ use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
 use App\Models\User;
 use Auth;
+
+use Illuminate\Contracts\Session\Session as SessionSession;
+use Illuminate\Support\Facades\Session as FacadesSession;
+
 use Session;
 
 class UsersController extends Controller
@@ -69,9 +73,40 @@ class UsersController extends Controller
           return redirect("/");
         } else{
           $message="Invalid Email or Password";
-          session::flash('error_message',$message);
+          Session::flash('error_message',$message);    
           return redirect()->back();
         }
       }
     }
+  
+  
+    public function account(Request $request){
+   $user_id=Auth::user()->id; 
+     $userDetails= User::find($user_id)->toArray();
+     $userDetails=json_decode(json_encode($userDetails),true);
+
+     if($request->isMethod('post')){
+       $data =$request->all();
+  
+       $user = User::find($user_id);
+       $user->firstname =$data['firstName'];
+       $user->lastName =$data['lastName'];
+       $user->userName =$data['userName'];
+       $user->email =$data['email'];
+       $user->age =$data['age'];
+       $user->address =$data['address'];
+       $user->phone =$data['phone'];
+       $user->save();
+
+       $message="your account has been updated successfully ! ";
+     Session::put('success_message',$message);;
+     Session::forget('error_message'); 
+     return redirect()->back();
+      
+    
+    }
+      
+      return view('frontend.account')->with(compact('userDetails'));  
+    }
+
 }
