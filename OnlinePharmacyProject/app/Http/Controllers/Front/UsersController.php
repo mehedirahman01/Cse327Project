@@ -6,8 +6,10 @@ use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
 use App\Models\User;
 use Auth;
+
 use Illuminate\Contracts\Session\Session as SessionSession;
 use Illuminate\Support\Facades\Session as FacadesSession;
+
 use Session;
 
 class UsersController extends Controller
@@ -71,11 +73,12 @@ class UsersController extends Controller
           return redirect("/");
         } else{
           $message="Invalid Email or Password";
-          Session::flash('error_message',$message);
+          Session::flash('error_message',$message);    
           return redirect()->back();
         }
       }
     }
+  
   
     public function account(Request $request){
    $user_id=Auth::user()->id; 
