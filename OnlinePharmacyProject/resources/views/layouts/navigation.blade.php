@@ -29,7 +29,7 @@
       @csrf
       <ul class="nav navbar-nav navbar-right">
         @auth
-        <li><a href="#"><span class="glyphicon glyphicon-user"></span> Hello {{ Auth::user()->firstName }}</a></li>
+        <li><a href="{{url('/account')}}"><span class="glyphicon glyphicon-user"></span> Hello {{ Auth::user()->firstName }}</a></li>
         @endauth
         <li class="dropdown"><a href="#"><span class="glyphicon glyphicon-user"></span> Your Account</a>
           <div class="dropdown-content" aria-label="submenu">

@@ -67,6 +67,11 @@
                 <label for="price">Price</label>
                 <input type="number" class="form-control" id="medicinePrice" name="medicinePrice" placeholder="Enter Price">
               </div>
+
+              <div class="form-group">
+                <label>Description</label>
+                <textarea class="form-control" rows="3" id="description" name="description" placeholder="Enter Description"></textarea>
+              </div>
               <!-- /.form-group -->
             </div>
             <!-- /.col -->
@@ -92,8 +97,23 @@
               </div>
               </div>
             </div>
+
+            <div class="form-group">
+              <label for="exampleInputFile">Medicine Image</label>
+              <div class="input-group">
+                <div class="custom-file">
+                  <input type="file" class="custom-file-input" id="medicineImage" name="medicineImage">
+                  <label class="custom-file-label" for="exampleInputFile">Choose file</label>
+                </div>
+                <div class="input-group-append">
+                  <span class="input-group-text">Upload</span>
+                </div>
+              </div>
+            </div>
             <!-- /.col -->
           </div>
+
+
 
           <div class="card-footer">
             <button type="submit" class="btn btn-primary">Submit</button>

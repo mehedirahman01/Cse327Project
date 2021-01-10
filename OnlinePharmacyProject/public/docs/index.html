@@ -64,7 +64,7 @@ You can switch the language used with the tabs at the top right (or from the nav
 <p>Base URL</p>
 </blockquote>
 <pre><code class="language-yaml">http://localhost</code></pre><h1>Authenticating requests</h1>
-<p>This API is not authenticated.</p><h1>Admin Controller</h1>
+<p>This API is not authenticated.</p><h1>Medicines Controller</h1>
 <p>Handle Medicine Stock for the application.</p>
 <h2>Medicine View</h2>
 <p><small class="badge badge-darkred">requires authentication</small></p>
@@ -148,13 +148,13 @@ print_r(json_decode((string) $body));</code></pre>
 <p>Example request:</p>
 </blockquote>
 <pre><code class="language-bash">curl -X GET \
-    -G "http://localhost/admin/add-edit-medicine/necessitatibus" \
+    -G "http://localhost/admin/add-edit-medicine/qui" \
     -H "Content-Type: application/json" \
     -H "Accept: application/json" \
-    -d '{"manufacturerId":1,"medicineName":"Alatrol","generic":"Cetirizine Hydrochloride","type":"Tablet","quantity":10,"dose":"2.5 mg","medicinePrice":35,"stock":100}'
+    -d '{"manufacturerId":1,"medicineName":"Alatrol","generic":"Cetirizine Hydrochloride","type":"Tablet","quantity":10,"dose":"2.5 mg","medicinePrice":35,"stock":100,"description":"This medicine.....","medicineImage":"omnis"}'
 </code></pre>
 <pre><code class="language-javascript">const url = new URL(
-    "http://localhost/admin/add-edit-medicine/necessitatibus"
+    "http://localhost/admin/add-edit-medicine/qui"
 );
 
 let headers = {
@@ -170,7 +170,9 @@ let body = {
     "quantity": 10,
     "dose": "2.5 mg",
     "medicinePrice": 35,
-    "stock": 100
+    "stock": 100,
+    "description": "This medicine.....",
+    "medicineImage": "omnis"
 }
 
 fetch(url, {
@@ -181,7 +183,7 @@ fetch(url, {
 <pre><code class="language-php">
 $client = new \GuzzleHttp\Client();
 $response = $client-&gt;get(
-    'http://localhost/admin/add-edit-medicine/necessitatibus',
+    'http://localhost/admin/add-edit-medicine/qui',
     [
         'headers' =&gt; [
             'Content-Type' =&gt; 'application/json',
@@ -196,6 +198,8 @@ $response = $client-&gt;get(
             'dose' =&gt; '2.5 mg',
             'medicinePrice' =&gt; 35.0,
             'stock' =&gt; 100.0,
+            'description' =&gt; 'This medicine.....',
+            'medicineImage' =&gt; 'omnis',
         ],
     ]
 );
@@ -290,217 +294,17 @@ Price of the Medicine.</p>
 <input type="number" name="stock" data-endpoint="GETadmin-add-edit-medicine--id--" data-component="body" required  hidden>
 <br>
 Stock of the Medicine.</p>
-
-</form><h1>Endpoints</h1>
-<h2>admin/admin_dashboard</h2>
-<blockquote>
-<p>Example request:</p>
-</blockquote>
-<pre><code class="language-bash">curl -X GET \
-    -G "http://localhost/admin/admin_dashboard" \
-    -H "Content-Type: application/json" \
-    -H "Accept: application/json"</code></pre>
-<pre><code class="language-javascript">const url = new URL(
-    "http://localhost/admin/admin_dashboard"
-);
-
-let headers = {
-    "Content-Type": "application/json",
-    "Accept": "application/json",
-};
-
-fetch(url, {
-    method: "GET",
-    headers,
-}).then(response =&gt; response.json());</code></pre>
-<pre><code class="language-php">
-$client = new \GuzzleHttp\Client();
-$response = $client-&gt;get(
-    'http://localhost/admin/admin_dashboard',
-    [
-        'headers' =&gt; [
-            'Content-Type' =&gt; 'application/json',
-            'Accept' =&gt; 'application/json',
-        ],
-    ]
-);
-$body = $response-&gt;getBody();
-print_r(json_decode((string) $body));</code></pre>
-<blockquote>
-<p>Example response (302):</p>
-</blockquote>
-<pre><code class="language-json">
-&lt;!DOCTYPE html&gt;
-&lt;html&gt;
-    &lt;head&gt;
-        &lt;meta charset="UTF-8" /&gt;
-        &lt;meta http-equiv="refresh" content="0;url='http://localhost/admin/login'" /&gt;
-
-        &lt;title&gt;Redirecting to http://localhost/admin/login&lt;/title&gt;
-    &lt;/head&gt;
-    &lt;body&gt;
-        Redirecting to &lt;a href="http://localhost/admin/login"&gt;http://localhost/admin/login&lt;/a&gt;.
-    &lt;/body&gt;
-&lt;/html&gt;</code></pre>
-<div id="execution-results-GETadmin-admin_dashboard" hidden>
-    <blockquote>Received response<span id="execution-response-status-GETadmin-admin_dashboard"></span>:</blockquote>
-    <pre class="json"><code id="execution-response-content-GETadmin-admin_dashboard"></code></pre>
-</div>
-<div id="execution-error-GETadmin-admin_dashboard" hidden>
-    <blockquote>Request failed with error:</blockquote>
-    <pre><code id="execution-error-message-GETadmin-admin_dashboard"></code></pre>
-</div>
-<form id="form-GETadmin-admin_dashboard" data-method="GET" data-path="admin/admin_dashboard" data-authed="0" data-hasfiles="0" data-headers='{"Content-Type":"application\/json","Accept":"application\/json"}' onsubmit="event.preventDefault(); executeTryOut('GETadmin-admin_dashboard', this);">
-<h3>
-    Request&nbsp;&nbsp;&nbsp;
-        <button type="button" style="background-color: #8fbcd4; padding: 5px 10px; border-radius: 5px; border-width: thin;" id="btn-tryout-GETadmin-admin_dashboard" onclick="tryItOut('GETadmin-admin_dashboard');">Try it out ⚡</button>
-    <button type="button" style="background-color: #c97a7e; padding: 5px 10px; border-radius: 5px; border-width: thin;" id="btn-canceltryout-GETadmin-admin_dashboard" onclick="cancelTryOut('GETadmin-admin_dashboard');" hidden>Cancel</button>&nbsp;&nbsp;
-    <button type="submit" style="background-color: #6ac174; padding: 5px 10px; border-radius: 5px; border-width: thin;" id="btn-executetryout-GETadmin-admin_dashboard" hidden>Send Request 💥</button>
-    </h3>
 <p>
-<small class="badge badge-green">GET</small>
- <b><code>admin/admin_dashboard</code></b>
-</p>
-</form>
-<h2>admin/logout</h2>
-<blockquote>
-<p>Example request:</p>
-</blockquote>
-<pre><code class="language-bash">curl -X GET \
-    -G "http://localhost/admin/logout" \
-    -H "Content-Type: application/json" \
-    -H "Accept: application/json"</code></pre>
-<pre><code class="language-javascript">const url = new URL(
-    "http://localhost/admin/logout"
-);
-
-let headers = {
-    "Content-Type": "application/json",
-    "Accept": "application/json",
-};
-
-fetch(url, {
-    method: "GET",
-    headers,
-}).then(response =&gt; response.json());</code></pre>
-<pre><code class="language-php">
-$client = new \GuzzleHttp\Client();
-$response = $client-&gt;get(
-    'http://localhost/admin/logout',
-    [
-        'headers' =&gt; [
-            'Content-Type' =&gt; 'application/json',
-            'Accept' =&gt; 'application/json',
-        ],
-    ]
-);
-$body = $response-&gt;getBody();
-print_r(json_decode((string) $body));</code></pre>
-<blockquote>
-<p>Example response (302):</p>
-</blockquote>
-<pre><code class="language-json">
-&lt;!DOCTYPE html&gt;
-&lt;html&gt;
-    &lt;head&gt;
-        &lt;meta charset="UTF-8" /&gt;
-        &lt;meta http-equiv="refresh" content="0;url='http://localhost/admin/login'" /&gt;
-
-        &lt;title&gt;Redirecting to http://localhost/admin/login&lt;/title&gt;
-    &lt;/head&gt;
-    &lt;body&gt;
-        Redirecting to &lt;a href="http://localhost/admin/login"&gt;http://localhost/admin/login&lt;/a&gt;.
-    &lt;/body&gt;
-&lt;/html&gt;</code></pre>
-<div id="execution-results-GETadmin-logout" hidden>
-    <blockquote>Received response<span id="execution-response-status-GETadmin-logout"></span>:</blockquote>
-    <pre class="json"><code id="execution-response-content-GETadmin-logout"></code></pre>
-</div>
-<div id="execution-error-GETadmin-logout" hidden>
-    <blockquote>Request failed with error:</blockquote>
-    <pre><code id="execution-error-message-GETadmin-logout"></code></pre>
-</div>
-<form id="form-GETadmin-logout" data-method="GET" data-path="admin/logout" data-authed="0" data-hasfiles="0" data-headers='{"Content-Type":"application\/json","Accept":"application\/json"}' onsubmit="event.preventDefault(); executeTryOut('GETadmin-logout', this);">
-<h3>
-    Request&nbsp;&nbsp;&nbsp;
-        <button type="button" style="background-color: #8fbcd4; padding: 5px 10px; border-radius: 5px; border-width: thin;" id="btn-tryout-GETadmin-logout" onclick="tryItOut('GETadmin-logout');">Try it out ⚡</button>
-    <button type="button" style="background-color: #c97a7e; padding: 5px 10px; border-radius: 5px; border-width: thin;" id="btn-canceltryout-GETadmin-logout" onclick="cancelTryOut('GETadmin-logout');" hidden>Cancel</button>&nbsp;&nbsp;
-    <button type="submit" style="background-color: #6ac174; padding: 5px 10px; border-radius: 5px; border-width: thin;" id="btn-executetryout-GETadmin-logout" hidden>Send Request 💥</button>
-    </h3>
+<b><code>description</code></b>&nbsp;&nbsp;<small>string</small>  &nbsp;
+<input type="text" name="description" data-endpoint="GETadmin-add-edit-medicine--id--" data-component="body" required  hidden>
+<br>
+Description of the Medicine.</p>
 <p>
-<small class="badge badge-green">GET</small>
- <b><code>admin/logout</code></b>
-</p>
-</form>
-<h2>admin/manufacturers</h2>
-<blockquote>
-<p>Example request:</p>
-</blockquote>
-<pre><code class="language-bash">curl -X GET \
-    -G "http://localhost/admin/manufacturers" \
-    -H "Content-Type: application/json" \
-    -H "Accept: application/json"</code></pre>
-<pre><code class="language-javascript">const url = new URL(
-    "http://localhost/admin/manufacturers"
-);
+<b><code>medicineImage</code></b>&nbsp;&nbsp;<small>image</small>  &nbsp;
+<input type="text" name="medicineImage" data-endpoint="GETadmin-add-edit-medicine--id--" data-component="body" required  hidden>
+<br>
+Image of the Medicine.</p>
 
-let headers = {
-    "Content-Type": "application/json",
-    "Accept": "application/json",
-};
-
-fetch(url, {
-    method: "GET",
-    headers,
-}).then(response =&gt; response.json());</code></pre>
-<pre><code class="language-php">
-$client = new \GuzzleHttp\Client();
-$response = $client-&gt;get(
-    'http://localhost/admin/manufacturers',
-    [
-        'headers' =&gt; [
-            'Content-Type' =&gt; 'application/json',
-            'Accept' =&gt; 'application/json',
-        ],
-    ]
-);
-$body = $response-&gt;getBody();
-print_r(json_decode((string) $body));</code></pre>
-<blockquote>
-<p>Example response (302):</p>
-</blockquote>
-<pre><code class="language-json">
-&lt;!DOCTYPE html&gt;
-&lt;html&gt;
-    &lt;head&gt;
-        &lt;meta charset="UTF-8" /&gt;
-        &lt;meta http-equiv="refresh" content="0;url='http://localhost/admin/login'" /&gt;
-
-        &lt;title&gt;Redirecting to http://localhost/admin/login&lt;/title&gt;
-    &lt;/head&gt;
-    &lt;body&gt;
-        Redirecting to &lt;a href="http://localhost/admin/login"&gt;http://localhost/admin/login&lt;/a&gt;.
-    &lt;/body&gt;
-&lt;/html&gt;</code></pre>
-<div id="execution-results-GETadmin-manufacturers" hidden>
-    <blockquote>Received response<span id="execution-response-status-GETadmin-manufacturers"></span>:</blockquote>
-    <pre class="json"><code id="execution-response-content-GETadmin-manufacturers"></code></pre>
-</div>
-<div id="execution-error-GETadmin-manufacturers" hidden>
-    <blockquote>Request failed with error:</blockquote>
-    <pre><code id="execution-error-message-GETadmin-manufacturers"></code></pre>
-</div>
-<form id="form-GETadmin-manufacturers" data-method="GET" data-path="admin/manufacturers" data-authed="0" data-hasfiles="0" data-headers='{"Content-Type":"application\/json","Accept":"application\/json"}' onsubmit="event.preventDefault(); executeTryOut('GETadmin-manufacturers', this);">
-<h3>
-    Request&nbsp;&nbsp;&nbsp;
-        <button type="button" style="background-color: #8fbcd4; padding: 5px 10px; border-radius: 5px; border-width: thin;" id="btn-tryout-GETadmin-manufacturers" onclick="tryItOut('GETadmin-manufacturers');">Try it out ⚡</button>
-    <button type="button" style="background-color: #c97a7e; padding: 5px 10px; border-radius: 5px; border-width: thin;" id="btn-canceltryout-GETadmin-manufacturers" onclick="cancelTryOut('GETadmin-manufacturers');" hidden>Cancel</button>&nbsp;&nbsp;
-    <button type="submit" style="background-color: #6ac174; padding: 5px 10px; border-radius: 5px; border-width: thin;" id="btn-executetryout-GETadmin-manufacturers" hidden>Send Request 💥</button>
-    </h3>
-<p>
-<small class="badge badge-green">GET</small>
- <b><code>admin/manufacturers</code></b>
-</p>
 </form>
     </div>
     <div class="dark-box">
