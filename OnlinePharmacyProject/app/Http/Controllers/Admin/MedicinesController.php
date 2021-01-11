@@ -55,7 +55,7 @@ class MedicinesController extends Controller
    * @bodyParam medicinePrice float required Price of the Medicine. Example: 35
    * @bodyParam stock number required Stock of the Medicine. Example: 100
    * @bodyParam description string required Description of the Medicine. Example: This medicine.....
-   * @bodyParam medicineImage image required Image of the Medicine. 
+   * @bodyParam medicineImage image required Image of the Medicine.
    */
 
   public function addEditMedicine(Request $request,$id=null){

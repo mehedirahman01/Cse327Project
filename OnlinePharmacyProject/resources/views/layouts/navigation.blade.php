@@ -10,7 +10,7 @@
     </div>
     <div class="collapse navbar-collapse" id="myNavbar">
       <ul class="nav navbar-nav">
-        <li class="active"><a href="#">Home</a></li>
+        <li class="active"><a href="/">Home</a></li>
         <li><a href="#">Products</a></li>
         <li><a href="#">Deals</a></li>
         <li><a href="#">Contact</a></li>
@@ -18,7 +18,7 @@
 
       <form class="navbar-form navbar-right" action="">
   <div class="input-group">
-    <input type="text" class="form-control" placeholder="Search medicines">
+    <input type="text" id="searchbox" class="form-control" placeholder="Search medicines">
     <div class="input-group-btn">
       <button class="btn btn-default" type="submit">
         <i class="glyphicon glyphicon-search"></i>

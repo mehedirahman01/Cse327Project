@@ -6,6 +6,8 @@ use App\Http\Controllers\Admin\AdminController;
 use App\Http\Controllers\Admin\ManufacturerController;
 use App\Http\Controllers\Admin\MedicinesController;
 use App\Http\Controllers\Front\UsersController;
+use App\Http\Controllers\Front\IndexController;
+use App\Http\Controllers\Front\ProductController;
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -17,13 +19,6 @@ use App\Http\Controllers\Front\UsersController;
 |
 */
 
-/*
-Route::get('/new-login',[AuthController::class, 'login']){
-            ->name('new-login');
-
-Route::get('/new-register',[AuthController::class, 'register']){
-            ->name('new-register');
-*/
 
 Route::post('/new-login',function(){
     return view("auth.newLogin");
@@ -38,11 +33,12 @@ Route::get('/new-forget',function(){
     return view("newForget");
 });
 
-Route::get('/', function () {
-    return view('welcome');
-})->name('homepage');
 
+Route::namespace('Front')->group(function(){
+    Route::get('/',[IndexController::class,'welcome']);
+    Route::get('/medicine/{id}',[ProductController::class,'detail']);
 
+});
 
 
 Route::prefix('admin')->group(function(){
