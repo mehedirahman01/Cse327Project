@@ -6,7 +6,7 @@ Handle Medicine Stock for the application.
 
 <small class="badge badge-darkred">requires authentication</small>
 
-This returns the view of medicine
+Returns the view of medicine
 
 > Example request:
 
@@ -14,7 +14,9 @@ This returns the view of medicine
 curl -X GET \
     -G "http://localhost/admin/medicines" \
     -H "Content-Type: application/json" \
-    -H "Accept: application/json"
+    -H "Accept: application/json" \
+    -d '{"medicines":"assumenda"}'
+
 ```
 
 ```javascript
@@ -27,10 +29,14 @@ let headers = {
     "Accept": "application/json",
 };
 
+let body = {
+    "medicines": "assumenda"
+}
 
 fetch(url, {
     method: "GET",
     headers,
+    body: JSON.stringify(body),
 }).then(response => response.json());
 ```
 
@@ -43,6 +49,9 @@ $response = $client->get(
         'headers' => [
             'Content-Type' => 'application/json',
             'Accept' => 'application/json',
+        ],
+        'json' => [
+            'medicines' => 'assumenda',
         ],
     ]
 );
@@ -90,6 +99,13 @@ print_r(json_decode((string) $body));
 <p>
 <label id="auth-GETadmin-medicines" hidden>Authorization header: <b><code>Bearer </code></b><input type="text" name="Authorization" data-prefix="Bearer " data-endpoint="GETadmin-medicines" data-component="header"></label>
 </p>
+<h4 class="fancy-heading-panel"><b>Body Parameters</b></h4>
+<p>
+<b><code>medicines</code></b>&nbsp;&nbsp;<small>array</small>  &nbsp;
+<input type="text" name="medicines" data-endpoint="GETadmin-medicines" data-component="body" required  hidden>
+<br>
+All medicine data from table</p>
+
 </form>
 
 
@@ -97,22 +113,24 @@ print_r(json_decode((string) $body));
 
 <small class="badge badge-darkred">requires authentication</small>
 
-Can add or edit or delete medicine
+Can add or edit medicine
+
+Returns to medicine page
 
 > Example request:
 
 ```bash
 curl -X GET \
-    -G "http://localhost/admin/add-edit-medicine/qui" \
+    -G "http://localhost/admin/add-edit-medicine/207.111368" \
     -H "Content-Type: application/json" \
     -H "Accept: application/json" \
-    -d '{"manufacturerId":1,"medicineName":"Alatrol","generic":"Cetirizine Hydrochloride","type":"Tablet","quantity":10,"dose":"2.5 mg","medicinePrice":35,"stock":100,"description":"This medicine.....","medicineImage":"omnis"}'
+    -d '{"medicine":{"manufacturerId":1,"medicineName":"Alatrol","generic":"Cetirizine Hydrochloride","type":"Tablet","quantity":10,"dose":"2.5 mg","medicinePrice":35,"stock":100,"description":"This medicine.....","medicineImage":"fuga"},"data":"perferendis","getManufacturers":"aspernatur","medicineData":"ut"}'
 
 ```
 
 ```javascript
 const url = new URL(
-    "http://localhost/admin/add-edit-medicine/qui"
+    "http://localhost/admin/add-edit-medicine/207.111368"
 );
 
 let headers = {
@@ -121,16 +139,21 @@ let headers = {
 };
 
 let body = {
-    "manufacturerId": 1,
-    "medicineName": "Alatrol",
-    "generic": "Cetirizine Hydrochloride",
-    "type": "Tablet",
-    "quantity": 10,
-    "dose": "2.5 mg",
-    "medicinePrice": 35,
-    "stock": 100,
-    "description": "This medicine.....",
-    "medicineImage": "omnis"
+    "medicine": {
+        "manufacturerId": 1,
+        "medicineName": "Alatrol",
+        "generic": "Cetirizine Hydrochloride",
+        "type": "Tablet",
+        "quantity": 10,
+        "dose": "2.5 mg",
+        "medicinePrice": 35,
+        "stock": 100,
+        "description": "This medicine.....",
+        "medicineImage": "fuga"
+    },
+    "data": "perferendis",
+    "getManufacturers": "aspernatur",
+    "medicineData": "ut"
 }
 
 fetch(url, {
@@ -144,23 +167,28 @@ fetch(url, {
 
 $client = new \GuzzleHttp\Client();
 $response = $client->get(
-    'http://localhost/admin/add-edit-medicine/qui',
+    'http://localhost/admin/add-edit-medicine/207.111368',
     [
         'headers' => [
             'Content-Type' => 'application/json',
             'Accept' => 'application/json',
         ],
         'json' => [
-            'manufacturerId' => 1.0,
-            'medicineName' => 'Alatrol',
-            'generic' => 'Cetirizine Hydrochloride',
-            'type' => 'Tablet',
-            'quantity' => 10.0,
-            'dose' => '2.5 mg',
-            'medicinePrice' => 35.0,
-            'stock' => 100.0,
-            'description' => 'This medicine.....',
-            'medicineImage' => 'omnis',
+            'medicine' => [
+                'manufacturerId' => 1.0,
+                'medicineName' => 'Alatrol',
+                'generic' => 'Cetirizine Hydrochloride',
+                'type' => 'Tablet',
+                'quantity' => 10.0,
+                'dose' => '2.5 mg',
+                'medicinePrice' => 35.0,
+                'stock' => 100.0,
+                'description' => 'This medicine.....',
+                'medicineImage' => 'fuga',
+            ],
+            'data' => 'perferendis',
+            'getManufacturers' => 'aspernatur',
+            'medicineData' => 'ut',
         ],
     ]
 );
@@ -214,61 +242,85 @@ print_r(json_decode((string) $body));
 </p>
 <h4 class="fancy-heading-panel"><b>URL Parameters</b></h4>
 <p>
-<b><code>id</code></b>&nbsp;&nbsp;<small>string</small>     <i>optional</i> &nbsp;
-<input type="text" name="id" data-endpoint="GETadmin-add-edit-medicine--id--" data-component="url"  hidden>
+<b><code>id</code></b>&nbsp;&nbsp;<small>number</small>     <i>optional</i> &nbsp;
+<input type="number" name="id" data-endpoint="GETadmin-add-edit-medicine--id--" data-component="url"  hidden>
 <br>
-</p>
+Id of the medicine</p>
 <h4 class="fancy-heading-panel"><b>Body Parameters</b></h4>
 <p>
-<b><code>manufacturerId</code></b>&nbsp;&nbsp;<small>number</small>     <i>optional</i> &nbsp;
-<input type="number" name="manufacturerId" data-endpoint="GETadmin-add-edit-medicine--id--" data-component="body"  hidden>
+<details>
+<summary>
+<b><code>medicine</code></b>&nbsp;&nbsp;<small>object</small>  &nbsp;
+<br>
+</summary>
+<br>
+<p>
+<b><code>medicine.manufacturerId</code></b>&nbsp;&nbsp;<small>number</small>  &nbsp;
+<input type="number" name="medicine.manufacturerId" data-endpoint="GETadmin-add-edit-medicine--id--" data-component="body" required  hidden>
 <br>
 Id of the manufacturer.</p>
 <p>
-<b><code>medicineName</code></b>&nbsp;&nbsp;<small>string</small>  &nbsp;
-<input type="text" name="medicineName" data-endpoint="GETadmin-add-edit-medicine--id--" data-component="body" required  hidden>
+<b><code>medicine.medicineName</code></b>&nbsp;&nbsp;<small>string</small>  &nbsp;
+<input type="text" name="medicine.medicineName" data-endpoint="GETadmin-add-edit-medicine--id--" data-component="body" required  hidden>
 <br>
 Name of the medicine.</p>
 <p>
-<b><code>generic</code></b>&nbsp;&nbsp;<small>string</small>  &nbsp;
-<input type="text" name="generic" data-endpoint="GETadmin-add-edit-medicine--id--" data-component="body" required  hidden>
+<b><code>medicine.generic</code></b>&nbsp;&nbsp;<small>string</small>  &nbsp;
+<input type="text" name="medicine.generic" data-endpoint="GETadmin-add-edit-medicine--id--" data-component="body" required  hidden>
 <br>
 Generic of the Medicine.</p>
 <p>
-<b><code>type</code></b>&nbsp;&nbsp;<small>string</small>  &nbsp;
-<input type="text" name="type" data-endpoint="GETadmin-add-edit-medicine--id--" data-component="body" required  hidden>
+<b><code>medicine.type</code></b>&nbsp;&nbsp;<small>string</small>  &nbsp;
+<input type="text" name="medicine.type" data-endpoint="GETadmin-add-edit-medicine--id--" data-component="body" required  hidden>
 <br>
 Type of the Medicine.</p>
 <p>
-<b><code>quantity</code></b>&nbsp;&nbsp;<small>number</small>  &nbsp;
-<input type="number" name="quantity" data-endpoint="GETadmin-add-edit-medicine--id--" data-component="body" required  hidden>
+<b><code>medicine.quantity</code></b>&nbsp;&nbsp;<small>number</small>  &nbsp;
+<input type="number" name="medicine.quantity" data-endpoint="GETadmin-add-edit-medicine--id--" data-component="body" required  hidden>
 <br>
 Units per Pata.</p>
 <p>
-<b><code>dose</code></b>&nbsp;&nbsp;<small>string</small>  &nbsp;
-<input type="text" name="dose" data-endpoint="GETadmin-add-edit-medicine--id--" data-component="body" required  hidden>
+<b><code>medicine.dose</code></b>&nbsp;&nbsp;<small>string</small>  &nbsp;
+<input type="text" name="medicine.dose" data-endpoint="GETadmin-add-edit-medicine--id--" data-component="body" required  hidden>
 <br>
 Dosage of the Medicine per unit.</p>
 <p>
-<b><code>medicinePrice</code></b>&nbsp;&nbsp;<small>number</small>  &nbsp;
-<input type="number" name="medicinePrice" data-endpoint="GETadmin-add-edit-medicine--id--" data-component="body" required  hidden>
+<b><code>medicine.medicinePrice</code></b>&nbsp;&nbsp;<small>number</small>  &nbsp;
+<input type="number" name="medicine.medicinePrice" data-endpoint="GETadmin-add-edit-medicine--id--" data-component="body" required  hidden>
 <br>
 Price of the Medicine.</p>
 <p>
-<b><code>stock</code></b>&nbsp;&nbsp;<small>number</small>  &nbsp;
-<input type="number" name="stock" data-endpoint="GETadmin-add-edit-medicine--id--" data-component="body" required  hidden>
+<b><code>medicine.stock</code></b>&nbsp;&nbsp;<small>number</small>  &nbsp;
+<input type="number" name="medicine.stock" data-endpoint="GETadmin-add-edit-medicine--id--" data-component="body" required  hidden>
 <br>
 Stock of the Medicine.</p>
 <p>
-<b><code>description</code></b>&nbsp;&nbsp;<small>string</small>  &nbsp;
-<input type="text" name="description" data-endpoint="GETadmin-add-edit-medicine--id--" data-component="body" required  hidden>
+<b><code>medicine.description</code></b>&nbsp;&nbsp;<small>string</small>  &nbsp;
+<input type="text" name="medicine.description" data-endpoint="GETadmin-add-edit-medicine--id--" data-component="body" required  hidden>
 <br>
 Description of the Medicine.</p>
 <p>
-<b><code>medicineImage</code></b>&nbsp;&nbsp;<small>image</small>  &nbsp;
-<input type="text" name="medicineImage" data-endpoint="GETadmin-add-edit-medicine--id--" data-component="body" required  hidden>
+<b><code>medicine.medicineImage</code></b>&nbsp;&nbsp;<small>string</small>  &nbsp;
+<input type="text" name="medicine.medicineImage" data-endpoint="GETadmin-add-edit-medicine--id--" data-component="body" required  hidden>
 <br>
 Image of the Medicine.</p>
+</details>
+</p>
+<p>
+<b><code>data</code></b>&nbsp;&nbsp;<small>array</small>  &nbsp;
+<input type="text" name="data" data-endpoint="GETadmin-add-edit-medicine--id--" data-component="body" required  hidden>
+<br>
+Data of the Medicine Form</p>
+<p>
+<b><code>getManufacturers</code></b>&nbsp;&nbsp;<small>array</small>  &nbsp;
+<input type="text" name="getManufacturers" data-endpoint="GETadmin-add-edit-medicine--id--" data-component="body" required  hidden>
+<br>
+All manufacturer data from table</p>
+<p>
+<b><code>medicineData</code></b>&nbsp;&nbsp;<small>array</small>  &nbsp;
+<input type="text" name="medicineData" data-endpoint="GETadmin-add-edit-medicine--id--" data-component="body" required  hidden>
+<br>
+All medicine data from table</p>
 
 </form>
 

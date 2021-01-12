@@ -20,13 +20,6 @@ use App\Http\Controllers\Front\ProductController;
 */
 
 
-Route::post('/new-login',function(){
-    return view("auth.newLogin");
-})->name('new-login');
-
-Route::post('/new-register',function(){
-    return view("auth.newRegister");
-})->name("new-register");
 
 
 Route::get('/new-forget',function(){
@@ -42,12 +35,12 @@ Route::namespace('Front')->group(function(){
 
 
 Route::prefix('admin')->group(function(){
-    Route::match(['get','post'],'/',[AdminController::class,'admin_login'])
+    Route::match(['get','post'],'/',[AdminController::class,'adminLogin'])
               ->name('admin_login');
     Route::middleware(['admin'])->group(function(){
-        Route::get('/admin_dashboard',[AdminController::class,'admin_dashboard'])
+        Route::get('/admin_dashboard',[AdminController::class,'adminDashboard'])
                 ->name('admin_dashboard');
-        Route::get('/logout',[AdminController::class,'admin_logout']);
+        Route::get('/logout',[AdminController::class,'adminLogout']);
 
 
         //Manufacturer
@@ -56,6 +49,7 @@ Route::prefix('admin')->group(function(){
         //Medicines
         Route::get('/medicines',[MedicinesController::class,'medicines']);
         Route::match(['get','post'],'add-edit-medicine/{id?}',[MedicinesController::class,'addEditMedicine']);
+        Route::match(['get','post'],'delete-medicine/{id?}',[MedicinesController::class,'deleteMedicine']);
 
     });
 });

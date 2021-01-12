@@ -37,6 +37,7 @@
                   <thead>
                   <tr>
                     <th>ID</th>
+                    <th>Actions</th>
                     <th>Name</th>
                     <th>Generic</th>
                     <th>Type</th>
@@ -52,6 +53,7 @@
                   @foreach($medicines as $medicine)
                   <tr>
                     <td>{{$medicine->id}}</td>
+                    <td> <a href="add-edit-medicine/{{$medicine->id}}">Edit</a> <a href="delete-medicine/{{$medicine->id}}">Delete</a> </td>
                     <td>{{$medicine->medicineName}}</td>
                     <td>{{$medicine->generic}}</td>
                     <td>{{$medicine->type}}</td>
