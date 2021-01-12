@@ -7,6 +7,7 @@ use Illuminate\Http\Request;
 use App\Models\Medicine;
 use App\Models\Manufacturer;
 use Intervention\Image\ImageManagerStatic as Image;
+use Auth;
 
 
 /**
@@ -28,8 +29,14 @@ class MedicinesController extends Controller
  * @authenticated
  */
   public function medicines(){
-      $medicines = Medicine::get();
-      return view('admin.medicines.medicines')->with(compact('medicines'));
+      if (Auth::guard('admin')) {
+          $medicines = Medicine::get();
+          return view('admin.medicines.medicines')->with(compact('medicines'));
+      }
+
+      else{
+          return view('admin.admin_login');
+      }
   }
 
   /**
