@@ -18,6 +18,6 @@ class Medicine extends Model
         'medicinePrice',
         'stock',
         'description',
-        'medicineImage'
+        'medicineImage',
     ];
 }

@@ -14,8 +14,8 @@ class AddFieldsToMedicinesTable extends Migration
     public function up()
     {
         Schema::table('medicines', function (Blueprint $table) {
-          $table->string('medicineImage');
-          $table->string('description');
+          //$table->string('medicineImage');
+         // $table->string('description');
 
         });
     }

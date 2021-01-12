@@ -23,6 +23,8 @@ class CreateMedicinesTable extends Migration
             $table->string('dose');
             $table->float('medicinePrice');
             $table->integer('stock');
+            $table->string('description');
+            $table->string('medicineImage')->nullable();    
             $table->timestamps();
         });
     }

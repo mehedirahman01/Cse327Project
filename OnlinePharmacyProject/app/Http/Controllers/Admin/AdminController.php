@@ -42,7 +42,7 @@ class AdminController extends Controller
 
         } else{
             Session::flash('error_message','Invalid Email or Password');
-            return redirect()->back();
+            return redirect('/admin/login');
         }
       }
       return view('admin.admin_login');
@@ -58,6 +58,6 @@ class AdminController extends Controller
      */
      public function adminLogout(){
         Auth::guard('admin')->logout();
-        return redirect('/admin');
+        return redirect('/admin/login');
     }
 }
