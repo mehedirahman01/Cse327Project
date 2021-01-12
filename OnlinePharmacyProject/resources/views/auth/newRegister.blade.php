@@ -102,7 +102,8 @@
                             </form>
                             <hr>
                             <div class="text-center">
-                                <a class="small" href="{{ route('new-login') }}">{{ __('Already registered?') }}</a>
+                                <a class="small" href="{{ url('/login-page') }}">{{ __('Already registered?') }}</a> <br>
+                                <a class="small" href="{{ url('/') }}">Return to homepage</a>
                             </div>
                         </div>
                     </div>

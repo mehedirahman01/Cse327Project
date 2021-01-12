@@ -10,11 +10,171 @@
     ],
     "info": {
         "name": "Laravel",
-        "_postman_id": "c4e5288f-d7ea-4e16-ac36-4ae0c4062647",
+        "_postman_id": "6a1589fb-1832-432e-8b6c-d5fb4957bd94",
         "description": "",
         "schema": "https:\/\/schema.getpostman.com\/json\/collection\/v2.1.0\/collection.json"
     },
     "item": [
+        {
+            "name": "Admin Controller",
+            "description": "\nHandle Admin authentication of the application.",
+            "item": [
+                {
+                    "name": "Admin Login",
+                    "request": {
+                        "url": {
+                            "protocol": "http",
+                            "host": "{{baseUrl}}",
+                            "path": "admin",
+                            "query": [],
+                            "raw": "http:\/\/{{baseUrl}}\/admin"
+                        },
+                        "method": "GET",
+                        "header": [
+                            {
+                                "key": "Content-Type",
+                                "value": "application\/json"
+                            },
+                            {
+                                "key": "Accept",
+                                "value": "application\/json"
+                            }
+                        ],
+                        "body": {
+                            "mode": "raw",
+                            "raw": "{\n    \"data\": \"harum\"\n}"
+                        },
+                        "description": "Handles admin login",
+                        "auth": {
+                            "type": "noauth"
+                        }
+                    },
+                    "response": []
+                },
+                {
+                    "name": "Admin Dashboard View",
+                    "request": {
+                        "url": {
+                            "protocol": "http",
+                            "host": "{{baseUrl}}",
+                            "path": "admin\/admin_dashboard",
+                            "query": [],
+                            "raw": "http:\/\/{{baseUrl}}\/admin\/admin_dashboard"
+                        },
+                        "method": "GET",
+                        "header": [
+                            {
+                                "key": "Content-Type",
+                                "value": "application\/json"
+                            },
+                            {
+                                "key": "Accept",
+                                "value": "application\/json"
+                            }
+                        ],
+                        "body": null,
+                        "description": "Returns the view of Admin dashboard"
+                    },
+                    "response": []
+                },
+                {
+                    "name": "Admin Logout",
+                    "request": {
+                        "url": {
+                            "protocol": "http",
+                            "host": "{{baseUrl}}",
+                            "path": "admin\/logout",
+                            "query": [],
+                            "raw": "http:\/\/{{baseUrl}}\/admin\/logout"
+                        },
+                        "method": "GET",
+                        "header": [
+                            {
+                                "key": "Content-Type",
+                                "value": "application\/json"
+                            },
+                            {
+                                "key": "Accept",
+                                "value": "application\/json"
+                            }
+                        ],
+                        "body": null,
+                        "description": "Handles admin logout\n\nReturns to admin login page"
+                    },
+                    "response": []
+                }
+            ]
+        },
+        {
+            "name": "Index Controller",
+            "description": "\nHandle Homepage functionalities",
+            "item": [
+                {
+                    "name": "Homepage View",
+                    "request": {
+                        "url": {
+                            "protocol": "http",
+                            "host": "{{baseUrl}}",
+                            "path": "\/",
+                            "query": [],
+                            "raw": "http:\/\/{{baseUrl}}\/\/"
+                        },
+                        "method": "GET",
+                        "header": [
+                            {
+                                "key": "Content-Type",
+                                "value": "application\/json"
+                            },
+                            {
+                                "key": "Accept",
+                                "value": "application\/json"
+                            }
+                        ],
+                        "body": {
+                            "mode": "raw",
+                            "raw": "{\n    \"newMedicines\": \"qui\"\n}"
+                        },
+                        "description": "Returns the view of homepage"
+                    },
+                    "response": []
+                }
+            ]
+        },
+        {
+            "name": "Manufacturer Controller",
+            "description": "\nHandle Manufacturers of the application.",
+            "item": [
+                {
+                    "name": "Manufacturer View",
+                    "request": {
+                        "url": {
+                            "protocol": "http",
+                            "host": "{{baseUrl}}",
+                            "path": "admin\/manufacturers",
+                            "query": [],
+                            "raw": "http:\/\/{{baseUrl}}\/admin\/manufacturers"
+                        },
+                        "method": "GET",
+                        "header": [
+                            {
+                                "key": "Content-Type",
+                                "value": "application\/json"
+                            },
+                            {
+                                "key": "Accept",
+                                "value": "application\/json"
+                            }
+                        ],
+                        "body": {
+                            "mode": "raw",
+                            "raw": "{\n    \"manufacturers\": \"et\"\n}"
+                        },
+                        "description": "Returns the view of manufacturer"
+                    },
+                    "response": []
+                }
+            ]
+        },
         {
             "name": "Medicines Controller",
             "description": "\nHandle Medicine Stock for the application.",
@@ -40,8 +200,11 @@
                                 "value": "application\/json"
                             }
                         ],
-                        "body": null,
-                        "description": "This returns the view of medicine"
+                        "body": {
+                            "mode": "raw",
+                            "raw": "{\n    \"medicines\": \"assumenda\"\n}"
+                        },
+                        "description": "Returns the view of medicine"
                     },
                     "response": []
                 },
@@ -58,8 +221,8 @@
                                 {
                                     "id": "id",
                                     "key": "id",
-                                    "value": "qui",
-                                    "description": ""
+                                    "value": "207.111368",
+                                    "description": "Id of the medicine"
                                 }
                             ]
                         },
@@ -76,9 +239,209 @@
                         ],
                         "body": {
                             "mode": "raw",
-                            "raw": "{\n    \"manufacturerId\": 1,\n    \"medicineName\": \"Alatrol\",\n    \"generic\": \"Cetirizine Hydrochloride\",\n    \"type\": \"Tablet\",\n    \"quantity\": 10,\n    \"dose\": \"2.5 mg\",\n    \"medicinePrice\": 35,\n    \"stock\": 100,\n    \"description\": \"This medicine.....\",\n    \"medicineImage\": \"omnis\"\n}"
+                            "raw": "{\n    \"medicine\": {\n        \"manufacturerId\": 1,\n        \"medicineName\": \"Alatrol\",\n        \"generic\": \"Cetirizine Hydrochloride\",\n        \"type\": \"Tablet\",\n        \"quantity\": 10,\n        \"dose\": \"2.5 mg\",\n        \"medicinePrice\": 35,\n        \"stock\": 100,\n        \"description\": \"This medicine.....\",\n        \"medicineImage\": \"fuga\"\n    },\n    \"data\": \"perferendis\",\n    \"getManufacturers\": \"aspernatur\",\n    \"medicineData\": \"ut\"\n}"
                         },
-                        "description": "Can add or edit or delete medicine"
+                        "description": "Can add or edit medicine\n\nReturns to medicine page"
+                    },
+                    "response": []
+                }
+            ]
+        },
+        {
+            "name": "Product Controller",
+            "description": "\nHandle Products",
+            "item": [
+                {
+                    "name": "Product Details View",
+                    "request": {
+                        "url": {
+                            "protocol": "http",
+                            "host": "{{baseUrl}}",
+                            "path": "medicine\/:id",
+                            "query": [],
+                            "raw": "http:\/\/{{baseUrl}}\/medicine\/:id",
+                            "variable": [
+                                {
+                                    "id": "id",
+                                    "key": "id",
+                                    "value": "6540378.3650353",
+                                    "description": "Id of the medicine"
+                                }
+                            ]
+                        },
+                        "method": "GET",
+                        "header": [
+                            {
+                                "key": "Content-Type",
+                                "value": "application\/json"
+                            },
+                            {
+                                "key": "Accept",
+                                "value": "application\/json"
+                            }
+                        ],
+                        "body": {
+                            "mode": "raw",
+                            "raw": "{\n    \"productDetails\": \"repudiandae\"\n}"
+                        },
+                        "description": "Returns the view of product details"
+                    },
+                    "response": []
+                }
+            ]
+        },
+        {
+            "name": "Users Controller",
+            "description": "\nHandle Products",
+            "item": [
+                {
+                    "name": "Login Page View",
+                    "request": {
+                        "url": {
+                            "protocol": "http",
+                            "host": "{{baseUrl}}",
+                            "path": "login-page",
+                            "query": [],
+                            "raw": "http:\/\/{{baseUrl}}\/login-page"
+                        },
+                        "method": "GET",
+                        "header": [
+                            {
+                                "key": "Content-Type",
+                                "value": "application\/json"
+                            },
+                            {
+                                "key": "Accept",
+                                "value": "application\/json"
+                            }
+                        ],
+                        "body": null,
+                        "description": "Returns the view of login page",
+                        "auth": {
+                            "type": "noauth"
+                        }
+                    },
+                    "response": []
+                },
+                {
+                    "name": "Registration Page View",
+                    "request": {
+                        "url": {
+                            "protocol": "http",
+                            "host": "{{baseUrl}}",
+                            "path": "registration-page",
+                            "query": [],
+                            "raw": "http:\/\/{{baseUrl}}\/registration-page"
+                        },
+                        "method": "GET",
+                        "header": [
+                            {
+                                "key": "Content-Type",
+                                "value": "application\/json"
+                            },
+                            {
+                                "key": "Accept",
+                                "value": "application\/json"
+                            }
+                        ],
+                        "body": null,
+                        "description": "Returns the view of registration page",
+                        "auth": {
+                            "type": "noauth"
+                        }
+                    },
+                    "response": []
+                },
+                {
+                    "name": "User Login",
+                    "request": {
+                        "url": {
+                            "protocol": "http",
+                            "host": "{{baseUrl}}",
+                            "path": "clogin",
+                            "query": [],
+                            "raw": "http:\/\/{{baseUrl}}\/clogin"
+                        },
+                        "method": "POST",
+                        "header": [
+                            {
+                                "key": "Content-Type",
+                                "value": "application\/json"
+                            },
+                            {
+                                "key": "Accept",
+                                "value": "application\/json"
+                            }
+                        ],
+                        "body": {
+                            "mode": "raw",
+                            "raw": "{\n    \"data\": \"blanditiis\"\n}"
+                        },
+                        "description": "Handles user login",
+                        "auth": {
+                            "type": "noauth"
+                        }
+                    },
+                    "response": []
+                },
+                {
+                    "name": "Handles User Registration",
+                    "request": {
+                        "url": {
+                            "protocol": "http",
+                            "host": "{{baseUrl}}",
+                            "path": "cregister",
+                            "query": [],
+                            "raw": "http:\/\/{{baseUrl}}\/cregister"
+                        },
+                        "method": "POST",
+                        "header": [
+                            {
+                                "key": "Content-Type",
+                                "value": "application\/json"
+                            },
+                            {
+                                "key": "Accept",
+                                "value": "application\/json"
+                            }
+                        ],
+                        "body": {
+                            "mode": "raw",
+                            "raw": "{\n    \"data\": \"ratione\",\n    \"emailCount\": 1093780.6515,\n    \"userCount\": 0.47898,\n    \"message\": \"labore\",\n    \"user\": {\n        \"firstName\": \"molestias\",\n        \"lastName\": \"aut\",\n        \"userName\": \"eos\",\n        \"email\": \"quibusdam\",\n        \"gender\": \"facere\",\n        \"age\": 4066.2321,\n        \"address\": \"velit\",\n        \"phone\": 20124.337295,\n        \"password\": \"odit\"\n    }\n}"
+                        },
+                        "description": "Returns to homepage",
+                        "auth": {
+                            "type": "noauth"
+                        }
+                    },
+                    "response": []
+                },
+                {
+                    "name": "User Logout",
+                    "request": {
+                        "url": {
+                            "protocol": "http",
+                            "host": "{{baseUrl}}",
+                            "path": "logout",
+                            "query": [],
+                            "raw": "http:\/\/{{baseUrl}}\/logout"
+                        },
+                        "method": "GET",
+                        "header": [
+                            {
+                                "key": "Content-Type",
+                                "value": "application\/json"
+                            },
+                            {
+                                "key": "Accept",
+                                "value": "application\/json"
+                            }
+                        ],
+                        "body": null,
+                        "description": "Handles user logout\n\nReturns the homepage",
+                        "auth": {
+                            "type": "noauth"
+                        }
                     },
                     "response": []
                 }
