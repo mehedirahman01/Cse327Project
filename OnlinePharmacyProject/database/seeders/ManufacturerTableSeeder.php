@@ -15,7 +15,10 @@ class ManufacturerTableSeeder extends Seeder
     public function run()
     {
         $manufacturerRecords=[
-          ['id'=>1,'manufacturerName'=>"Beximco Pharma"]
+          ['id'=>1,'manufacturerName'=>"Beximco Pharma"],
+          ['id'=>2,'manufacturerName'=>"Incepta Pharma"],
+          ['id'=>3,'manufacturerName'=>"Acme"],
+          ['id'=>4,'manufacturerName'=>"Drug International"]
         ];
 
         DB::table('Manufacturers')->insert($manufacturerRecords);
