@@ -9,6 +9,7 @@ use App\Http\Controllers\Front\UsersController;
 use App\Http\Controllers\Front\IndexController;
 use App\Http\Controllers\Front\ProductController;
 use App\Http\Controllers\Map\MapsController;
+
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -67,3 +68,6 @@ Route::match(['GET', 'POST'],'/account',[UsersController::class,'account']);
 
 //map
 Route::get('/map',[MapsController::class,'getLocation']);
+
+//add to cart
+Route::post('/cart',[ProductController::class,'addtocart']);
