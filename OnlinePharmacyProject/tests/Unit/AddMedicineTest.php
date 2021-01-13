@@ -24,7 +24,6 @@ class AddMedicineTest extends TestCase
     public function MedicineCanBeAddedThroughForm(){
 
         $admin = Admin::factory()->create();
-        //$this->actingAs(factory(Admin::class,'admin'))->create();
         $this->withoutExceptionHandling();
 
         $response = $this->actingAs($admin,'admin')
@@ -38,7 +37,7 @@ class AddMedicineTest extends TestCase
             'medicinePrice'=>500,
             'stock'=>200,
             'description'=>'This....',
-            //'medicineImage'=>'34388',
+            'medicineImage'=>'34388.jpg',
         ]);
 
         $this->assertCount(1,Medicine::all());

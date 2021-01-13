@@ -8,6 +8,7 @@ use App\Http\Controllers\Admin\MedicinesController;
 use App\Http\Controllers\Front\UsersController;
 use App\Http\Controllers\Front\IndexController;
 use App\Http\Controllers\Front\ProductController;
+use App\Http\Controllers\Map\MapsController;
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -62,3 +63,7 @@ Route::get('/logout',[UsersController::class,'logout']);
 
 //user account
 Route::match(['GET', 'POST'],'/account',[UsersController::class,'account']);
+
+
+//map
+Route::get('/map',[MapsController::class,'getLocation']);
