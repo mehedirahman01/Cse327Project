@@ -4,7 +4,6 @@ Handle Products
 
 ## Product Details View
 
-<small class="badge badge-darkred">requires authentication</small>
 
 Returns the view of product details
 
@@ -12,16 +11,16 @@ Returns the view of product details
 
 ```bash
 curl -X GET \
-    -G "http://localhost/medicine/6540378.3650353" \
+    -G "http://localhost/medicine/67.5034" \
     -H "Content-Type: application/json" \
     -H "Accept: application/json" \
-    -d '{"productDetails":"repudiandae"}'
+    -d '{"productDetails":"eum"}'
 
 ```
 
 ```javascript
 const url = new URL(
-    "http://localhost/medicine/6540378.3650353"
+    "http://localhost/medicine/67.5034"
 );
 
 let headers = {
@@ -30,7 +29,7 @@ let headers = {
 };
 
 let body = {
-    "productDetails": "repudiandae"
+    "productDetails": "eum"
 }
 
 fetch(url, {
@@ -44,14 +43,14 @@ fetch(url, {
 
 $client = new \GuzzleHttp\Client();
 $response = $client->get(
-    'http://localhost/medicine/6540378.3650353',
+    'http://localhost/medicine/67.5034',
     [
         'headers' => [
             'Content-Type' => 'application/json',
             'Accept' => 'application/json',
         ],
         'json' => [
-            'productDetails' => 'repudiandae',
+            'productDetails' => 'eum',
         ],
     ]
 );
@@ -67,7 +66,7 @@ print_r(json_decode((string) $body));
     "message": "Call to a member function toArray() on null",
     "exception": "Error",
     "file": "C:\\Users\\Shelby\\Documents\\GitHub\\Cse327Project\\OnlinePharmacyProject\\app\\Http\\Controllers\\Front\\ProductController.php",
-    "line": 27,
+    "line": 26,
     "trace": [
         {
             "file": "C:\\Users\\Shelby\\Documents\\GitHub\\Cse327Project\\OnlinePharmacyProject\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Controller.php",
@@ -535,7 +534,7 @@ print_r(json_decode((string) $body));
     <blockquote>Request failed with error:</blockquote>
     <pre><code id="execution-error-message-GETmedicine--id-"></code></pre>
 </div>
-<form id="form-GETmedicine--id-" data-method="GET" data-path="medicine/{id}" data-authed="1" data-hasfiles="0" data-headers='{"Content-Type":"application\/json","Accept":"application\/json"}' onsubmit="event.preventDefault(); executeTryOut('GETmedicine--id-', this);">
+<form id="form-GETmedicine--id-" data-method="GET" data-path="medicine/{id}" data-authed="0" data-hasfiles="0" data-headers='{"Content-Type":"application\/json","Accept":"application\/json"}' onsubmit="event.preventDefault(); executeTryOut('GETmedicine--id-', this);">
 <h3>
     Request&nbsp;&nbsp;&nbsp;
         <button type="button" style="background-color: #8fbcd4; padding: 5px 10px; border-radius: 5px; border-width: thin;" id="btn-tryout-GETmedicine--id-" onclick="tryItOut('GETmedicine--id-');">Try it out ⚡</button>
@@ -545,9 +544,6 @@ print_r(json_decode((string) $body));
 <p>
 <small class="badge badge-green">GET</small>
  <b><code>medicine/{id}</code></b>
-</p>
-<p>
-<label id="auth-GETmedicine--id-" hidden>Authorization header: <b><code>Bearer </code></b><input type="text" name="Authorization" data-prefix="Bearer " data-endpoint="GETmedicine--id-" data-component="header"></label>
 </p>
 <h4 class="fancy-heading-panel"><b>URL Parameters</b></h4>
 <p>

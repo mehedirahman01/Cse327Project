@@ -4,7 +4,6 @@ Handle Homepage functionalities
 
 ## Homepage View
 
-<small class="badge badge-darkred">requires authentication</small>
 
 Returns the view of homepage
 
@@ -15,7 +14,7 @@ curl -X GET \
     -G "http://localhost/" \
     -H "Content-Type: application/json" \
     -H "Accept: application/json" \
-    -d '{"newMedicines":"qui"}'
+    -d '{"newMedicines":"est"}'
 
 ```
 
@@ -30,7 +29,7 @@ let headers = {
 };
 
 let body = {
-    "newMedicines": "qui"
+    "newMedicines": "est"
 }
 
 fetch(url, {
@@ -51,7 +50,7 @@ $response = $client->get(
             'Accept' => 'application/json',
         ],
         'json' => [
-            'newMedicines' => 'qui',
+            'newMedicines' => 'est',
         ],
     ]
 );
@@ -167,9 +166,7 @@ print_r(json_decode((string) $body));
     <div class="collapse navbar-collapse" id="myNavbar">
       <ul class="nav navbar-nav">
         <li class="active"><a href="/">Home</a></li>
-        <li><a href="#">Products</a></li>
-        <li><a href="#">Deals</a></li>
-        <li><a href="#">Contact</a></li>
+        <li><a href="http://localhost/map">Nearby Pharmacy</a></li>
       </ul>
 
       <form class="navbar-form navbar-right" action="">
@@ -182,7 +179,7 @@ print_r(json_decode((string) $body));
     </div>
   </div>
 </form>
-      <input type="hidden" name="_token" value="FT3aGWHvUg8gHMx7pRCjqhcunRFmmJU9eo2XDYfO">      <ul class="nav navbar-nav navbar-right">
+      <input type="hidden" name="_token" value="5g4lyPnXJEUU9KFkaOGp130cL6HR0J0NSYDIrbLT">      <ul class="nav navbar-nav navbar-right">
                 <li class="dropdown"><a href="#"><span class="glyphicon glyphicon-user"></span> Your Account</a>
           <div class="dropdown-content" aria-label="submenu">
                                     <a href="http://localhost/registration-page">Register</a>
@@ -253,52 +250,7 @@ print_r(json_decode((string) $body));
 									Cetirizine Hydrochloride
 								</p>
 
-								<h4 style="text-align:center"><a class="btn" href="/medicine/8">View</a> <a class="btn" href="#">Add to Cart</i></a> <a class="btn btn-primary" href="#">334 Tk</a></h4>
-							</div>
-						</div>
-					</li>
-                					<li class="span3">
-						<div class="thumbnail">
-							<a  href="#">
-                                                                                                <img src="images/medicine_images/no_image.jpg" alt=""/>
-                                                            </a>
-							<div class="caption">
-								<h5>Boni</h5>
-								<p>
-									Calcium carbonate
-								</p>
-
-								<h4 style="text-align:center"><a class="btn" href="/medicine/5">View</a> <a class="btn" href="#">Add to Cart</i></a> <a class="btn btn-primary" href="#">48 Tk</a></h4>
-							</div>
-						</div>
-					</li>
-                					<li class="span3">
-						<div class="thumbnail">
-							<a  href="#">
-                                                                                                <img src="images/medicine_images/no_image.jpg" alt=""/>
-                                                            </a>
-							<div class="caption">
-								<h5>Amdocal plus 50</h5>
-								<p>
-									Atenolol Bp 25mg &amp; Amlodipine BP
-								</p>
-
-								<h4 style="text-align:center"><a class="btn" href="/medicine/4">View</a> <a class="btn" href="#">Add to Cart</i></a> <a class="btn btn-primary" href="#">60 Tk</a></h4>
-							</div>
-						</div>
-					</li>
-                					<li class="span3">
-						<div class="thumbnail">
-							<a  href="#">
-                                                                                                <img src="images/medicine_images/no_image.jpg" alt=""/>
-                                                            </a>
-							<div class="caption">
-								<h5>Alatrol</h5>
-								<p>
-									Cetirizine Hydrochloride
-								</p>
-
-								<h4 style="text-align:center"><a class="btn" href="/medicine/3">View</a> <a class="btn" href="#">Add to Cart</i></a> <a class="btn btn-primary" href="#">30 Tk</a></h4>
+								<h4 style="text-align:center"><a class="btn" href="/medicine/2">View</a> <a class="btn" href="#">Add to Cart</i></a> <a class="btn btn-primary" href="#">40 Tk</a></h4>
 							</div>
 						</div>
 					</li>
@@ -336,7 +288,7 @@ print_r(json_decode((string) $body));
     <blockquote>Request failed with error:</blockquote>
     <pre><code id="execution-error-message-GET-"></code></pre>
 </div>
-<form id="form-GET-" data-method="GET" data-path="/" data-authed="1" data-hasfiles="0" data-headers='{"Content-Type":"application\/json","Accept":"application\/json"}' onsubmit="event.preventDefault(); executeTryOut('GET-', this);">
+<form id="form-GET-" data-method="GET" data-path="/" data-authed="0" data-hasfiles="0" data-headers='{"Content-Type":"application\/json","Accept":"application\/json"}' onsubmit="event.preventDefault(); executeTryOut('GET-', this);">
 <h3>
     Request&nbsp;&nbsp;&nbsp;
         <button type="button" style="background-color: #8fbcd4; padding: 5px 10px; border-radius: 5px; border-width: thin;" id="btn-tryout-GET-" onclick="tryItOut('GET-');">Try it out ⚡</button>
@@ -346,9 +298,6 @@ print_r(json_decode((string) $body));
 <p>
 <small class="badge badge-green">GET</small>
  <b><code>/</code></b>
-</p>
-<p>
-<label id="auth-GET-" hidden>Authorization header: <b><code>Bearer </code></b><input type="text" name="Authorization" data-prefix="Bearer " data-endpoint="GET-" data-component="header"></label>
 </p>
 <h4 class="fancy-heading-panel"><b>Body Parameters</b></h4>
 <p>

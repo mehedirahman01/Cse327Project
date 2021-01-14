@@ -11,16 +11,16 @@ Handles admin login
 
 ```bash
 curl -X GET \
-    -G "http://localhost/admin" \
+    -G "http://localhost/admin/login" \
     -H "Content-Type: application/json" \
     -H "Accept: application/json" \
-    -d '{"data":"harum"}'
+    -d '{"data":"dolore"}'
 
 ```
 
 ```javascript
 const url = new URL(
-    "http://localhost/admin"
+    "http://localhost/admin/login"
 );
 
 let headers = {
@@ -29,7 +29,7 @@ let headers = {
 };
 
 let body = {
-    "data": "harum"
+    "data": "dolore"
 }
 
 fetch(url, {
@@ -43,14 +43,14 @@ fetch(url, {
 
 $client = new \GuzzleHttp\Client();
 $response = $client->get(
-    'http://localhost/admin',
+    'http://localhost/admin/login',
     [
         'headers' => [
             'Content-Type' => 'application/json',
             'Accept' => 'application/json',
         ],
         'json' => [
-            'data' => 'harum',
+            'data' => 'dolore',
         ],
     ]
 );
@@ -106,8 +106,8 @@ print_r(json_decode((string) $body));
                                     <div class="text-center">
                                         <h1 class="h4 text-gray-900 mb-4">Welcome Back!</h1>
                                     </div>
-                                                                        <form method="POST" class="user" action="http://localhost/admin">
-                                        <input type="hidden" name="_token" value="FT3aGWHvUg8gHMx7pRCjqhcunRFmmJU9eo2XDYfO">                                        <div class="form-group">
+                                                                        <form method="POST" class="user" action="http://localhost/admin/login">
+                                        <input type="hidden" name="_token" value="5g4lyPnXJEUU9KFkaOGp130cL6HR0J0NSYDIrbLT">                                        <div class="form-group">
                                             <input id="email" class="form-control form-control-user" type="email" name="email" :value="old('email')" placeholder="Email" required autofocus />
                                         </div>
                                         <div class="form-group">
@@ -158,28 +158,28 @@ print_r(json_decode((string) $body));
 </html>
 
 ```
-<div id="execution-results-GETadmin" hidden>
-    <blockquote>Received response<span id="execution-response-status-GETadmin"></span>:</blockquote>
-    <pre class="json"><code id="execution-response-content-GETadmin"></code></pre>
+<div id="execution-results-GETadmin-login" hidden>
+    <blockquote>Received response<span id="execution-response-status-GETadmin-login"></span>:</blockquote>
+    <pre class="json"><code id="execution-response-content-GETadmin-login"></code></pre>
 </div>
-<div id="execution-error-GETadmin" hidden>
+<div id="execution-error-GETadmin-login" hidden>
     <blockquote>Request failed with error:</blockquote>
-    <pre><code id="execution-error-message-GETadmin"></code></pre>
+    <pre><code id="execution-error-message-GETadmin-login"></code></pre>
 </div>
-<form id="form-GETadmin" data-method="GET" data-path="admin" data-authed="0" data-hasfiles="0" data-headers='{"Content-Type":"application\/json","Accept":"application\/json"}' onsubmit="event.preventDefault(); executeTryOut('GETadmin', this);">
+<form id="form-GETadmin-login" data-method="GET" data-path="admin/login" data-authed="0" data-hasfiles="0" data-headers='{"Content-Type":"application\/json","Accept":"application\/json"}' onsubmit="event.preventDefault(); executeTryOut('GETadmin-login', this);">
 <h3>
     Request&nbsp;&nbsp;&nbsp;
-        <button type="button" style="background-color: #8fbcd4; padding: 5px 10px; border-radius: 5px; border-width: thin;" id="btn-tryout-GETadmin" onclick="tryItOut('GETadmin');">Try it out ⚡</button>
-    <button type="button" style="background-color: #c97a7e; padding: 5px 10px; border-radius: 5px; border-width: thin;" id="btn-canceltryout-GETadmin" onclick="cancelTryOut('GETadmin');" hidden>Cancel</button>&nbsp;&nbsp;
-    <button type="submit" style="background-color: #6ac174; padding: 5px 10px; border-radius: 5px; border-width: thin;" id="btn-executetryout-GETadmin" hidden>Send Request 💥</button>
+        <button type="button" style="background-color: #8fbcd4; padding: 5px 10px; border-radius: 5px; border-width: thin;" id="btn-tryout-GETadmin-login" onclick="tryItOut('GETadmin-login');">Try it out ⚡</button>
+    <button type="button" style="background-color: #c97a7e; padding: 5px 10px; border-radius: 5px; border-width: thin;" id="btn-canceltryout-GETadmin-login" onclick="cancelTryOut('GETadmin-login');" hidden>Cancel</button>&nbsp;&nbsp;
+    <button type="submit" style="background-color: #6ac174; padding: 5px 10px; border-radius: 5px; border-width: thin;" id="btn-executetryout-GETadmin-login" hidden>Send Request 💥</button>
     </h3>
 <p>
 <small class="badge badge-green">GET</small>
- <b><code>admin</code></b>
+ <b><code>admin/login</code></b>
 </p>
 <p>
 <small class="badge badge-black">POST</small>
- <b><code>admin</code></b>
+ <b><code>admin/login</code></b>
 </p>
 <h4 class="fancy-heading-panel"><b>Body Parameters</b></h4>
 <p>
@@ -191,12 +191,12 @@ Data from Login Form</summary>
 <br>
 <p>
 <b><code>data.email</code></b>&nbsp;&nbsp;<small>email</small>  &nbsp;
-<input type="text" name="data.email" data-endpoint="GETadmin" data-component="body" required  hidden>
+<input type="text" name="data.email" data-endpoint="GETadmin-login" data-component="body" required  hidden>
 <br>
 Email of Admin</p>
 <p>
 <b><code>data.password</code></b>&nbsp;&nbsp;<small>password</small>  &nbsp;
-<input type="text" name="data.password" data-endpoint="GETadmin" data-component="body" required  hidden>
+<input type="text" name="data.password" data-endpoint="GETadmin-login" data-component="body" required  hidden>
 <br>
 Password of Admin</p>
 </details>

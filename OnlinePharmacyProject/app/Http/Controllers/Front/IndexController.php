@@ -22,7 +22,6 @@ class IndexController extends Controller
      *
      * Returns the view of homepage
      * @bodyParam newMedicines array required Newly added medicine data from table
-     * @authenticated
      */
     public function welcome(){
         $newMedicines= Medicine::orderBy('id','Desc')->limit(4)->get()->toArray();
