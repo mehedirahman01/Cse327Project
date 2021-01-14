@@ -21,7 +21,6 @@ class ProductController extends Controller
      * Returns the view of product details
      * @bodyParam productDetails array required All data of the medicine by id from table
      * @urlParam id number required Id of the medicine
-     * @authenticated
      */
     public function detail($id){
     //  $productDetails = Medicine::with(['medicineName','manufacturerId', 'generic','type', 'quantity'=>function($query){

@@ -10,7 +10,7 @@
     ],
     "info": {
         "name": "Laravel",
-        "_postman_id": "6a1589fb-1832-432e-8b6c-d5fb4957bd94",
+        "_postman_id": "40410f16-b29a-42f3-bb66-0c19279def4f",
         "description": "",
         "schema": "https:\/\/schema.getpostman.com\/json\/collection\/v2.1.0\/collection.json"
     },
@@ -25,9 +25,9 @@
                         "url": {
                             "protocol": "http",
                             "host": "{{baseUrl}}",
-                            "path": "admin",
+                            "path": "admin\/login",
                             "query": [],
-                            "raw": "http:\/\/{{baseUrl}}\/admin"
+                            "raw": "http:\/\/{{baseUrl}}\/admin\/login"
                         },
                         "method": "GET",
                         "header": [
@@ -42,7 +42,7 @@
                         ],
                         "body": {
                             "mode": "raw",
-                            "raw": "{\n    \"data\": \"harum\"\n}"
+                            "raw": "{\n    \"data\": \"dolore\"\n}"
                         },
                         "description": "Handles admin login",
                         "auth": {
@@ -132,9 +132,12 @@
                         ],
                         "body": {
                             "mode": "raw",
-                            "raw": "{\n    \"newMedicines\": \"qui\"\n}"
+                            "raw": "{\n    \"newMedicines\": \"est\"\n}"
                         },
-                        "description": "Returns the view of homepage"
+                        "description": "Returns the view of homepage",
+                        "auth": {
+                            "type": "noauth"
+                        }
                     },
                     "response": []
                 }
@@ -167,9 +170,44 @@
                         ],
                         "body": {
                             "mode": "raw",
-                            "raw": "{\n    \"manufacturers\": \"et\"\n}"
+                            "raw": "{\n    \"manufacturers\": \"soluta\"\n}"
                         },
                         "description": "Returns the view of manufacturer"
+                    },
+                    "response": []
+                }
+            ]
+        },
+        {
+            "name": "Maps Controller",
+            "description": "\nHandle Homepage functionalities",
+            "item": [
+                {
+                    "name": "Maps View",
+                    "request": {
+                        "url": {
+                            "protocol": "http",
+                            "host": "{{baseUrl}}",
+                            "path": "map",
+                            "query": [],
+                            "raw": "http:\/\/{{baseUrl}}\/map"
+                        },
+                        "method": "GET",
+                        "header": [
+                            {
+                                "key": "Content-Type",
+                                "value": "application\/json"
+                            },
+                            {
+                                "key": "Accept",
+                                "value": "application\/json"
+                            }
+                        ],
+                        "body": null,
+                        "description": "Returns the view of map",
+                        "auth": {
+                            "type": "noauth"
+                        }
                     },
                     "response": []
                 }
@@ -202,7 +240,7 @@
                         ],
                         "body": {
                             "mode": "raw",
-                            "raw": "{\n    \"medicines\": \"assumenda\"\n}"
+                            "raw": "{\n    \"medicines\": \"quibusdam\"\n}"
                         },
                         "description": "Returns the view of medicine"
                     },
@@ -221,7 +259,7 @@
                                 {
                                     "id": "id",
                                     "key": "id",
-                                    "value": "207.111368",
+                                    "value": "145882.35745868",
                                     "description": "Id of the medicine"
                                 }
                             ]
@@ -239,7 +277,7 @@
                         ],
                         "body": {
                             "mode": "raw",
-                            "raw": "{\n    \"medicine\": {\n        \"manufacturerId\": 1,\n        \"medicineName\": \"Alatrol\",\n        \"generic\": \"Cetirizine Hydrochloride\",\n        \"type\": \"Tablet\",\n        \"quantity\": 10,\n        \"dose\": \"2.5 mg\",\n        \"medicinePrice\": 35,\n        \"stock\": 100,\n        \"description\": \"This medicine.....\",\n        \"medicineImage\": \"fuga\"\n    },\n    \"data\": \"perferendis\",\n    \"getManufacturers\": \"aspernatur\",\n    \"medicineData\": \"ut\"\n}"
+                            "raw": "{\n    \"medicine\": {\n        \"manufacturerId\": 1,\n        \"medicineName\": \"Alatrol\",\n        \"generic\": \"Cetirizine Hydrochloride\",\n        \"type\": \"Tablet\",\n        \"quantity\": 10,\n        \"dose\": \"2.5 mg\",\n        \"medicinePrice\": 35,\n        \"stock\": 100,\n        \"description\": \"This medicine.....\",\n        \"medicineImage\": \"est\"\n    },\n    \"data\": \"nesciunt\",\n    \"getManufacturers\": \"modi\",\n    \"medicineData\": \"tempora\"\n}"
                         },
                         "description": "Can add or edit medicine\n\nReturns to medicine page"
                     },
@@ -264,7 +302,7 @@
                                 {
                                     "id": "id",
                                     "key": "id",
-                                    "value": "6540378.3650353",
+                                    "value": "67.5034",
                                     "description": "Id of the medicine"
                                 }
                             ]
@@ -282,9 +320,12 @@
                         ],
                         "body": {
                             "mode": "raw",
-                            "raw": "{\n    \"productDetails\": \"repudiandae\"\n}"
+                            "raw": "{\n    \"productDetails\": \"eum\"\n}"
                         },
-                        "description": "Returns the view of product details"
+                        "description": "Returns the view of product details",
+                        "auth": {
+                            "type": "noauth"
+                        }
                     },
                     "response": []
                 }
@@ -375,7 +416,7 @@
                         ],
                         "body": {
                             "mode": "raw",
-                            "raw": "{\n    \"data\": \"blanditiis\"\n}"
+                            "raw": "{\n    \"data\": \"ut\"\n}"
                         },
                         "description": "Handles user login",
                         "auth": {
@@ -407,7 +448,7 @@
                         ],
                         "body": {
                             "mode": "raw",
-                            "raw": "{\n    \"data\": \"ratione\",\n    \"emailCount\": 1093780.6515,\n    \"userCount\": 0.47898,\n    \"message\": \"labore\",\n    \"user\": {\n        \"firstName\": \"molestias\",\n        \"lastName\": \"aut\",\n        \"userName\": \"eos\",\n        \"email\": \"quibusdam\",\n        \"gender\": \"facere\",\n        \"age\": 4066.2321,\n        \"address\": \"velit\",\n        \"phone\": 20124.337295,\n        \"password\": \"odit\"\n    }\n}"
+                            "raw": "{\n    \"data\": \"quo\",\n    \"emailCount\": 1.959,\n    \"userCount\": 486.14030571,\n    \"message\": \"explicabo\",\n    \"user\": {\n        \"firstName\": \"sit\",\n        \"lastName\": \"provident\",\n        \"userName\": \"voluptatem\",\n        \"email\": \"est\",\n        \"gender\": \"laboriosam\",\n        \"age\": 56489.516518493,\n        \"address\": \"aperiam\",\n        \"phone\": 371.31,\n        \"password\": \"harum\"\n    }\n}"
                         },
                         "description": "Returns to homepage",
                         "auth": {

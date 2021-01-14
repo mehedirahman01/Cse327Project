@@ -11,9 +11,7 @@
     <div class="collapse navbar-collapse" id="myNavbar">
       <ul class="nav navbar-nav">
         <li class="active"><a href="/">Home</a></li>
-        <li><a href="#">Products</a></li>
-        <li><a href="#">Deals</a></li>
-        <li><a href="#">Contact</a></li>
+        <li><a href="{{url('/map')}}">Nearby Pharmacy</a></li>
       </ul>
 
       <form class="navbar-form navbar-right" action="">

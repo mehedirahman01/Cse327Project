@@ -15,7 +15,7 @@ curl -X GET \
     -G "http://localhost/admin/medicines" \
     -H "Content-Type: application/json" \
     -H "Accept: application/json" \
-    -d '{"medicines":"assumenda"}'
+    -d '{"medicines":"quibusdam"}'
 
 ```
 
@@ -30,7 +30,7 @@ let headers = {
 };
 
 let body = {
-    "medicines": "assumenda"
+    "medicines": "quibusdam"
 }
 
 fetch(url, {
@@ -51,7 +51,7 @@ $response = $client->get(
             'Accept' => 'application/json',
         ],
         'json' => [
-            'medicines' => 'assumenda',
+            'medicines' => 'quibusdam',
         ],
     ]
 );
@@ -121,16 +121,16 @@ Returns to medicine page
 
 ```bash
 curl -X GET \
-    -G "http://localhost/admin/add-edit-medicine/207.111368" \
+    -G "http://localhost/admin/add-edit-medicine/145882.35745868" \
     -H "Content-Type: application/json" \
     -H "Accept: application/json" \
-    -d '{"medicine":{"manufacturerId":1,"medicineName":"Alatrol","generic":"Cetirizine Hydrochloride","type":"Tablet","quantity":10,"dose":"2.5 mg","medicinePrice":35,"stock":100,"description":"This medicine.....","medicineImage":"fuga"},"data":"perferendis","getManufacturers":"aspernatur","medicineData":"ut"}'
+    -d '{"medicine":{"manufacturerId":1,"medicineName":"Alatrol","generic":"Cetirizine Hydrochloride","type":"Tablet","quantity":10,"dose":"2.5 mg","medicinePrice":35,"stock":100,"description":"This medicine.....","medicineImage":"est"},"data":"nesciunt","getManufacturers":"modi","medicineData":"tempora"}'
 
 ```
 
 ```javascript
 const url = new URL(
-    "http://localhost/admin/add-edit-medicine/207.111368"
+    "http://localhost/admin/add-edit-medicine/145882.35745868"
 );
 
 let headers = {
@@ -149,11 +149,11 @@ let body = {
         "medicinePrice": 35,
         "stock": 100,
         "description": "This medicine.....",
-        "medicineImage": "fuga"
+        "medicineImage": "est"
     },
-    "data": "perferendis",
-    "getManufacturers": "aspernatur",
-    "medicineData": "ut"
+    "data": "nesciunt",
+    "getManufacturers": "modi",
+    "medicineData": "tempora"
 }
 
 fetch(url, {
@@ -167,7 +167,7 @@ fetch(url, {
 
 $client = new \GuzzleHttp\Client();
 $response = $client->get(
-    'http://localhost/admin/add-edit-medicine/207.111368',
+    'http://localhost/admin/add-edit-medicine/145882.35745868',
     [
         'headers' => [
             'Content-Type' => 'application/json',
@@ -184,11 +184,11 @@ $response = $client->get(
                 'medicinePrice' => 35.0,
                 'stock' => 100.0,
                 'description' => 'This medicine.....',
-                'medicineImage' => 'fuga',
+                'medicineImage' => 'est',
             ],
-            'data' => 'perferendis',
-            'getManufacturers' => 'aspernatur',
-            'medicineData' => 'ut',
+            'data' => 'nesciunt',
+            'getManufacturers' => 'modi',
+            'medicineData' => 'tempora',
         ],
     ]
 );

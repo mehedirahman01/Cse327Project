@@ -45,7 +45,7 @@
                             <li><a href='http://github.com/knuckleswtf/scribe'>Documentation powered by Scribe ✍</a></li>
                     </ul>
             <ul class="toc-footer" id="last-updated">
-            <li>Last updated: January 12 2021</li>
+            <li>Last updated: January 13 2021</li>
         </ul>
 </div>
 <div class="page-wrapper">
@@ -72,13 +72,13 @@ You can switch the language used with the tabs at the top right (or from the nav
 <p>Example request:</p>
 </blockquote>
 <pre><code class="language-bash">curl -X GET \
-    -G "http://localhost/admin" \
+    -G "http://localhost/admin/login" \
     -H "Content-Type: application/json" \
     -H "Accept: application/json" \
-    -d '{"data":"harum"}'
+    -d '{"data":"dolore"}'
 </code></pre>
 <pre><code class="language-javascript">const url = new URL(
-    "http://localhost/admin"
+    "http://localhost/admin/login"
 );
 
 let headers = {
@@ -87,7 +87,7 @@ let headers = {
 };
 
 let body = {
-    "data": "harum"
+    "data": "dolore"
 }
 
 fetch(url, {
@@ -98,14 +98,14 @@ fetch(url, {
 <pre><code class="language-php">
 $client = new \GuzzleHttp\Client();
 $response = $client-&gt;get(
-    'http://localhost/admin',
+    'http://localhost/admin/login',
     [
         'headers' =&gt; [
             'Content-Type' =&gt; 'application/json',
             'Accept' =&gt; 'application/json',
         ],
         'json' =&gt; [
-            'data' =&gt; 'harum',
+            'data' =&gt; 'dolore',
         ],
     ]
 );
@@ -158,8 +158,8 @@ print_r(json_decode((string) $body));</code></pre>
                                     &lt;div class="text-center"&gt;
                                         &lt;h1 class="h4 text-gray-900 mb-4"&gt;Welcome Back!&lt;/h1&gt;
                                     &lt;/div&gt;
-                                                                        &lt;form method="POST" class="user" action="http://localhost/admin"&gt;
-                                        &lt;input type="hidden" name="_token" value="FT3aGWHvUg8gHMx7pRCjqhcunRFmmJU9eo2XDYfO"&gt;                                        &lt;div class="form-group"&gt;
+                                                                        &lt;form method="POST" class="user" action="http://localhost/admin/login"&gt;
+                                        &lt;input type="hidden" name="_token" value="5g4lyPnXJEUU9KFkaOGp130cL6HR0J0NSYDIrbLT"&gt;                                        &lt;div class="form-group"&gt;
                                             &lt;input id="email" class="form-control form-control-user" type="email" name="email" :value="old('email')" placeholder="Email" required autofocus /&gt;
                                         &lt;/div&gt;
                                         &lt;div class="form-group"&gt;
@@ -209,28 +209,28 @@ print_r(json_decode((string) $body));</code></pre>
 
 &lt;/html&gt;
 </code></pre>
-<div id="execution-results-GETadmin" hidden>
-    <blockquote>Received response<span id="execution-response-status-GETadmin"></span>:</blockquote>
-    <pre class="json"><code id="execution-response-content-GETadmin"></code></pre>
+<div id="execution-results-GETadmin-login" hidden>
+    <blockquote>Received response<span id="execution-response-status-GETadmin-login"></span>:</blockquote>
+    <pre class="json"><code id="execution-response-content-GETadmin-login"></code></pre>
 </div>
-<div id="execution-error-GETadmin" hidden>
+<div id="execution-error-GETadmin-login" hidden>
     <blockquote>Request failed with error:</blockquote>
-    <pre><code id="execution-error-message-GETadmin"></code></pre>
+    <pre><code id="execution-error-message-GETadmin-login"></code></pre>
 </div>
-<form id="form-GETadmin" data-method="GET" data-path="admin" data-authed="0" data-hasfiles="0" data-headers='{"Content-Type":"application\/json","Accept":"application\/json"}' onsubmit="event.preventDefault(); executeTryOut('GETadmin', this);">
+<form id="form-GETadmin-login" data-method="GET" data-path="admin/login" data-authed="0" data-hasfiles="0" data-headers='{"Content-Type":"application\/json","Accept":"application\/json"}' onsubmit="event.preventDefault(); executeTryOut('GETadmin-login', this);">
 <h3>
     Request&nbsp;&nbsp;&nbsp;
-        <button type="button" style="background-color: #8fbcd4; padding: 5px 10px; border-radius: 5px; border-width: thin;" id="btn-tryout-GETadmin" onclick="tryItOut('GETadmin');">Try it out ⚡</button>
-    <button type="button" style="background-color: #c97a7e; padding: 5px 10px; border-radius: 5px; border-width: thin;" id="btn-canceltryout-GETadmin" onclick="cancelTryOut('GETadmin');" hidden>Cancel</button>&nbsp;&nbsp;
-    <button type="submit" style="background-color: #6ac174; padding: 5px 10px; border-radius: 5px; border-width: thin;" id="btn-executetryout-GETadmin" hidden>Send Request 💥</button>
+        <button type="button" style="background-color: #8fbcd4; padding: 5px 10px; border-radius: 5px; border-width: thin;" id="btn-tryout-GETadmin-login" onclick="tryItOut('GETadmin-login');">Try it out ⚡</button>
+    <button type="button" style="background-color: #c97a7e; padding: 5px 10px; border-radius: 5px; border-width: thin;" id="btn-canceltryout-GETadmin-login" onclick="cancelTryOut('GETadmin-login');" hidden>Cancel</button>&nbsp;&nbsp;
+    <button type="submit" style="background-color: #6ac174; padding: 5px 10px; border-radius: 5px; border-width: thin;" id="btn-executetryout-GETadmin-login" hidden>Send Request 💥</button>
     </h3>
 <p>
 <small class="badge badge-green">GET</small>
- <b><code>admin</code></b>
+ <b><code>admin/login</code></b>
 </p>
 <p>
 <small class="badge badge-black">POST</small>
- <b><code>admin</code></b>
+ <b><code>admin/login</code></b>
 </p>
 <h4 class="fancy-heading-panel"><b>Body Parameters</b></h4>
 <p>
@@ -242,12 +242,12 @@ Data from Login Form</summary>
 <br>
 <p>
 <b><code>data.email</code></b>&nbsp;&nbsp;<small>email</small>  &nbsp;
-<input type="text" name="data.email" data-endpoint="GETadmin" data-component="body" required  hidden>
+<input type="text" name="data.email" data-endpoint="GETadmin-login" data-component="body" required  hidden>
 <br>
 Email of Admin</p>
 <p>
 <b><code>data.password</code></b>&nbsp;&nbsp;<small>password</small>  &nbsp;
-<input type="text" name="data.password" data-endpoint="GETadmin" data-component="body" required  hidden>
+<input type="text" name="data.password" data-endpoint="GETadmin-login" data-component="body" required  hidden>
 <br>
 Password of Admin</p>
 </details>
@@ -407,7 +407,6 @@ print_r(json_decode((string) $body));</code></pre>
 </form><h1>Index Controller</h1>
 <p>Handle Homepage functionalities</p>
 <h2>Homepage View</h2>
-<p><small class="badge badge-darkred">requires authentication</small></p>
 <p>Returns the view of homepage</p>
 <blockquote>
 <p>Example request:</p>
@@ -416,7 +415,7 @@ print_r(json_decode((string) $body));</code></pre>
     -G "http://localhost/" \
     -H "Content-Type: application/json" \
     -H "Accept: application/json" \
-    -d '{"newMedicines":"qui"}'
+    -d '{"newMedicines":"est"}'
 </code></pre>
 <pre><code class="language-javascript">const url = new URL(
     "http://localhost/"
@@ -428,7 +427,7 @@ let headers = {
 };
 
 let body = {
-    "newMedicines": "qui"
+    "newMedicines": "est"
 }
 
 fetch(url, {
@@ -446,7 +445,7 @@ $response = $client-&gt;get(
             'Accept' =&gt; 'application/json',
         ],
         'json' =&gt; [
-            'newMedicines' =&gt; 'qui',
+            'newMedicines' =&gt; 'est',
         ],
     ]
 );
@@ -553,9 +552,7 @@ print_r(json_decode((string) $body));</code></pre>
     &lt;div class="collapse navbar-collapse" id="myNavbar"&gt;
       &lt;ul class="nav navbar-nav"&gt;
         &lt;li class="active"&gt;&lt;a href="/"&gt;Home&lt;/a&gt;&lt;/li&gt;
-        &lt;li&gt;&lt;a href="#"&gt;Products&lt;/a&gt;&lt;/li&gt;
-        &lt;li&gt;&lt;a href="#"&gt;Deals&lt;/a&gt;&lt;/li&gt;
-        &lt;li&gt;&lt;a href="#"&gt;Contact&lt;/a&gt;&lt;/li&gt;
+        &lt;li&gt;&lt;a href="http://localhost/map"&gt;Nearby Pharmacy&lt;/a&gt;&lt;/li&gt;
       &lt;/ul&gt;
 
       &lt;form class="navbar-form navbar-right" action=""&gt;
@@ -568,7 +565,7 @@ print_r(json_decode((string) $body));</code></pre>
     &lt;/div&gt;
   &lt;/div&gt;
 &lt;/form&gt;
-      &lt;input type="hidden" name="_token" value="FT3aGWHvUg8gHMx7pRCjqhcunRFmmJU9eo2XDYfO"&gt;      &lt;ul class="nav navbar-nav navbar-right"&gt;
+      &lt;input type="hidden" name="_token" value="5g4lyPnXJEUU9KFkaOGp130cL6HR0J0NSYDIrbLT"&gt;      &lt;ul class="nav navbar-nav navbar-right"&gt;
                 &lt;li class="dropdown"&gt;&lt;a href="#"&gt;&lt;span class="glyphicon glyphicon-user"&gt;&lt;/span&gt; Your Account&lt;/a&gt;
           &lt;div class="dropdown-content" aria-label="submenu"&gt;
                                     &lt;a href="http://localhost/registration-page"&gt;Register&lt;/a&gt;
@@ -639,52 +636,7 @@ print_r(json_decode((string) $body));</code></pre>
                                     Cetirizine Hydrochloride
                                 &lt;/p&gt;
 
-                                &lt;h4 style="text-align:center"&gt;&lt;a class="btn" href="/medicine/8"&gt;View&lt;/a&gt; &lt;a class="btn" href="#"&gt;Add to Cart&lt;/i&gt;&lt;/a&gt; &lt;a class="btn btn-primary" href="#"&gt;334 Tk&lt;/a&gt;&lt;/h4&gt;
-                            &lt;/div&gt;
-                        &lt;/div&gt;
-                    &lt;/li&gt;
-                                    &lt;li class="span3"&gt;
-                        &lt;div class="thumbnail"&gt;
-                            &lt;a  href="#"&gt;
-                                                                                                &lt;img src="images/medicine_images/no_image.jpg" alt=""/&gt;
-                                                            &lt;/a&gt;
-                            &lt;div class="caption"&gt;
-                                &lt;h5&gt;Boni&lt;/h5&gt;
-                                &lt;p&gt;
-                                    Calcium carbonate
-                                &lt;/p&gt;
-
-                                &lt;h4 style="text-align:center"&gt;&lt;a class="btn" href="/medicine/5"&gt;View&lt;/a&gt; &lt;a class="btn" href="#"&gt;Add to Cart&lt;/i&gt;&lt;/a&gt; &lt;a class="btn btn-primary" href="#"&gt;48 Tk&lt;/a&gt;&lt;/h4&gt;
-                            &lt;/div&gt;
-                        &lt;/div&gt;
-                    &lt;/li&gt;
-                                    &lt;li class="span3"&gt;
-                        &lt;div class="thumbnail"&gt;
-                            &lt;a  href="#"&gt;
-                                                                                                &lt;img src="images/medicine_images/no_image.jpg" alt=""/&gt;
-                                                            &lt;/a&gt;
-                            &lt;div class="caption"&gt;
-                                &lt;h5&gt;Amdocal plus 50&lt;/h5&gt;
-                                &lt;p&gt;
-                                    Atenolol Bp 25mg &amp;amp; Amlodipine BP
-                                &lt;/p&gt;
-
-                                &lt;h4 style="text-align:center"&gt;&lt;a class="btn" href="/medicine/4"&gt;View&lt;/a&gt; &lt;a class="btn" href="#"&gt;Add to Cart&lt;/i&gt;&lt;/a&gt; &lt;a class="btn btn-primary" href="#"&gt;60 Tk&lt;/a&gt;&lt;/h4&gt;
-                            &lt;/div&gt;
-                        &lt;/div&gt;
-                    &lt;/li&gt;
-                                    &lt;li class="span3"&gt;
-                        &lt;div class="thumbnail"&gt;
-                            &lt;a  href="#"&gt;
-                                                                                                &lt;img src="images/medicine_images/no_image.jpg" alt=""/&gt;
-                                                            &lt;/a&gt;
-                            &lt;div class="caption"&gt;
-                                &lt;h5&gt;Alatrol&lt;/h5&gt;
-                                &lt;p&gt;
-                                    Cetirizine Hydrochloride
-                                &lt;/p&gt;
-
-                                &lt;h4 style="text-align:center"&gt;&lt;a class="btn" href="/medicine/3"&gt;View&lt;/a&gt; &lt;a class="btn" href="#"&gt;Add to Cart&lt;/i&gt;&lt;/a&gt; &lt;a class="btn btn-primary" href="#"&gt;30 Tk&lt;/a&gt;&lt;/h4&gt;
+                                &lt;h4 style="text-align:center"&gt;&lt;a class="btn" href="/medicine/2"&gt;View&lt;/a&gt; &lt;a class="btn" href="#"&gt;Add to Cart&lt;/i&gt;&lt;/a&gt; &lt;a class="btn btn-primary" href="#"&gt;40 Tk&lt;/a&gt;&lt;/h4&gt;
                             &lt;/div&gt;
                         &lt;/div&gt;
                     &lt;/li&gt;
@@ -716,7 +668,7 @@ print_r(json_decode((string) $body));</code></pre>
     <blockquote>Request failed with error:</blockquote>
     <pre><code id="execution-error-message-GET-"></code></pre>
 </div>
-<form id="form-GET-" data-method="GET" data-path="/" data-authed="1" data-hasfiles="0" data-headers='{"Content-Type":"application\/json","Accept":"application\/json"}' onsubmit="event.preventDefault(); executeTryOut('GET-', this);">
+<form id="form-GET-" data-method="GET" data-path="/" data-authed="0" data-hasfiles="0" data-headers='{"Content-Type":"application\/json","Accept":"application\/json"}' onsubmit="event.preventDefault(); executeTryOut('GET-', this);">
 <h3>
     Request&nbsp;&nbsp;&nbsp;
         <button type="button" style="background-color: #8fbcd4; padding: 5px 10px; border-radius: 5px; border-width: thin;" id="btn-tryout-GET-" onclick="tryItOut('GET-');">Try it out ⚡</button>
@@ -726,9 +678,6 @@ print_r(json_decode((string) $body));</code></pre>
 <p>
 <small class="badge badge-green">GET</small>
  <b><code>/</code></b>
-</p>
-<p>
-<label id="auth-GET-" hidden>Authorization header: <b><code>Bearer </code></b><input type="text" name="Authorization" data-prefix="Bearer " data-endpoint="GET-" data-component="header"></label>
 </p>
 <h4 class="fancy-heading-panel"><b>Body Parameters</b></h4>
 <p>
@@ -749,7 +698,7 @@ Newly added medicine data from table</p>
     -G "http://localhost/admin/manufacturers" \
     -H "Content-Type: application/json" \
     -H "Accept: application/json" \
-    -d '{"manufacturers":"et"}'
+    -d '{"manufacturers":"soluta"}'
 </code></pre>
 <pre><code class="language-javascript">const url = new URL(
     "http://localhost/admin/manufacturers"
@@ -761,7 +710,7 @@ let headers = {
 };
 
 let body = {
-    "manufacturers": "et"
+    "manufacturers": "soluta"
 }
 
 fetch(url, {
@@ -779,7 +728,7 @@ $response = $client-&gt;get(
             'Accept' =&gt; 'application/json',
         ],
         'json' =&gt; [
-            'manufacturers' =&gt; 'et',
+            'manufacturers' =&gt; 'soluta',
         ],
     ]
 );
@@ -830,6 +779,161 @@ print_r(json_decode((string) $body));</code></pre>
 <br>
 All manufacturer data from table</p>
 
+</form><h1>Maps Controller</h1>
+<p>Handle Homepage functionalities</p>
+<h2>Maps View</h2>
+<p>Returns the view of map</p>
+<blockquote>
+<p>Example request:</p>
+</blockquote>
+<pre><code class="language-bash">curl -X GET \
+    -G "http://localhost/map" \
+    -H "Content-Type: application/json" \
+    -H "Accept: application/json"</code></pre>
+<pre><code class="language-javascript">const url = new URL(
+    "http://localhost/map"
+);
+
+let headers = {
+    "Content-Type": "application/json",
+    "Accept": "application/json",
+};
+
+fetch(url, {
+    method: "GET",
+    headers,
+}).then(response =&gt; response.json());</code></pre>
+<pre><code class="language-php">
+$client = new \GuzzleHttp\Client();
+$response = $client-&gt;get(
+    'http://localhost/map',
+    [
+        'headers' =&gt; [
+            'Content-Type' =&gt; 'application/json',
+            'Accept' =&gt; 'application/json',
+        ],
+    ]
+);
+$body = $response-&gt;getBody();
+print_r(json_decode((string) $body));</code></pre>
+<blockquote>
+<p>Example response (200):</p>
+</blockquote>
+<pre><code class="language-json">
+&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+&lt;head&gt;
+&lt;meta charset="utf-8" /&gt;
+&lt;title&gt;Locate the user&lt;/title&gt;
+&lt;meta name="viewport" content="initial-scale=1,maximum-scale=1,user-scalable=no" /&gt;
+&lt;script src="https://api.mapbox.com/mapbox-gl-js/v2.0.1/mapbox-gl.js"&gt;&lt;/script&gt;
+&lt;link href="https://api.mapbox.com/mapbox-gl-js/v2.0.1/mapbox-gl.css" rel="stylesheet" /&gt;
+&lt;style&gt;
+    body { margin: 0; padding: 0; }
+    #map { position: absolute; top: 0; bottom: 0; width: 100%; }
+&lt;/style&gt;
+&lt;/head&gt;
+&lt;body&gt;
+    &lt;script src="https://api.mapbox.com/mapbox-gl-js/plugins/mapbox-gl-geocoder/v4.5.1/mapbox-gl-geocoder.min.js"&gt;&lt;/script&gt;
+    &lt;link
+    rel="stylesheet"
+    href="https://api.mapbox.com/mapbox-gl-js/plugins/mapbox-gl-geocoder/v4.5.1/mapbox-gl-geocoder.css"
+    type="text/css"
+    /&gt;
+    &lt;!-- Promise polyfill script required to use Mapbox GL Geocoder in IE 11 --&gt;
+    &lt;script src="https://cdn.jsdelivr.net/npm/es6-promise@4/dist/es6-promise.min.js"&gt;&lt;/script&gt;
+    &lt;script src="https://cdn.jsdelivr.net/npm/es6-promise@4/dist/es6-promise.auto.min.js"&gt;&lt;/script&gt;
+&lt;div id="map"&gt;&lt;/div&gt;
+&lt;script&gt;
+
+    //mapboxgl.accessToken = 'sk.eyJ1IjoibWVoZWRpMDEiLCJhIjoiY2tqdjhxNG04MDZpNDJ3b2FpYXE2YmxqaiJ9.CfzO5t8rZd-w_NoOCSSswQ';
+    mapboxgl.accessToken='pk.eyJ1IjoibWVoZWRpMDEiLCJhIjoiY2tqdjd2ZHp0MnllZzJ5cW5ndjlrMjhnbSJ9.2-45lm_cXiPkhoD48g-Kxg';
+    var map = new mapboxgl.Map({
+        container: 'map', // container id
+        style: 'mapbox://styles/mapbox/streets-v11',
+        center: [0, 0], // starting position
+        zoom: 12 // starting zoom
+    });
+
+    // Add geolocate control to the map.
+    var geolocate = new mapboxgl.GeolocateControl({
+        positionOptions: {
+            enableHighAccuracy: true
+        },
+        trackUserLocation: false
+    });
+    // Add the control to the map.
+    map.addControl(geolocate);
+    map.on('load', function() {
+        geolocate.trigger();
+        geolocate.on('geolocate', function(position) {
+    console.log(`latitude: ${position.coords.latitude}, longitude: ${position.coords.longitude}`);
+    var marker = new mapboxgl.Marker() // initialize a new marker
+        .setLngLat([position.coords.longitude, position.coords.latitude]) // Marker [lng, lat] coordinates
+        .addTo(map);
+    var geocoder = new MapboxGeocoder({ // Initialize the geocoder
+        accessToken: 'pk.eyJ1IjoibWVoZWRpMDEiLCJhIjoiY2tqdjd2ZHp0MnllZzJ5cW5ndjlrMjhnbSJ9.2-45lm_cXiPkhoD48g-Kxg', // Set the access token
+        //placeholder: 'Search for pharmacies',
+        mapboxgl: mapboxgl, // Set the mapbox-gl instance
+        marker: false, // Do not use the default marker style
+        placeholder: 'Search for pharmacies', // Placeholder text for the search bar
+        bbox: [position.coords.longitude-0.2, position.coords.latitude-0.2, position.coords.longitude+0.2, position.coords.latitude+0.2], // Boundary for Berkeley
+        proximity: {
+            longitude: position.coords.longitude,
+            latitude: position.coords.latitude
+        }
+    });
+
+    // Add the geocoder to the map
+    map.addControl(geocoder);
+
+    map.addSource('single-point', {
+        type: 'geojson',
+        data: {
+          type: 'FeatureCollection',
+          features: []
+        }
+});
+
+    map.addLayer({
+        id: 'point',
+        source: 'single-point',
+        type: 'circle',
+        paint: {
+            'circle-radius': 10,
+            'circle-color': '#448ee4'
+        }
+});
+
+    geocoder.on('result', function(e) {
+    map.getSource('single-point').setData(e.result.geometry);
+});
+});
+});
+&lt;/script&gt;
+
+&lt;/body&gt;
+&lt;/html&gt;
+</code></pre>
+<div id="execution-results-GETmap" hidden>
+    <blockquote>Received response<span id="execution-response-status-GETmap"></span>:</blockquote>
+    <pre class="json"><code id="execution-response-content-GETmap"></code></pre>
+</div>
+<div id="execution-error-GETmap" hidden>
+    <blockquote>Request failed with error:</blockquote>
+    <pre><code id="execution-error-message-GETmap"></code></pre>
+</div>
+<form id="form-GETmap" data-method="GET" data-path="map" data-authed="0" data-hasfiles="0" data-headers='{"Content-Type":"application\/json","Accept":"application\/json"}' onsubmit="event.preventDefault(); executeTryOut('GETmap', this);">
+<h3>
+    Request&nbsp;&nbsp;&nbsp;
+        <button type="button" style="background-color: #8fbcd4; padding: 5px 10px; border-radius: 5px; border-width: thin;" id="btn-tryout-GETmap" onclick="tryItOut('GETmap');">Try it out ⚡</button>
+    <button type="button" style="background-color: #c97a7e; padding: 5px 10px; border-radius: 5px; border-width: thin;" id="btn-canceltryout-GETmap" onclick="cancelTryOut('GETmap');" hidden>Cancel</button>&nbsp;&nbsp;
+    <button type="submit" style="background-color: #6ac174; padding: 5px 10px; border-radius: 5px; border-width: thin;" id="btn-executetryout-GETmap" hidden>Send Request 💥</button>
+    </h3>
+<p>
+<small class="badge badge-green">GET</small>
+ <b><code>map</code></b>
+</p>
 </form><h1>Medicines Controller</h1>
 <p>Handle Medicine Stock for the application.</p>
 <h2>Medicine View</h2>
@@ -842,7 +946,7 @@ All manufacturer data from table</p>
     -G "http://localhost/admin/medicines" \
     -H "Content-Type: application/json" \
     -H "Accept: application/json" \
-    -d '{"medicines":"assumenda"}'
+    -d '{"medicines":"quibusdam"}'
 </code></pre>
 <pre><code class="language-javascript">const url = new URL(
     "http://localhost/admin/medicines"
@@ -854,7 +958,7 @@ let headers = {
 };
 
 let body = {
-    "medicines": "assumenda"
+    "medicines": "quibusdam"
 }
 
 fetch(url, {
@@ -872,7 +976,7 @@ $response = $client-&gt;get(
             'Accept' =&gt; 'application/json',
         ],
         'json' =&gt; [
-            'medicines' =&gt; 'assumenda',
+            'medicines' =&gt; 'quibusdam',
         ],
     ]
 );
@@ -932,13 +1036,13 @@ All medicine data from table</p>
 <p>Example request:</p>
 </blockquote>
 <pre><code class="language-bash">curl -X GET \
-    -G "http://localhost/admin/add-edit-medicine/207.111368" \
+    -G "http://localhost/admin/add-edit-medicine/145882.35745868" \
     -H "Content-Type: application/json" \
     -H "Accept: application/json" \
-    -d '{"medicine":{"manufacturerId":1,"medicineName":"Alatrol","generic":"Cetirizine Hydrochloride","type":"Tablet","quantity":10,"dose":"2.5 mg","medicinePrice":35,"stock":100,"description":"This medicine.....","medicineImage":"fuga"},"data":"perferendis","getManufacturers":"aspernatur","medicineData":"ut"}'
+    -d '{"medicine":{"manufacturerId":1,"medicineName":"Alatrol","generic":"Cetirizine Hydrochloride","type":"Tablet","quantity":10,"dose":"2.5 mg","medicinePrice":35,"stock":100,"description":"This medicine.....","medicineImage":"est"},"data":"nesciunt","getManufacturers":"modi","medicineData":"tempora"}'
 </code></pre>
 <pre><code class="language-javascript">const url = new URL(
-    "http://localhost/admin/add-edit-medicine/207.111368"
+    "http://localhost/admin/add-edit-medicine/145882.35745868"
 );
 
 let headers = {
@@ -957,11 +1061,11 @@ let body = {
         "medicinePrice": 35,
         "stock": 100,
         "description": "This medicine.....",
-        "medicineImage": "fuga"
+        "medicineImage": "est"
     },
-    "data": "perferendis",
-    "getManufacturers": "aspernatur",
-    "medicineData": "ut"
+    "data": "nesciunt",
+    "getManufacturers": "modi",
+    "medicineData": "tempora"
 }
 
 fetch(url, {
@@ -972,7 +1076,7 @@ fetch(url, {
 <pre><code class="language-php">
 $client = new \GuzzleHttp\Client();
 $response = $client-&gt;get(
-    'http://localhost/admin/add-edit-medicine/207.111368',
+    'http://localhost/admin/add-edit-medicine/145882.35745868',
     [
         'headers' =&gt; [
             'Content-Type' =&gt; 'application/json',
@@ -989,11 +1093,11 @@ $response = $client-&gt;get(
                 'medicinePrice' =&gt; 35.0,
                 'stock' =&gt; 100.0,
                 'description' =&gt; 'This medicine.....',
-                'medicineImage' =&gt; 'fuga',
+                'medicineImage' =&gt; 'est',
             ],
-            'data' =&gt; 'perferendis',
-            'getManufacturers' =&gt; 'aspernatur',
-            'medicineData' =&gt; 'ut',
+            'data' =&gt; 'nesciunt',
+            'getManufacturers' =&gt; 'modi',
+            'medicineData' =&gt; 'tempora',
         ],
     ]
 );
@@ -1126,19 +1230,18 @@ All medicine data from table</p>
 </form><h1>Product Controller</h1>
 <p>Handle Products</p>
 <h2>Product Details View</h2>
-<p><small class="badge badge-darkred">requires authentication</small></p>
 <p>Returns the view of product details</p>
 <blockquote>
 <p>Example request:</p>
 </blockquote>
 <pre><code class="language-bash">curl -X GET \
-    -G "http://localhost/medicine/6540378.3650353" \
+    -G "http://localhost/medicine/67.5034" \
     -H "Content-Type: application/json" \
     -H "Accept: application/json" \
-    -d '{"productDetails":"repudiandae"}'
+    -d '{"productDetails":"eum"}'
 </code></pre>
 <pre><code class="language-javascript">const url = new URL(
-    "http://localhost/medicine/6540378.3650353"
+    "http://localhost/medicine/67.5034"
 );
 
 let headers = {
@@ -1147,7 +1250,7 @@ let headers = {
 };
 
 let body = {
-    "productDetails": "repudiandae"
+    "productDetails": "eum"
 }
 
 fetch(url, {
@@ -1158,14 +1261,14 @@ fetch(url, {
 <pre><code class="language-php">
 $client = new \GuzzleHttp\Client();
 $response = $client-&gt;get(
-    'http://localhost/medicine/6540378.3650353',
+    'http://localhost/medicine/67.5034',
     [
         'headers' =&gt; [
             'Content-Type' =&gt; 'application/json',
             'Accept' =&gt; 'application/json',
         ],
         'json' =&gt; [
-            'productDetails' =&gt; 'repudiandae',
+            'productDetails' =&gt; 'eum',
         ],
     ]
 );
@@ -1178,7 +1281,7 @@ print_r(json_decode((string) $body));</code></pre>
     "message": "Call to a member function toArray() on null",
     "exception": "Error",
     "file": "C:\\Users\\Shelby\\Documents\\GitHub\\Cse327Project\\OnlinePharmacyProject\\app\\Http\\Controllers\\Front\\ProductController.php",
-    "line": 27,
+    "line": 26,
     "trace": [
         {
             "file": "C:\\Users\\Shelby\\Documents\\GitHub\\Cse327Project\\OnlinePharmacyProject\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Controller.php",
@@ -1645,7 +1748,7 @@ print_r(json_decode((string) $body));</code></pre>
     <blockquote>Request failed with error:</blockquote>
     <pre><code id="execution-error-message-GETmedicine--id-"></code></pre>
 </div>
-<form id="form-GETmedicine--id-" data-method="GET" data-path="medicine/{id}" data-authed="1" data-hasfiles="0" data-headers='{"Content-Type":"application\/json","Accept":"application\/json"}' onsubmit="event.preventDefault(); executeTryOut('GETmedicine--id-', this);">
+<form id="form-GETmedicine--id-" data-method="GET" data-path="medicine/{id}" data-authed="0" data-hasfiles="0" data-headers='{"Content-Type":"application\/json","Accept":"application\/json"}' onsubmit="event.preventDefault(); executeTryOut('GETmedicine--id-', this);">
 <h3>
     Request&nbsp;&nbsp;&nbsp;
         <button type="button" style="background-color: #8fbcd4; padding: 5px 10px; border-radius: 5px; border-width: thin;" id="btn-tryout-GETmedicine--id-" onclick="tryItOut('GETmedicine--id-');">Try it out ⚡</button>
@@ -1655,9 +1758,6 @@ print_r(json_decode((string) $body));</code></pre>
 <p>
 <small class="badge badge-green">GET</small>
  <b><code>medicine/{id}</code></b>
-</p>
-<p>
-<label id="auth-GETmedicine--id-" hidden>Authorization header: <b><code>Bearer </code></b><input type="text" name="Authorization" data-prefix="Bearer " data-endpoint="GETmedicine--id-" data-component="header"></label>
 </p>
 <h4 class="fancy-heading-panel"><b>URL Parameters</b></h4>
 <p>
@@ -1759,7 +1859,7 @@ print_r(json_decode((string) $body));</code></pre>
                                     &lt;/div&gt;
 
                                     &lt;form method="POST" class="user" action="http://localhost/clogin"&gt;
-                                        &lt;input type="hidden" name="_token" value="FT3aGWHvUg8gHMx7pRCjqhcunRFmmJU9eo2XDYfO"&gt;                                        &lt;div class="form-group"&gt;
+                                        &lt;input type="hidden" name="_token" value="5g4lyPnXJEUU9KFkaOGp130cL6HR0J0NSYDIrbLT"&gt;                                        &lt;div class="form-group"&gt;
                                             &lt;input id="email" class="form-control form-control-user" type="email" name="email" :value="old('email')" placeholder="Email" required autofocus /&gt;
                                         &lt;/div&gt;
                                         &lt;div class="form-group"&gt;
@@ -1910,7 +2010,7 @@ print_r(json_decode((string) $body));</code></pre>
                             &lt;/div&gt;
 
                                                         &lt;form class="user" method="post" action="http://localhost/cregister"&gt;
-                              &lt;input type="hidden" name="_token" value="FT3aGWHvUg8gHMx7pRCjqhcunRFmmJU9eo2XDYfO"&gt;                                &lt;div class="form-group row"&gt;
+                              &lt;input type="hidden" name="_token" value="5g4lyPnXJEUU9KFkaOGp130cL6HR0J0NSYDIrbLT"&gt;                                &lt;div class="form-group row"&gt;
                                     &lt;div class="col-sm-6 mb-3 mb-sm-0"&gt;
                                         &lt;input type="text" class="form-control form-control-user" id="firstName" name="firstName" :value="old('firstName')" placeholder="First Name" required autofocus /&gt;
                                     &lt;/div&gt;
@@ -2017,7 +2117,7 @@ print_r(json_decode((string) $body));</code></pre>
     "http://localhost/clogin" \
     -H "Content-Type: application/json" \
     -H "Accept: application/json" \
-    -d '{"data":"blanditiis"}'
+    -d '{"data":"ut"}'
 </code></pre>
 <pre><code class="language-javascript">const url = new URL(
     "http://localhost/clogin"
@@ -2029,7 +2129,7 @@ let headers = {
 };
 
 let body = {
-    "data": "blanditiis"
+    "data": "ut"
 }
 
 fetch(url, {
@@ -2047,7 +2147,7 @@ $response = $client-&gt;post(
             'Accept' =&gt; 'application/json',
         ],
         'json' =&gt; [
-            'data' =&gt; 'blanditiis',
+            'data' =&gt; 'ut',
         ],
     ]
 );
@@ -2527,7 +2627,7 @@ Password of user</p>
     "http://localhost/cregister" \
     -H "Content-Type: application/json" \
     -H "Accept: application/json" \
-    -d '{"data":"ratione","emailCount":1093780.6515,"userCount":0.47898,"message":"labore","user":{"firstName":"molestias","lastName":"aut","userName":"eos","email":"quibusdam","gender":"facere","age":4066.2321,"address":"velit","phone":20124.337295,"password":"odit"}}'
+    -d '{"data":"quo","emailCount":1.959,"userCount":486.14030571,"message":"explicabo","user":{"firstName":"sit","lastName":"provident","userName":"voluptatem","email":"est","gender":"laboriosam","age":56489.516518493,"address":"aperiam","phone":371.31,"password":"harum"}}'
 </code></pre>
 <pre><code class="language-javascript">const url = new URL(
     "http://localhost/cregister"
@@ -2539,20 +2639,20 @@ let headers = {
 };
 
 let body = {
-    "data": "ratione",
-    "emailCount": 1093780.6515,
-    "userCount": 0.47898,
-    "message": "labore",
+    "data": "quo",
+    "emailCount": 1.959,
+    "userCount": 486.14030571,
+    "message": "explicabo",
     "user": {
-        "firstName": "molestias",
-        "lastName": "aut",
-        "userName": "eos",
-        "email": "quibusdam",
-        "gender": "facere",
-        "age": 4066.2321,
-        "address": "velit",
-        "phone": 20124.337295,
-        "password": "odit"
+        "firstName": "sit",
+        "lastName": "provident",
+        "userName": "voluptatem",
+        "email": "est",
+        "gender": "laboriosam",
+        "age": 56489.516518493,
+        "address": "aperiam",
+        "phone": 371.31,
+        "password": "harum"
     }
 }
 
@@ -2571,20 +2671,20 @@ $response = $client-&gt;post(
             'Accept' =&gt; 'application/json',
         ],
         'json' =&gt; [
-            'data' =&gt; 'ratione',
-            'emailCount' =&gt; 1093780.6515,
-            'userCount' =&gt; 0.47898,
-            'message' =&gt; 'labore',
+            'data' =&gt; 'quo',
+            'emailCount' =&gt; 1.959,
+            'userCount' =&gt; 486.14030571,
+            'message' =&gt; 'explicabo',
             'user' =&gt; [
-                'firstName' =&gt; 'molestias',
-                'lastName' =&gt; 'aut',
-                'userName' =&gt; 'eos',
-                'email' =&gt; 'quibusdam',
-                'gender' =&gt; 'facere',
-                'age' =&gt; 4066.2321,
-                'address' =&gt; 'velit',
-                'phone' =&gt; 20124.337295,
-                'password' =&gt; 'odit',
+                'firstName' =&gt; 'sit',
+                'lastName' =&gt; 'provident',
+                'userName' =&gt; 'voluptatem',
+                'email' =&gt; 'est',
+                'gender' =&gt; 'laboriosam',
+                'age' =&gt; 56489.516518493,
+                'address' =&gt; 'aperiam',
+                'phone' =&gt; 371.31,
+                'password' =&gt; 'harum',
             ],
         ],
     ]
