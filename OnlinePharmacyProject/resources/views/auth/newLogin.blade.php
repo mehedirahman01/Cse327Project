@@ -27,6 +27,7 @@
 
 <body class="bg-gradient-primary">
 
+
     <div class="container">
 
         <!-- Outer Row -->
@@ -80,7 +81,8 @@
                                         @endif
                                     </div>
                                     <div class="text-center">
-                                        <a class="small" href="{{ route('new-register') }}">Create an Account!</a>
+                                        <a class="small" href="{{ url('registration-page') }}">Create an Account!</a> <br>
+                                        <a class="small" href="{{ url('/') }}">Return to homepage</a>
                                     </div>
                                 </div>
                             </div>

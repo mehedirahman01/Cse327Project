@@ -10,15 +10,13 @@
     </div>
     <div class="collapse navbar-collapse" id="myNavbar">
       <ul class="nav navbar-nav">
-        <li class="active"><a href="#">Home</a></li>
-        <li><a href="#">Products</a></li>
-        <li><a href="#">Deals</a></li>
-        <li><a href="#">Contact</a></li>
+        <li class="active"><a href="/">Home</a></li>
+        <li><a href="{{url('/map')}}">Nearby Pharmacy</a></li>
       </ul>
 
       <form class="navbar-form navbar-right" action="">
   <div class="input-group">
-    <input type="text" class="form-control" placeholder="Search medicines">
+    <input type="text" id="searchbox" class="form-control" placeholder="Search medicines">
     <div class="input-group-btn">
       <button class="btn btn-default" type="submit">
         <i class="glyphicon glyphicon-search"></i>
@@ -29,7 +27,7 @@
       @csrf
       <ul class="nav navbar-nav navbar-right">
         @auth
-        <li><a href="#"><span class="glyphicon glyphicon-user"></span> Hello {{ Auth::user()->firstName }}</a></li>
+        <li><a href="{{url('/account')}}"><span class="glyphicon glyphicon-user"></span> Hello {{ Auth::user()->firstName }}</a></li>
         @endauth
         <li class="dropdown"><a href="#"><span class="glyphicon glyphicon-user"></span> Your Account</a>
           <div class="dropdown-content" aria-label="submenu">

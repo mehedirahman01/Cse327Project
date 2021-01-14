@@ -1,18 +1,28 @@
 <?php
 
 namespace App\Http\Controllers\Admin;
-//namespace App\Models;
 
 use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
 use App\Models\Manufacturer;
 
+/**
+ * @group Manufacturer Controller
+ *
+ * Handle Manufacturers of the application.
+ */
+
 class ManufacturerController extends Controller
 {
+    /**
+     * Manufacturer View
+     *
+     * Returns the view of manufacturer
+     * @bodyParam manufacturers array required All manufacturer data from table
+     * @authenticated
+     */
     public function manufacturers(){
-      $manufacturers = Manufacturer::get();
-      //$manufacturers = json_decode(json_encode($manufacturers));
-      //echo "<pre>";print_r($manufacturers);die;
-      return view('admin.manufacturers.manufacturers')->with(compact('manufacturers'));
+        $manufacturers = Manufacturer::get();
+        return view('admin.manufacturers.manufacturers')->with(compact('manufacturers'));
     }
 }
