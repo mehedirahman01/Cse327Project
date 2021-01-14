@@ -23,6 +23,8 @@ class ProductController extends Controller
      * @urlParam id number required Id of the medicine
      */
     public function detail($id){
+
+
     //  $productDetails = Medicine::with(['medicineName','manufacturerId', 'generic','type', 'quantity'=>function($query){
     //      $query->where('status',1);
     //           },'images'])->find($id)->toArray();
@@ -31,35 +33,41 @@ class ProductController extends Controller
         return view('frontend.medicine_detail')->with(compact('productDetails'));
     }
 
-    
-    
+
+
+
     public function addtocart(Request $request){
         if($request->isMethod('post')){
             $data = $request->all();
-          //echo "<pre>"; print_r($data); die;
+
            //generate season id
            $session_id = Session::get('session_id');
            if(empty($session_id)){
-               $sesson_id = Session::getId();
+               $session_id = Session::getId();
                Session::put('session_id', $session_id);
            }
 
-        //   Cart::insert(['session_id'=>$session_id,'id'=>$data['id'],'manufacturerId'=>$data['manufacturerId'],'medicineName'=>$data['medicineName'] ]);
-        $cart=new Cart;
+          //Cart::insert(['session_id'=>$session_id,'medicineId'=>$data['medicineId'],'quantity'=>$data['quantity'] ]);
+
+        $cart = new Cart;
         $cart->session_id = $session_id;
         $cart->quantity = $data['quantity'];
-    //  $cart->manufacturerId = $data['manufacturerId'];
-   
-        $cart->save();
+        $cart->medicineId = $data['medicineId'];
+    //     echo "<pre>"; print_r($session_id); die;
 
-         
-           $message = "Product has been added to cart";
-           session::flash('success_message',$message);
-           return redirect()->back();
-        }
-       
-        
+        $cart->save();
+        $message = "Product has been added to cart";
+        session::flash('success_message',$message);
+        return redirect()->back();
+
+    //       $message = "Product has been added to cart";
+    //       session::flash('success_message',$message);
+    //       return redirect()->back();
+    //    }
 
 
     }
 }
+
+}
+
