@@ -37,11 +37,14 @@
                   <thead>
                   <tr>
                     <th>ID</th>
+                    <th>Actions</th>
                     <th>Name</th>
                     <th>Generic</th>
                     <th>Type</th>
                     <th>Quantity</th>
                     <th>Dose</th>
+                    <th>Description</th>
+                    <th>Medicine Image</th>
                     <th>Medicine Price</th>
                     <th>Stock</th>
                   </tr>
@@ -50,11 +53,14 @@
                   @foreach($medicines as $medicine)
                   <tr>
                     <td>{{$medicine->id}}</td>
+                    <td> <a href="add-edit-medicine/{{$medicine->id}}">Edit</a> <a href="delete-medicine/{{$medicine->id}}">Delete</a> </td>
                     <td>{{$medicine->medicineName}}</td>
                     <td>{{$medicine->generic}}</td>
                     <td>{{$medicine->type}}</td>
                     <td>{{$medicine->quantity}}</td>
                     <td>{{$medicine->dose}}</td>
+                    <td>{{$medicine->description}}</td>
+                    <td> <img src="{{asset('images/medicine_images/'.$medicine->medicineImage)}}" alt=""> </td>
                     <td>{{$medicine->medicinePrice}}</td>
                     <td>{{$medicine->stock}}</td>
 

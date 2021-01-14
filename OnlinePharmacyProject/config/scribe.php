@@ -33,7 +33,7 @@ return [
                 /*
                  * Match only routes whose paths match this pattern (use * as a wildcard to match any characters). Example: 'users/*'.
                  */
-                'prefixes' => ['*'],
+                'prefixes' => ['map','admin/medicines','admin/add-edit-medicine/{id?}','admin/manufacturers','admin/login','admin/admin_dashboard','admin/logout','/','medicine/{id}','login-page','registration-page','clogin','cregister','logout'],
 
                 /*
                  * [Dingo router only] Match only routes registered under this version. Wildcards are not supported.
@@ -79,7 +79,7 @@ return [
                      * API calls will be made only for routes in this group matching these HTTP methods (GET, POST, etc).
                      * List the methods here or use '*' to mean all methods. Leave empty to disable API calls.
                      */
-                    'methods' => ['GET'],
+                    'methods' => ['GET','POST'],
 
                     /*
                      * Laravel config variables which should be set for the API call.
@@ -178,7 +178,7 @@ return [
         /*
          * Set this to true if any endpoints in your API use authentication.
          */
-        'enabled' => true,
+        'enabled' => false,
 
         /*
          * Set this to true if your API should be authenticated by default. If so, you must also set `enabled` (above) to true.
@@ -237,6 +237,7 @@ INTRO
     'example_languages' => [
         'bash',
         'javascript',
+        'php',
     ],
 
     /*

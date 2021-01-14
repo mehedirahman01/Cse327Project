@@ -17,5 +17,7 @@ class Medicine extends Model
         'dose',
         'medicinePrice',
         'stock',
+        'description',
+        'medicineImage',
     ];
 }
