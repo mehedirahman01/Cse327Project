@@ -23,16 +23,9 @@ class ProductController extends Controller
      * @urlParam id number required Id of the medicine
      */
     public function detail($id){
-
-
-    //  $productDetails = Medicine::with(['medicineName','manufacturerId', 'generic','type', 'quantity'=>function($query){
-    //      $query->where('status',1);
-    //           },'images'])->find($id)->toArray();
-  
         $productDetails= Medicine::find($id)->toArray();
         return view('frontend.medicine_detail')->with(compact('productDetails'));
     }
-
 
 
 
@@ -66,8 +59,15 @@ class ProductController extends Controller
     //    }
 
 
+
+
     }
 }
-
+public function search(){
+$search_text =$_GET['query'];
+$productDetails = Medicine::where('medicineName', 'LIKE', '%'.$search_text.'%')->get();
+return view('frontend.search',compact('productDetails'));
 }
 
+
+}

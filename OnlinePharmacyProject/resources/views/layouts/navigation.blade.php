@@ -14,9 +14,10 @@
         <li><a href="{{url('/map')}}">Nearby Pharmacy</a></li>
       </ul>
 
-      <form class="navbar-form navbar-right" action="">
+      <form class="navbar-form navbar-right" type="get" action="{{ url('/search')}}">
   <div class="input-group">
-    <input type="text" id="searchbox" class="form-control" placeholder="Search medicines">
+  
+    <input type="text" name="query" id="searchbox" class="form-control" placeholder="Search medicines">
     <div class="input-group-btn">
       <button class="btn btn-default" type="submit">
         <i class="glyphicon glyphicon-search"></i>
