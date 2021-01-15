@@ -10,6 +10,7 @@
     ],
     "info": {
         "name": "Laravel",
+
         "_postman_id": "c81c85c4-4148-42e0-9f3a-402ff05839b2",
         "description": "",
         "schema": "https:\/\/schema.getpostman.com\/json\/collection\/v2.1.0\/collection.json"
@@ -42,7 +43,9 @@
                         ],
                         "body": {
                             "mode": "raw",
+
                             "raw": "{\n    \"data\": \"et\"\n}"
+
                         },
                         "description": "Handles admin login",
                         "auth": {
@@ -132,7 +135,9 @@
                         ],
                         "body": {
                             "mode": "raw",
+
                             "raw": "{\n    \"newMedicines\": \"mollitia\"\n}"
+
                         },
                         "description": "Returns the view of homepage",
                         "auth": {
@@ -170,6 +175,7 @@
                         ],
                         "body": {
                             "mode": "raw",
+
                             "raw": "{\n    \"manufacturers\": \"in\"\n}"
                         },
                         "description": "Returns the view of manufacturer"
@@ -240,6 +246,7 @@
                         ],
                         "body": {
                             "mode": "raw",
+
                             "raw": "{\n    \"medicines\": \"sit\"\n}"
                         },
                         "description": "Returns the view of medicine"
@@ -259,6 +266,7 @@
                                 {
                                     "id": "id",
                                     "key": "id",
+
                                     "value": "67.944422",
                                     "description": "Id of the medicine"
                                 }
@@ -277,7 +285,9 @@
                         ],
                         "body": {
                             "mode": "raw",
+
                             "raw": "{\n    \"medicine\": {\n        \"manufacturerId\": 1,\n        \"medicineName\": \"Alatrol\",\n        \"generic\": \"Cetirizine Hydrochloride\",\n        \"type\": \"Tablet\",\n        \"quantity\": 10,\n        \"dose\": \"2.5 mg\",\n        \"medicinePrice\": 35,\n        \"stock\": 100,\n        \"description\": \"This medicine.....\",\n        \"medicineImage\": \"nesciunt\"\n    },\n    \"data\": \"qui\",\n    \"getManufacturers\": \"unde\",\n    \"medicineData\": \"et\"\n}"
+
                         },
                         "description": "Can add or edit medicine\n\nReturns to medicine page"
                     },
@@ -302,7 +312,9 @@
                                 {
                                     "id": "id",
                                     "key": "id",
+
                                     "value": "50609211.157573",
+
                                     "description": "Id of the medicine"
                                 }
                             ]
@@ -320,6 +332,7 @@
                         ],
                         "body": {
                             "mode": "raw",
+
                             "raw": "{\n    \"productDetails\": \"dolorum\"\n}"
                         },
                         "description": "Returns the view of product details",
@@ -480,7 +493,9 @@
                         ],
                         "body": {
                             "mode": "raw",
+
                             "raw": "{\n    \"data\": \"excepturi\"\n}"
+
                         },
                         "description": "Handles user login",
                         "auth": {
@@ -512,7 +527,9 @@
                         ],
                         "body": {
                             "mode": "raw",
+
                             "raw": "{\n    \"data\": \"suscipit\",\n    \"emailCount\": 14303807.156510191,\n    \"userCount\": 6462.92,\n    \"message\": \"enim\",\n    \"user\": {\n        \"firstName\": \"nesciunt\",\n        \"lastName\": \"est\",\n        \"userName\": \"velit\",\n        \"email\": \"rerum\",\n        \"gender\": \"sed\",\n        \"age\": 7.7,\n        \"address\": \"autem\",\n        \"phone\": 399636069.7949773,\n        \"password\": \"consectetur\"\n    }\n}"
+
                         },
                         "description": "Returns to homepage",
                         "auth": {

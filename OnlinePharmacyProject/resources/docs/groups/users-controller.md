@@ -101,7 +101,9 @@ print_r(json_decode((string) $body));
                                     </div>
                                     
                                     <form method="POST" class="user" action="http://localhost/clogin">
+
                                         <input type="hidden" name="_token" value="z0YEFnWK1D5I9QDy3oJdOABHYgC09vSERZhswbvV">                                        <div class="form-group">
+
                                             <input id="email" class="form-control form-control-user" type="email" name="email" :value="old('email')" placeholder="Email" required autofocus />
                                         </div>
                                         <div class="form-group">
@@ -270,7 +272,9 @@ print_r(json_decode((string) $body));
                             </div>
 
                                                         <form class="user" method="post" action="http://localhost/cregister">
+
                               <input type="hidden" name="_token" value="z0YEFnWK1D5I9QDy3oJdOABHYgC09vSERZhswbvV">                                <div class="form-group row">
+
                                     <div class="col-sm-6 mb-3 mb-sm-0">
                                         <input type="text" class="form-control form-control-user" id="firstName" name="firstName" :value="old('firstName')" placeholder="First Name" required autofocus />
                                     </div>
@@ -383,7 +387,9 @@ curl -X POST \
     "http://localhost/clogin" \
     -H "Content-Type: application/json" \
     -H "Accept: application/json" \
+
     -d '{"data":"excepturi"}'
+
 
 ```
 
@@ -398,7 +404,9 @@ let headers = {
 };
 
 let body = {
+
     "data": "excepturi"
+
 }
 
 fetch(url, {
@@ -419,7 +427,9 @@ $response = $client->post(
             'Accept' => 'application/json',
         ],
         'json' => [
+
             'data' => 'excepturi',
+
         ],
     ]
 );
@@ -908,7 +918,9 @@ curl -X POST \
     "http://localhost/cregister" \
     -H "Content-Type: application/json" \
     -H "Accept: application/json" \
+
     -d '{"data":"suscipit","emailCount":14303807.156510191,"userCount":6462.92,"message":"enim","user":{"firstName":"nesciunt","lastName":"est","userName":"velit","email":"rerum","gender":"sed","age":7.7,"address":"autem","phone":399636069.7949773,"password":"consectetur"}}'
+
 
 ```
 
@@ -923,6 +935,7 @@ let headers = {
 };
 
 let body = {
+
     "data": "suscipit",
     "emailCount": 14303807.156510191,
     "userCount": 6462.92,
@@ -937,6 +950,7 @@ let body = {
         "address": "autem",
         "phone": 399636069.7949773,
         "password": "consectetur"
+
     }
 }
 
@@ -958,6 +972,7 @@ $response = $client->post(
             'Accept' => 'application/json',
         ],
         'json' => [
+
             'data' => 'suscipit',
             'emailCount' => 14303807.156510191,
             'userCount' => 6462.92,
@@ -972,6 +987,7 @@ $response = $client->post(
                 'address' => 'autem',
                 'phone' => 399636069.7949773,
                 'password' => 'consectetur',
+
             ],
         ],
     ]

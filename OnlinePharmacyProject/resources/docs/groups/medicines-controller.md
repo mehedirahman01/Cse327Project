@@ -15,7 +15,9 @@ curl -X GET \
     -G "http://localhost/admin/medicines" \
     -H "Content-Type: application/json" \
     -H "Accept: application/json" \
+
     -d '{"medicines":"sit"}'
+
 
 ```
 
@@ -30,7 +32,9 @@ let headers = {
 };
 
 let body = {
+
     "medicines": "sit"
+
 }
 
 fetch(url, {
@@ -51,7 +55,9 @@ $response = $client->get(
             'Accept' => 'application/json',
         ],
         'json' => [
+
             'medicines' => 'sit',
+
         ],
     ]
 );
@@ -121,16 +127,20 @@ Returns to medicine page
 
 ```bash
 curl -X GET \
+
     -G "http://localhost/admin/add-edit-medicine/67.944422" \
     -H "Content-Type: application/json" \
     -H "Accept: application/json" \
     -d '{"medicine":{"manufacturerId":1,"medicineName":"Alatrol","generic":"Cetirizine Hydrochloride","type":"Tablet","quantity":10,"dose":"2.5 mg","medicinePrice":35,"stock":100,"description":"This medicine.....","medicineImage":"nesciunt"},"data":"qui","getManufacturers":"unde","medicineData":"et"}'
 
+
 ```
 
 ```javascript
 const url = new URL(
+
     "http://localhost/admin/add-edit-medicine/67.944422"
+
 );
 
 let headers = {
@@ -149,11 +159,13 @@ let body = {
         "medicinePrice": 35,
         "stock": 100,
         "description": "This medicine.....",
+
         "medicineImage": "nesciunt"
     },
     "data": "qui",
     "getManufacturers": "unde",
     "medicineData": "et"
+
 }
 
 fetch(url, {
@@ -167,7 +179,9 @@ fetch(url, {
 
 $client = new \GuzzleHttp\Client();
 $response = $client->get(
+
     'http://localhost/admin/add-edit-medicine/67.944422',
+
     [
         'headers' => [
             'Content-Type' => 'application/json',
@@ -184,11 +198,13 @@ $response = $client->get(
                 'medicinePrice' => 35.0,
                 'stock' => 100.0,
                 'description' => 'This medicine.....',
+
                 'medicineImage' => 'nesciunt',
             ],
             'data' => 'qui',
             'getManufacturers' => 'unde',
             'medicineData' => 'et',
+
         ],
     ]
 );

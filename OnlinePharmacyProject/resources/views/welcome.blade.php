@@ -67,7 +67,7 @@
 									{{$medicine['generic']}}
 								</p>
 
-								<h4 style="text-align:center"><a class="btn" href="/medicine/{{$medicine['id']}}">View</a> <a class="btn" href="#">Add to Cart</i></a> <a class="btn btn-primary" href="#">{{$medicine['medicinePrice']}} Tk</a></h4>
+								<h4 style="text-align:center"><a class="btn btn-primary" href="#">{{$medicine['medicinePrice']}} Tk</a><a class="btn" href="/medicine/{{$medicine['id']}}">View Details</a> </h4>
 							</div>
 						</div>
 					</li>
