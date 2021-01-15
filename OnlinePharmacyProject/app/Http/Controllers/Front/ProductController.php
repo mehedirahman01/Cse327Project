@@ -50,7 +50,7 @@ class ProductController extends Controller
 
         $cart->save();
         $message = "Product has been added to cart";
-        session::flash('success_message',$message);
+        session::flash('success_message2',$message);
         return redirect()->back();
 
     //       $message = "Product has been added to cart";

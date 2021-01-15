@@ -10,7 +10,7 @@
     ],
     "info": {
         "name": "Laravel",
-        "_postman_id": "40410f16-b29a-42f3-bb66-0c19279def4f",
+        "_postman_id": "985ca04b-3395-4261-88ea-aef5344c6a4e",
         "description": "",
         "schema": "https:\/\/schema.getpostman.com\/json\/collection\/v2.1.0\/collection.json"
     },
@@ -42,7 +42,7 @@
                         ],
                         "body": {
                             "mode": "raw",
-                            "raw": "{\n    \"data\": \"dolore\"\n}"
+                            "raw": "{\n    \"data\": \"assumenda\"\n}"
                         },
                         "description": "Handles admin login",
                         "auth": {
@@ -132,7 +132,7 @@
                         ],
                         "body": {
                             "mode": "raw",
-                            "raw": "{\n    \"newMedicines\": \"est\"\n}"
+                            "raw": "{\n    \"newMedicines\": \"cupiditate\"\n}"
                         },
                         "description": "Returns the view of homepage",
                         "auth": {
@@ -170,7 +170,7 @@
                         ],
                         "body": {
                             "mode": "raw",
-                            "raw": "{\n    \"manufacturers\": \"soluta\"\n}"
+                            "raw": "{\n    \"manufacturers\": \"eos\"\n}"
                         },
                         "description": "Returns the view of manufacturer"
                     },
@@ -240,7 +240,7 @@
                         ],
                         "body": {
                             "mode": "raw",
-                            "raw": "{\n    \"medicines\": \"quibusdam\"\n}"
+                            "raw": "{\n    \"medicines\": \"quia\"\n}"
                         },
                         "description": "Returns the view of medicine"
                     },
@@ -259,7 +259,7 @@
                                 {
                                     "id": "id",
                                     "key": "id",
-                                    "value": "145882.35745868",
+                                    "value": "1270527.06926",
                                     "description": "Id of the medicine"
                                 }
                             ]
@@ -277,7 +277,7 @@
                         ],
                         "body": {
                             "mode": "raw",
-                            "raw": "{\n    \"medicine\": {\n        \"manufacturerId\": 1,\n        \"medicineName\": \"Alatrol\",\n        \"generic\": \"Cetirizine Hydrochloride\",\n        \"type\": \"Tablet\",\n        \"quantity\": 10,\n        \"dose\": \"2.5 mg\",\n        \"medicinePrice\": 35,\n        \"stock\": 100,\n        \"description\": \"This medicine.....\",\n        \"medicineImage\": \"est\"\n    },\n    \"data\": \"nesciunt\",\n    \"getManufacturers\": \"modi\",\n    \"medicineData\": \"tempora\"\n}"
+                            "raw": "{\n    \"medicine\": {\n        \"manufacturerId\": 1,\n        \"medicineName\": \"Alatrol\",\n        \"generic\": \"Cetirizine Hydrochloride\",\n        \"type\": \"Tablet\",\n        \"quantity\": 10,\n        \"dose\": \"2.5 mg\",\n        \"medicinePrice\": 35,\n        \"stock\": 100,\n        \"description\": \"This medicine.....\",\n        \"medicineImage\": \"et\"\n    },\n    \"data\": \"sed\",\n    \"getManufacturers\": \"quis\",\n    \"medicineData\": \"exercitationem\"\n}"
                         },
                         "description": "Can add or edit medicine\n\nReturns to medicine page"
                     },
@@ -302,7 +302,7 @@
                                 {
                                     "id": "id",
                                     "key": "id",
-                                    "value": "67.5034",
+                                    "value": "2089.346397",
                                     "description": "Id of the medicine"
                                 }
                             ]
@@ -320,7 +320,7 @@
                         ],
                         "body": {
                             "mode": "raw",
-                            "raw": "{\n    \"productDetails\": \"eum\"\n}"
+                            "raw": "{\n    \"productDetails\": \"assumenda\"\n}"
                         },
                         "description": "Returns the view of product details",
                         "auth": {
@@ -416,7 +416,7 @@
                         ],
                         "body": {
                             "mode": "raw",
-                            "raw": "{\n    \"data\": \"ut\"\n}"
+                            "raw": "{\n    \"data\": \"labore\"\n}"
                         },
                         "description": "Handles user login",
                         "auth": {
@@ -448,7 +448,7 @@
                         ],
                         "body": {
                             "mode": "raw",
-                            "raw": "{\n    \"data\": \"quo\",\n    \"emailCount\": 1.959,\n    \"userCount\": 486.14030571,\n    \"message\": \"explicabo\",\n    \"user\": {\n        \"firstName\": \"sit\",\n        \"lastName\": \"provident\",\n        \"userName\": \"voluptatem\",\n        \"email\": \"est\",\n        \"gender\": \"laboriosam\",\n        \"age\": 56489.516518493,\n        \"address\": \"aperiam\",\n        \"phone\": 371.31,\n        \"password\": \"harum\"\n    }\n}"
+                            "raw": "{\n    \"data\": \"aut\",\n    \"emailCount\": 122795745.91280504,\n    \"userCount\": 132,\n    \"message\": \"blanditiis\",\n    \"user\": {\n        \"firstName\": \"aut\",\n        \"lastName\": \"iusto\",\n        \"userName\": \"eveniet\",\n        \"email\": \"eaque\",\n        \"gender\": \"doloribus\",\n        \"age\": 162.891,\n        \"address\": \"quasi\",\n        \"phone\": 1.335255,\n        \"password\": \"sed\"\n    }\n}"
                         },
                         "description": "Returns to homepage",
                         "auth": {

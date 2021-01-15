@@ -45,7 +45,7 @@
                             <li><a href='http://github.com/knuckleswtf/scribe'>Documentation powered by Scribe ✍</a></li>
                     </ul>
             <ul class="toc-footer" id="last-updated">
-            <li>Last updated: January 13 2021</li>
+            <li>Last updated: January 15 2021</li>
         </ul>
 </div>
 <div class="page-wrapper">
@@ -75,7 +75,7 @@ You can switch the language used with the tabs at the top right (or from the nav
     -G "http://localhost/admin/login" \
     -H "Content-Type: application/json" \
     -H "Accept: application/json" \
-    -d '{"data":"dolore"}'
+    -d '{"data":"assumenda"}'
 </code></pre>
 <pre><code class="language-javascript">const url = new URL(
     "http://localhost/admin/login"
@@ -87,7 +87,7 @@ let headers = {
 };
 
 let body = {
-    "data": "dolore"
+    "data": "assumenda"
 }
 
 fetch(url, {
@@ -105,7 +105,7 @@ $response = $client-&gt;get(
             'Accept' =&gt; 'application/json',
         ],
         'json' =&gt; [
-            'data' =&gt; 'dolore',
+            'data' =&gt; 'assumenda',
         ],
     ]
 );
@@ -159,7 +159,7 @@ print_r(json_decode((string) $body));</code></pre>
                                         &lt;h1 class="h4 text-gray-900 mb-4"&gt;Welcome Back!&lt;/h1&gt;
                                     &lt;/div&gt;
                                                                         &lt;form method="POST" class="user" action="http://localhost/admin/login"&gt;
-                                        &lt;input type="hidden" name="_token" value="5g4lyPnXJEUU9KFkaOGp130cL6HR0J0NSYDIrbLT"&gt;                                        &lt;div class="form-group"&gt;
+                                        &lt;input type="hidden" name="_token" value="kQ7T5q2UWwCRjC1chIIDEEEzbBkRztpcfgt4Li7d"&gt;                                        &lt;div class="form-group"&gt;
                                             &lt;input id="email" class="form-control form-control-user" type="email" name="email" :value="old('email')" placeholder="Email" required autofocus /&gt;
                                         &lt;/div&gt;
                                         &lt;div class="form-group"&gt;
@@ -415,7 +415,7 @@ print_r(json_decode((string) $body));</code></pre>
     -G "http://localhost/" \
     -H "Content-Type: application/json" \
     -H "Accept: application/json" \
-    -d '{"newMedicines":"est"}'
+    -d '{"newMedicines":"cupiditate"}'
 </code></pre>
 <pre><code class="language-javascript">const url = new URL(
     "http://localhost/"
@@ -427,7 +427,7 @@ let headers = {
 };
 
 let body = {
-    "newMedicines": "est"
+    "newMedicines": "cupiditate"
 }
 
 fetch(url, {
@@ -445,7 +445,7 @@ $response = $client-&gt;get(
             'Accept' =&gt; 'application/json',
         ],
         'json' =&gt; [
-            'newMedicines' =&gt; 'est',
+            'newMedicines' =&gt; 'cupiditate',
         ],
     ]
 );
@@ -555,9 +555,10 @@ print_r(json_decode((string) $body));</code></pre>
         &lt;li&gt;&lt;a href="http://localhost/map"&gt;Nearby Pharmacy&lt;/a&gt;&lt;/li&gt;
       &lt;/ul&gt;
 
-      &lt;form class="navbar-form navbar-right" action=""&gt;
+      &lt;form class="navbar-form navbar-right" type="get" action="http://localhost/search"&gt;
   &lt;div class="input-group"&gt;
-    &lt;input type="text" id="searchbox" class="form-control" placeholder="Search medicines"&gt;
+
+    &lt;input type="text" name="query" id="searchbox" class="form-control" placeholder="Search medicines"&gt;
     &lt;div class="input-group-btn"&gt;
       &lt;button class="btn btn-default" type="submit"&gt;
         &lt;i class="glyphicon glyphicon-search"&gt;&lt;/i&gt;
@@ -565,7 +566,7 @@ print_r(json_decode((string) $body));</code></pre>
     &lt;/div&gt;
   &lt;/div&gt;
 &lt;/form&gt;
-      &lt;input type="hidden" name="_token" value="5g4lyPnXJEUU9KFkaOGp130cL6HR0J0NSYDIrbLT"&gt;      &lt;ul class="nav navbar-nav navbar-right"&gt;
+      &lt;input type="hidden" name="_token" value="kQ7T5q2UWwCRjC1chIIDEEEzbBkRztpcfgt4Li7d"&gt;      &lt;ul class="nav navbar-nav navbar-right"&gt;
                 &lt;li class="dropdown"&gt;&lt;a href="#"&gt;&lt;span class="glyphicon glyphicon-user"&gt;&lt;/span&gt; Your Account&lt;/a&gt;
           &lt;div class="dropdown-content" aria-label="submenu"&gt;
                                     &lt;a href="http://localhost/registration-page"&gt;Register&lt;/a&gt;
@@ -698,7 +699,7 @@ Newly added medicine data from table</p>
     -G "http://localhost/admin/manufacturers" \
     -H "Content-Type: application/json" \
     -H "Accept: application/json" \
-    -d '{"manufacturers":"soluta"}'
+    -d '{"manufacturers":"eos"}'
 </code></pre>
 <pre><code class="language-javascript">const url = new URL(
     "http://localhost/admin/manufacturers"
@@ -710,7 +711,7 @@ let headers = {
 };
 
 let body = {
-    "manufacturers": "soluta"
+    "manufacturers": "eos"
 }
 
 fetch(url, {
@@ -728,7 +729,7 @@ $response = $client-&gt;get(
             'Accept' =&gt; 'application/json',
         ],
         'json' =&gt; [
-            'manufacturers' =&gt; 'soluta',
+            'manufacturers' =&gt; 'eos',
         ],
     ]
 );
@@ -946,7 +947,7 @@ print_r(json_decode((string) $body));</code></pre>
     -G "http://localhost/admin/medicines" \
     -H "Content-Type: application/json" \
     -H "Accept: application/json" \
-    -d '{"medicines":"quibusdam"}'
+    -d '{"medicines":"quia"}'
 </code></pre>
 <pre><code class="language-javascript">const url = new URL(
     "http://localhost/admin/medicines"
@@ -958,7 +959,7 @@ let headers = {
 };
 
 let body = {
-    "medicines": "quibusdam"
+    "medicines": "quia"
 }
 
 fetch(url, {
@@ -976,7 +977,7 @@ $response = $client-&gt;get(
             'Accept' =&gt; 'application/json',
         ],
         'json' =&gt; [
-            'medicines' =&gt; 'quibusdam',
+            'medicines' =&gt; 'quia',
         ],
     ]
 );
@@ -1036,13 +1037,13 @@ All medicine data from table</p>
 <p>Example request:</p>
 </blockquote>
 <pre><code class="language-bash">curl -X GET \
-    -G "http://localhost/admin/add-edit-medicine/145882.35745868" \
+    -G "http://localhost/admin/add-edit-medicine/1270527.06926" \
     -H "Content-Type: application/json" \
     -H "Accept: application/json" \
-    -d '{"medicine":{"manufacturerId":1,"medicineName":"Alatrol","generic":"Cetirizine Hydrochloride","type":"Tablet","quantity":10,"dose":"2.5 mg","medicinePrice":35,"stock":100,"description":"This medicine.....","medicineImage":"est"},"data":"nesciunt","getManufacturers":"modi","medicineData":"tempora"}'
+    -d '{"medicine":{"manufacturerId":1,"medicineName":"Alatrol","generic":"Cetirizine Hydrochloride","type":"Tablet","quantity":10,"dose":"2.5 mg","medicinePrice":35,"stock":100,"description":"This medicine.....","medicineImage":"et"},"data":"sed","getManufacturers":"quis","medicineData":"exercitationem"}'
 </code></pre>
 <pre><code class="language-javascript">const url = new URL(
-    "http://localhost/admin/add-edit-medicine/145882.35745868"
+    "http://localhost/admin/add-edit-medicine/1270527.06926"
 );
 
 let headers = {
@@ -1061,11 +1062,11 @@ let body = {
         "medicinePrice": 35,
         "stock": 100,
         "description": "This medicine.....",
-        "medicineImage": "est"
+        "medicineImage": "et"
     },
-    "data": "nesciunt",
-    "getManufacturers": "modi",
-    "medicineData": "tempora"
+    "data": "sed",
+    "getManufacturers": "quis",
+    "medicineData": "exercitationem"
 }
 
 fetch(url, {
@@ -1076,7 +1077,7 @@ fetch(url, {
 <pre><code class="language-php">
 $client = new \GuzzleHttp\Client();
 $response = $client-&gt;get(
-    'http://localhost/admin/add-edit-medicine/145882.35745868',
+    'http://localhost/admin/add-edit-medicine/1270527.06926',
     [
         'headers' =&gt; [
             'Content-Type' =&gt; 'application/json',
@@ -1093,11 +1094,11 @@ $response = $client-&gt;get(
                 'medicinePrice' =&gt; 35.0,
                 'stock' =&gt; 100.0,
                 'description' =&gt; 'This medicine.....',
-                'medicineImage' =&gt; 'est',
+                'medicineImage' =&gt; 'et',
             ],
-            'data' =&gt; 'nesciunt',
-            'getManufacturers' =&gt; 'modi',
-            'medicineData' =&gt; 'tempora',
+            'data' =&gt; 'sed',
+            'getManufacturers' =&gt; 'quis',
+            'medicineData' =&gt; 'exercitationem',
         ],
     ]
 );
@@ -1235,13 +1236,13 @@ All medicine data from table</p>
 <p>Example request:</p>
 </blockquote>
 <pre><code class="language-bash">curl -X GET \
-    -G "http://localhost/medicine/67.5034" \
+    -G "http://localhost/medicine/2089.346397" \
     -H "Content-Type: application/json" \
     -H "Accept: application/json" \
-    -d '{"productDetails":"eum"}'
+    -d '{"productDetails":"assumenda"}'
 </code></pre>
 <pre><code class="language-javascript">const url = new URL(
-    "http://localhost/medicine/67.5034"
+    "http://localhost/medicine/2089.346397"
 );
 
 let headers = {
@@ -1250,7 +1251,7 @@ let headers = {
 };
 
 let body = {
-    "productDetails": "eum"
+    "productDetails": "assumenda"
 }
 
 fetch(url, {
@@ -1261,14 +1262,14 @@ fetch(url, {
 <pre><code class="language-php">
 $client = new \GuzzleHttp\Client();
 $response = $client-&gt;get(
-    'http://localhost/medicine/67.5034',
+    'http://localhost/medicine/2089.346397',
     [
         'headers' =&gt; [
             'Content-Type' =&gt; 'application/json',
             'Accept' =&gt; 'application/json',
         ],
         'json' =&gt; [
-            'productDetails' =&gt; 'eum',
+            'productDetails' =&gt; 'assumenda',
         ],
     ]
 );
@@ -1859,7 +1860,7 @@ print_r(json_decode((string) $body));</code></pre>
                                     &lt;/div&gt;
 
                                     &lt;form method="POST" class="user" action="http://localhost/clogin"&gt;
-                                        &lt;input type="hidden" name="_token" value="5g4lyPnXJEUU9KFkaOGp130cL6HR0J0NSYDIrbLT"&gt;                                        &lt;div class="form-group"&gt;
+                                        &lt;input type="hidden" name="_token" value="kQ7T5q2UWwCRjC1chIIDEEEzbBkRztpcfgt4Li7d"&gt;                                        &lt;div class="form-group"&gt;
                                             &lt;input id="email" class="form-control form-control-user" type="email" name="email" :value="old('email')" placeholder="Email" required autofocus /&gt;
                                         &lt;/div&gt;
                                         &lt;div class="form-group"&gt;
@@ -2010,7 +2011,7 @@ print_r(json_decode((string) $body));</code></pre>
                             &lt;/div&gt;
 
                                                         &lt;form class="user" method="post" action="http://localhost/cregister"&gt;
-                              &lt;input type="hidden" name="_token" value="5g4lyPnXJEUU9KFkaOGp130cL6HR0J0NSYDIrbLT"&gt;                                &lt;div class="form-group row"&gt;
+                              &lt;input type="hidden" name="_token" value="kQ7T5q2UWwCRjC1chIIDEEEzbBkRztpcfgt4Li7d"&gt;                                &lt;div class="form-group row"&gt;
                                     &lt;div class="col-sm-6 mb-3 mb-sm-0"&gt;
                                         &lt;input type="text" class="form-control form-control-user" id="firstName" name="firstName" :value="old('firstName')" placeholder="First Name" required autofocus /&gt;
                                     &lt;/div&gt;
@@ -2117,7 +2118,7 @@ print_r(json_decode((string) $body));</code></pre>
     "http://localhost/clogin" \
     -H "Content-Type: application/json" \
     -H "Accept: application/json" \
-    -d '{"data":"ut"}'
+    -d '{"data":"labore"}'
 </code></pre>
 <pre><code class="language-javascript">const url = new URL(
     "http://localhost/clogin"
@@ -2129,7 +2130,7 @@ let headers = {
 };
 
 let body = {
-    "data": "ut"
+    "data": "labore"
 }
 
 fetch(url, {
@@ -2147,7 +2148,7 @@ $response = $client-&gt;post(
             'Accept' =&gt; 'application/json',
         ],
         'json' =&gt; [
-            'data' =&gt; 'ut',
+            'data' =&gt; 'labore',
         ],
     ]
 );
@@ -2627,7 +2628,7 @@ Password of user</p>
     "http://localhost/cregister" \
     -H "Content-Type: application/json" \
     -H "Accept: application/json" \
-    -d '{"data":"quo","emailCount":1.959,"userCount":486.14030571,"message":"explicabo","user":{"firstName":"sit","lastName":"provident","userName":"voluptatem","email":"est","gender":"laboriosam","age":56489.516518493,"address":"aperiam","phone":371.31,"password":"harum"}}'
+    -d '{"data":"aut","emailCount":122795745.91280504,"userCount":132,"message":"blanditiis","user":{"firstName":"aut","lastName":"iusto","userName":"eveniet","email":"eaque","gender":"doloribus","age":162.891,"address":"quasi","phone":1.335255,"password":"sed"}}'
 </code></pre>
 <pre><code class="language-javascript">const url = new URL(
     "http://localhost/cregister"
@@ -2639,20 +2640,20 @@ let headers = {
 };
 
 let body = {
-    "data": "quo",
-    "emailCount": 1.959,
-    "userCount": 486.14030571,
-    "message": "explicabo",
+    "data": "aut",
+    "emailCount": 122795745.91280504,
+    "userCount": 132,
+    "message": "blanditiis",
     "user": {
-        "firstName": "sit",
-        "lastName": "provident",
-        "userName": "voluptatem",
-        "email": "est",
-        "gender": "laboriosam",
-        "age": 56489.516518493,
-        "address": "aperiam",
-        "phone": 371.31,
-        "password": "harum"
+        "firstName": "aut",
+        "lastName": "iusto",
+        "userName": "eveniet",
+        "email": "eaque",
+        "gender": "doloribus",
+        "age": 162.891,
+        "address": "quasi",
+        "phone": 1.335255,
+        "password": "sed"
     }
 }
 
@@ -2671,20 +2672,20 @@ $response = $client-&gt;post(
             'Accept' =&gt; 'application/json',
         ],
         'json' =&gt; [
-            'data' =&gt; 'quo',
-            'emailCount' =&gt; 1.959,
-            'userCount' =&gt; 486.14030571,
-            'message' =&gt; 'explicabo',
+            'data' =&gt; 'aut',
+            'emailCount' =&gt; 122795745.91280504,
+            'userCount' =&gt; 132.0,
+            'message' =&gt; 'blanditiis',
             'user' =&gt; [
-                'firstName' =&gt; 'sit',
-                'lastName' =&gt; 'provident',
-                'userName' =&gt; 'voluptatem',
-                'email' =&gt; 'est',
-                'gender' =&gt; 'laboriosam',
-                'age' =&gt; 56489.516518493,
-                'address' =&gt; 'aperiam',
-                'phone' =&gt; 371.31,
-                'password' =&gt; 'harum',
+                'firstName' =&gt; 'aut',
+                'lastName' =&gt; 'iusto',
+                'userName' =&gt; 'eveniet',
+                'email' =&gt; 'eaque',
+                'gender' =&gt; 'doloribus',
+                'age' =&gt; 162.891,
+                'address' =&gt; 'quasi',
+                'phone' =&gt; 1.335255,
+                'password' =&gt; 'sed',
             ],
         ],
     ]

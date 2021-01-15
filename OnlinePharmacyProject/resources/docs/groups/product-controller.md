@@ -11,16 +11,16 @@ Returns the view of product details
 
 ```bash
 curl -X GET \
-    -G "http://localhost/medicine/67.5034" \
+    -G "http://localhost/medicine/2089.346397" \
     -H "Content-Type: application/json" \
     -H "Accept: application/json" \
-    -d '{"productDetails":"eum"}'
+    -d '{"productDetails":"assumenda"}'
 
 ```
 
 ```javascript
 const url = new URL(
-    "http://localhost/medicine/67.5034"
+    "http://localhost/medicine/2089.346397"
 );
 
 let headers = {
@@ -29,7 +29,7 @@ let headers = {
 };
 
 let body = {
-    "productDetails": "eum"
+    "productDetails": "assumenda"
 }
 
 fetch(url, {
@@ -43,14 +43,14 @@ fetch(url, {
 
 $client = new \GuzzleHttp\Client();
 $response = $client->get(
-    'http://localhost/medicine/67.5034',
+    'http://localhost/medicine/2089.346397',
     [
         'headers' => [
             'Content-Type' => 'application/json',
             'Accept' => 'application/json',
         ],
         'json' => [
-            'productDetails' => 'eum',
+            'productDetails' => 'assumenda',
         ],
     ]
 );

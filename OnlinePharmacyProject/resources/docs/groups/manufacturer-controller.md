@@ -15,7 +15,7 @@ curl -X GET \
     -G "http://localhost/admin/manufacturers" \
     -H "Content-Type: application/json" \
     -H "Accept: application/json" \
-    -d '{"manufacturers":"soluta"}'
+    -d '{"manufacturers":"eos"}'
 
 ```
 
@@ -30,7 +30,7 @@ let headers = {
 };
 
 let body = {
-    "manufacturers": "soluta"
+    "manufacturers": "eos"
 }
 
 fetch(url, {
@@ -51,7 +51,7 @@ $response = $client->get(
             'Accept' => 'application/json',
         ],
         'json' => [
-            'manufacturers' => 'soluta',
+            'manufacturers' => 'eos',
         ],
     ]
 );

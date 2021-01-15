@@ -14,7 +14,7 @@ curl -X GET \
     -G "http://localhost/" \
     -H "Content-Type: application/json" \
     -H "Accept: application/json" \
-    -d '{"newMedicines":"est"}'
+    -d '{"newMedicines":"cupiditate"}'
 
 ```
 
@@ -29,7 +29,7 @@ let headers = {
 };
 
 let body = {
-    "newMedicines": "est"
+    "newMedicines": "cupiditate"
 }
 
 fetch(url, {
@@ -50,7 +50,7 @@ $response = $client->get(
             'Accept' => 'application/json',
         ],
         'json' => [
-            'newMedicines' => 'est',
+            'newMedicines' => 'cupiditate',
         ],
     ]
 );
@@ -169,9 +169,10 @@ print_r(json_decode((string) $body));
         <li><a href="http://localhost/map">Nearby Pharmacy</a></li>
       </ul>
 
-      <form class="navbar-form navbar-right" action="">
+      <form class="navbar-form navbar-right" type="get" action="http://localhost/search">
   <div class="input-group">
-    <input type="text" id="searchbox" class="form-control" placeholder="Search medicines">
+  
+    <input type="text" name="query" id="searchbox" class="form-control" placeholder="Search medicines">
     <div class="input-group-btn">
       <button class="btn btn-default" type="submit">
         <i class="glyphicon glyphicon-search"></i>
@@ -179,7 +180,7 @@ print_r(json_decode((string) $body));
     </div>
   </div>
 </form>
-      <input type="hidden" name="_token" value="5g4lyPnXJEUU9KFkaOGp130cL6HR0J0NSYDIrbLT">      <ul class="nav navbar-nav navbar-right">
+      <input type="hidden" name="_token" value="kQ7T5q2UWwCRjC1chIIDEEEzbBkRztpcfgt4Li7d">      <ul class="nav navbar-nav navbar-right">
                 <li class="dropdown"><a href="#"><span class="glyphicon glyphicon-user"></span> Your Account</a>
           <div class="dropdown-content" aria-label="submenu">
                                     <a href="http://localhost/registration-page">Register</a>

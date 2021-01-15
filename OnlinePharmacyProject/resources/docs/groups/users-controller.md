@@ -101,7 +101,7 @@ print_r(json_decode((string) $body));
                                     </div>
                                     
                                     <form method="POST" class="user" action="http://localhost/clogin">
-                                        <input type="hidden" name="_token" value="5g4lyPnXJEUU9KFkaOGp130cL6HR0J0NSYDIrbLT">                                        <div class="form-group">
+                                        <input type="hidden" name="_token" value="kQ7T5q2UWwCRjC1chIIDEEEzbBkRztpcfgt4Li7d">                                        <div class="form-group">
                                             <input id="email" class="form-control form-control-user" type="email" name="email" :value="old('email')" placeholder="Email" required autofocus />
                                         </div>
                                         <div class="form-group">
@@ -270,7 +270,7 @@ print_r(json_decode((string) $body));
                             </div>
 
                                                         <form class="user" method="post" action="http://localhost/cregister">
-                              <input type="hidden" name="_token" value="5g4lyPnXJEUU9KFkaOGp130cL6HR0J0NSYDIrbLT">                                <div class="form-group row">
+                              <input type="hidden" name="_token" value="kQ7T5q2UWwCRjC1chIIDEEEzbBkRztpcfgt4Li7d">                                <div class="form-group row">
                                     <div class="col-sm-6 mb-3 mb-sm-0">
                                         <input type="text" class="form-control form-control-user" id="firstName" name="firstName" :value="old('firstName')" placeholder="First Name" required autofocus />
                                     </div>
@@ -383,7 +383,7 @@ curl -X POST \
     "http://localhost/clogin" \
     -H "Content-Type: application/json" \
     -H "Accept: application/json" \
-    -d '{"data":"ut"}'
+    -d '{"data":"labore"}'
 
 ```
 
@@ -398,7 +398,7 @@ let headers = {
 };
 
 let body = {
-    "data": "ut"
+    "data": "labore"
 }
 
 fetch(url, {
@@ -419,7 +419,7 @@ $response = $client->post(
             'Accept' => 'application/json',
         ],
         'json' => [
-            'data' => 'ut',
+            'data' => 'labore',
         ],
     ]
 );
@@ -908,7 +908,7 @@ curl -X POST \
     "http://localhost/cregister" \
     -H "Content-Type: application/json" \
     -H "Accept: application/json" \
-    -d '{"data":"quo","emailCount":1.959,"userCount":486.14030571,"message":"explicabo","user":{"firstName":"sit","lastName":"provident","userName":"voluptatem","email":"est","gender":"laboriosam","age":56489.516518493,"address":"aperiam","phone":371.31,"password":"harum"}}'
+    -d '{"data":"aut","emailCount":122795745.91280504,"userCount":132,"message":"blanditiis","user":{"firstName":"aut","lastName":"iusto","userName":"eveniet","email":"eaque","gender":"doloribus","age":162.891,"address":"quasi","phone":1.335255,"password":"sed"}}'
 
 ```
 
@@ -923,20 +923,20 @@ let headers = {
 };
 
 let body = {
-    "data": "quo",
-    "emailCount": 1.959,
-    "userCount": 486.14030571,
-    "message": "explicabo",
+    "data": "aut",
+    "emailCount": 122795745.91280504,
+    "userCount": 132,
+    "message": "blanditiis",
     "user": {
-        "firstName": "sit",
-        "lastName": "provident",
-        "userName": "voluptatem",
-        "email": "est",
-        "gender": "laboriosam",
-        "age": 56489.516518493,
-        "address": "aperiam",
-        "phone": 371.31,
-        "password": "harum"
+        "firstName": "aut",
+        "lastName": "iusto",
+        "userName": "eveniet",
+        "email": "eaque",
+        "gender": "doloribus",
+        "age": 162.891,
+        "address": "quasi",
+        "phone": 1.335255,
+        "password": "sed"
     }
 }
 
@@ -958,20 +958,20 @@ $response = $client->post(
             'Accept' => 'application/json',
         ],
         'json' => [
-            'data' => 'quo',
-            'emailCount' => 1.959,
-            'userCount' => 486.14030571,
-            'message' => 'explicabo',
+            'data' => 'aut',
+            'emailCount' => 122795745.91280504,
+            'userCount' => 132.0,
+            'message' => 'blanditiis',
             'user' => [
-                'firstName' => 'sit',
-                'lastName' => 'provident',
-                'userName' => 'voluptatem',
-                'email' => 'est',
-                'gender' => 'laboriosam',
-                'age' => 56489.516518493,
-                'address' => 'aperiam',
-                'phone' => 371.31,
-                'password' => 'harum',
+                'firstName' => 'aut',
+                'lastName' => 'iusto',
+                'userName' => 'eveniet',
+                'email' => 'eaque',
+                'gender' => 'doloribus',
+                'age' => 162.891,
+                'address' => 'quasi',
+                'phone' => 1.335255,
+                'password' => 'sed',
             ],
         ],
     ]
