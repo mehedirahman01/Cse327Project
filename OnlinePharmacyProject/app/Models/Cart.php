@@ -12,8 +12,10 @@ class Cart extends Model
         'id',
         'session_id',
         'user_id',
-        'manufacturerId',
+        'medicineId',
         'quantity',
-      
+        'created_at',
+        'updated_at'
+
     ];
 }

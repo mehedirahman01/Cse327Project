@@ -46,21 +46,19 @@
 					<small>- {{$productDetails['type']}}</small>
 					<hr class="soft"/>
 					<small>{{$productDetails['stock']}} items in stock</small>
+
 					<form action="{{url('/cart')}}" method="post" class="form-horizontal qtyFrm">
 					@csrf
-					<input type="hidden" name="id" value="{{ $productDetails['id'] }}">
-					<input name="quantity" value="{{ $productDetails['quantity'] }}">
-					<input name="" value="{{ $productDetails['manufacturerId'] }}">
-					
+					<input type="hidden" name="medicineId" value="{{ $productDetails['id'] }}">
 
 						<div class="control-group">
 							<h4>{{$productDetails['medicinePrice']}} Tk</h4>
-								<input name="quantity" type="number" class="span1" placeholder="Qty." required=""/>
+								<input name="quantity" type="number" class="span1" placeholder="Qty." required="" value="1"/>
 								<button type="submit" class="btn btn-large btn-primary pull-right"> Add to cart </button>
 							</div>
 						</div>
 					</form>
-					
+
 
 				</div>
 

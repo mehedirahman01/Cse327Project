@@ -71,3 +71,5 @@ Route::get('/map',[MapsController::class,'getLocation']);
 
 //add to cart
 Route::post('/cart',[ProductController::class,'addtocart']);
+
+Route::get('/search',[ProductController::class,'search']);
