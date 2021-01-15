@@ -132,22 +132,7 @@ class UsersController extends Controller
         Auth::logout();
         return redirect ("/");
     }
-    /**
-     * Update User Account
-     *
-     * @bodyparam requires id from user
-    * @bodyParam data array required Data from Login Form
-     * @bodyParam userDetails.user_id required  of user
-     * @bodyParam user.firstName required firstName of user
-     * @bodyParam user.lastName string required Last name of user
-    
-     * @bodyParam user.email email required Email of user
-   
-     * @bodyParam user.age number required Age of user
-     * @bodyParam user.address string required Address of user
-     * @bodyParam user.phone number required Phone number of user
-    *
-     */
+
 
     public function account(Request $request){
    $user_id=Auth::user()->id;

@@ -33,7 +33,7 @@ return [
                 /*
                  * Match only routes whose paths match this pattern (use * as a wildcard to match any characters). Example: 'users/*'.
                  */
-                'prefixes' => ['map','admin/medicines','admin/add-edit-medicine/{id?}','admin/manufacturers','admin/login','admin/admin_dashboard','admin/logout','/','medicine/{id}','login-page','registration-page','clogin','cregister','logout','cart','account','search'],
+                'prefixes' => ['map','admin/medicines','admin/add-edit-medicine/{id?}','admin/manufacturers','admin/login','admin/admin_dashboard','admin/logout','/','medicine/{id}','login-page','registration-page','clogin','cregister','logout'],
 
                 /*
                  * [Dingo router only] Match only routes registered under this version. Wildcards are not supported.
