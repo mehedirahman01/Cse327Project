@@ -10,7 +10,7 @@
     ],
     "info": {
         "name": "Laravel",
-        "_postman_id": "40410f16-b29a-42f3-bb66-0c19279def4f",
+        "_postman_id": "c81c85c4-4148-42e0-9f3a-402ff05839b2",
         "description": "",
         "schema": "https:\/\/schema.getpostman.com\/json\/collection\/v2.1.0\/collection.json"
     },
@@ -42,7 +42,7 @@
                         ],
                         "body": {
                             "mode": "raw",
-                            "raw": "{\n    \"data\": \"dolore\"\n}"
+                            "raw": "{\n    \"data\": \"et\"\n}"
                         },
                         "description": "Handles admin login",
                         "auth": {
@@ -132,7 +132,7 @@
                         ],
                         "body": {
                             "mode": "raw",
-                            "raw": "{\n    \"newMedicines\": \"est\"\n}"
+                            "raw": "{\n    \"newMedicines\": \"mollitia\"\n}"
                         },
                         "description": "Returns the view of homepage",
                         "auth": {
@@ -170,7 +170,7 @@
                         ],
                         "body": {
                             "mode": "raw",
-                            "raw": "{\n    \"manufacturers\": \"soluta\"\n}"
+                            "raw": "{\n    \"manufacturers\": \"in\"\n}"
                         },
                         "description": "Returns the view of manufacturer"
                     },
@@ -240,7 +240,7 @@
                         ],
                         "body": {
                             "mode": "raw",
-                            "raw": "{\n    \"medicines\": \"quibusdam\"\n}"
+                            "raw": "{\n    \"medicines\": \"sit\"\n}"
                         },
                         "description": "Returns the view of medicine"
                     },
@@ -259,7 +259,7 @@
                                 {
                                     "id": "id",
                                     "key": "id",
-                                    "value": "145882.35745868",
+                                    "value": "67.944422",
                                     "description": "Id of the medicine"
                                 }
                             ]
@@ -277,7 +277,7 @@
                         ],
                         "body": {
                             "mode": "raw",
-                            "raw": "{\n    \"medicine\": {\n        \"manufacturerId\": 1,\n        \"medicineName\": \"Alatrol\",\n        \"generic\": \"Cetirizine Hydrochloride\",\n        \"type\": \"Tablet\",\n        \"quantity\": 10,\n        \"dose\": \"2.5 mg\",\n        \"medicinePrice\": 35,\n        \"stock\": 100,\n        \"description\": \"This medicine.....\",\n        \"medicineImage\": \"est\"\n    },\n    \"data\": \"nesciunt\",\n    \"getManufacturers\": \"modi\",\n    \"medicineData\": \"tempora\"\n}"
+                            "raw": "{\n    \"medicine\": {\n        \"manufacturerId\": 1,\n        \"medicineName\": \"Alatrol\",\n        \"generic\": \"Cetirizine Hydrochloride\",\n        \"type\": \"Tablet\",\n        \"quantity\": 10,\n        \"dose\": \"2.5 mg\",\n        \"medicinePrice\": 35,\n        \"stock\": 100,\n        \"description\": \"This medicine.....\",\n        \"medicineImage\": \"nesciunt\"\n    },\n    \"data\": \"qui\",\n    \"getManufacturers\": \"unde\",\n    \"medicineData\": \"et\"\n}"
                         },
                         "description": "Can add or edit medicine\n\nReturns to medicine page"
                     },
@@ -302,7 +302,7 @@
                                 {
                                     "id": "id",
                                     "key": "id",
-                                    "value": "67.5034",
+                                    "value": "50609211.157573",
                                     "description": "Id of the medicine"
                                 }
                             ]
@@ -320,7 +320,71 @@
                         ],
                         "body": {
                             "mode": "raw",
-                            "raw": "{\n    \"productDetails\": \"eum\"\n}"
+                            "raw": "{\n    \"productDetails\": \"dolorum\"\n}"
+                        },
+                        "description": "Returns the view of product details",
+                        "auth": {
+                            "type": "noauth"
+                        }
+                    },
+                    "response": []
+                },
+                {
+                    "name": "Products Added View",
+                    "request": {
+                        "url": {
+                            "protocol": "http",
+                            "host": "{{baseUrl}}",
+                            "path": "cart",
+                            "query": [],
+                            "raw": "http:\/\/{{baseUrl}}\/cart"
+                        },
+                        "method": "POST",
+                        "header": [
+                            {
+                                "key": "Content-Type",
+                                "value": "application\/json"
+                            },
+                            {
+                                "key": "Accept",
+                                "value": "application\/json"
+                            }
+                        ],
+                        "body": {
+                            "mode": "raw",
+                            "raw": "{\n    \"request\": \"quaerat\",\n    \"session_id\": \"placeat\",\n    \"create\": \"deserunt\",\n    \"message\": \"non\"\n}"
+                        },
+                        "description": "Returns the view of product details",
+                        "auth": {
+                            "type": "noauth"
+                        }
+                    },
+                    "response": []
+                },
+                {
+                    "name": "Search",
+                    "request": {
+                        "url": {
+                            "protocol": "http",
+                            "host": "{{baseUrl}}",
+                            "path": "search",
+                            "query": [],
+                            "raw": "http:\/\/{{baseUrl}}\/search"
+                        },
+                        "method": "GET",
+                        "header": [
+                            {
+                                "key": "Content-Type",
+                                "value": "application\/json"
+                            },
+                            {
+                                "key": "Accept",
+                                "value": "application\/json"
+                            }
+                        ],
+                        "body": {
+                            "mode": "raw",
+                            "raw": "{\n    \"productDetails\": \"maxime\"\n}"
                         },
                         "description": "Returns the view of product details",
                         "auth": {
@@ -416,7 +480,7 @@
                         ],
                         "body": {
                             "mode": "raw",
-                            "raw": "{\n    \"data\": \"ut\"\n}"
+                            "raw": "{\n    \"data\": \"excepturi\"\n}"
                         },
                         "description": "Handles user login",
                         "auth": {
@@ -448,7 +512,7 @@
                         ],
                         "body": {
                             "mode": "raw",
-                            "raw": "{\n    \"data\": \"quo\",\n    \"emailCount\": 1.959,\n    \"userCount\": 486.14030571,\n    \"message\": \"explicabo\",\n    \"user\": {\n        \"firstName\": \"sit\",\n        \"lastName\": \"provident\",\n        \"userName\": \"voluptatem\",\n        \"email\": \"est\",\n        \"gender\": \"laboriosam\",\n        \"age\": 56489.516518493,\n        \"address\": \"aperiam\",\n        \"phone\": 371.31,\n        \"password\": \"harum\"\n    }\n}"
+                            "raw": "{\n    \"data\": \"suscipit\",\n    \"emailCount\": 14303807.156510191,\n    \"userCount\": 6462.92,\n    \"message\": \"enim\",\n    \"user\": {\n        \"firstName\": \"nesciunt\",\n        \"lastName\": \"est\",\n        \"userName\": \"velit\",\n        \"email\": \"rerum\",\n        \"gender\": \"sed\",\n        \"age\": 7.7,\n        \"address\": \"autem\",\n        \"phone\": 399636069.7949773,\n        \"password\": \"consectetur\"\n    }\n}"
                         },
                         "description": "Returns to homepage",
                         "auth": {
@@ -480,6 +544,38 @@
                         ],
                         "body": null,
                         "description": "Handles user logout\n\nReturns the homepage",
+                        "auth": {
+                            "type": "noauth"
+                        }
+                    },
+                    "response": []
+                },
+                {
+                    "name": "Update User Account",
+                    "request": {
+                        "url": {
+                            "protocol": "http",
+                            "host": "{{baseUrl}}",
+                            "path": "account",
+                            "query": [],
+                            "raw": "http:\/\/{{baseUrl}}\/account"
+                        },
+                        "method": "GET",
+                        "header": [
+                            {
+                                "key": "Content-Type",
+                                "value": "application\/json"
+                            },
+                            {
+                                "key": "Accept",
+                                "value": "application\/json"
+                            }
+                        ],
+                        "body": {
+                            "mode": "raw",
+                            "raw": "{\n    \"data\": \"autem\"\n}"
+                        },
+                        "description": "",
                         "auth": {
                             "type": "noauth"
                         }
