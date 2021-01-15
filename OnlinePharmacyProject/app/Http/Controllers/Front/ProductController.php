@@ -32,16 +32,16 @@ class ProductController extends Controller
      * Returns the view of product details
      * @bodyParam request is requesting for data
      * @bodyParam session_id is getting session_id
-     
+
      * @bodyParam create Cart object
-   
+
      * @bodyParam cart.session_id string required session_id of user
      * @bodyParam cart.quantity integer required quantity of product
      * @bodyParam cart.medicineId string required medicineId of medicine
      * @bodyParam message string is a confirmation message
      *
      */
-  
+
 
     public function addtocart(Request $request){
         if($request->isMethod('post')){
@@ -63,7 +63,7 @@ class ProductController extends Controller
 
         $cart->save();
         $message = "Product has been added to cart";
-        session::flash('success_message',$message);
+        session::flash('success_message2',$message);
         return redirect()->back();
 
     //       $message = "Product has been added to cart";
@@ -84,7 +84,7 @@ class ProductController extends Controller
      * Returns the view of product details
 
      */
-  
+
 public function search(){
 $search_text =$_GET['query'];
 $productDetails = Medicine::where('medicineName', 'LIKE', '%'.$search_text.'%')->get();
