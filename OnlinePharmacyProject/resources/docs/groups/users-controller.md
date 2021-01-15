@@ -101,7 +101,9 @@ print_r(json_decode((string) $body));
                                     </div>
                                     
                                     <form method="POST" class="user" action="http://localhost/clogin">
-                                        <input type="hidden" name="_token" value="kQ7T5q2UWwCRjC1chIIDEEEzbBkRztpcfgt4Li7d">                                        <div class="form-group">
+
+                                        <input type="hidden" name="_token" value="z0YEFnWK1D5I9QDy3oJdOABHYgC09vSERZhswbvV">                                        <div class="form-group">
+
                                             <input id="email" class="form-control form-control-user" type="email" name="email" :value="old('email')" placeholder="Email" required autofocus />
                                         </div>
                                         <div class="form-group">
@@ -270,7 +272,9 @@ print_r(json_decode((string) $body));
                             </div>
 
                                                         <form class="user" method="post" action="http://localhost/cregister">
-                              <input type="hidden" name="_token" value="kQ7T5q2UWwCRjC1chIIDEEEzbBkRztpcfgt4Li7d">                                <div class="form-group row">
+
+                              <input type="hidden" name="_token" value="z0YEFnWK1D5I9QDy3oJdOABHYgC09vSERZhswbvV">                                <div class="form-group row">
+
                                     <div class="col-sm-6 mb-3 mb-sm-0">
                                         <input type="text" class="form-control form-control-user" id="firstName" name="firstName" :value="old('firstName')" placeholder="First Name" required autofocus />
                                     </div>
@@ -383,7 +387,9 @@ curl -X POST \
     "http://localhost/clogin" \
     -H "Content-Type: application/json" \
     -H "Accept: application/json" \
-    -d '{"data":"labore"}'
+
+    -d '{"data":"excepturi"}'
+
 
 ```
 
@@ -398,7 +404,9 @@ let headers = {
 };
 
 let body = {
-    "data": "labore"
+
+    "data": "excepturi"
+
 }
 
 fetch(url, {
@@ -419,7 +427,9 @@ $response = $client->post(
             'Accept' => 'application/json',
         ],
         'json' => [
-            'data' => 'labore',
+
+            'data' => 'excepturi',
+
         ],
     ]
 );
@@ -434,417 +444,417 @@ print_r(json_decode((string) $body));
 {
     "message": "CSRF token mismatch.",
     "exception": "Symfony\\Component\\HttpKernel\\Exception\\HttpException",
-    "file": "C:\\Users\\Shelby\\Documents\\GitHub\\Cse327Project\\OnlinePharmacyProject\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Exceptions\\Handler.php",
+    "file": "E:\\Github\\Cse327Project\\OnlinePharmacyProject\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Exceptions\\Handler.php",
     "line": 369,
     "trace": [
         {
-            "file": "C:\\Users\\Shelby\\Documents\\GitHub\\Cse327Project\\OnlinePharmacyProject\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Exceptions\\Handler.php",
+            "file": "E:\\Github\\Cse327Project\\OnlinePharmacyProject\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Exceptions\\Handler.php",
             "line": 314,
             "function": "prepareException",
             "class": "Illuminate\\Foundation\\Exceptions\\Handler",
             "type": "->"
         },
         {
-            "file": "C:\\Users\\Shelby\\Documents\\GitHub\\Cse327Project\\OnlinePharmacyProject\\vendor\\nunomaduro\\collision\\src\\Adapters\\Laravel\\ExceptionHandler.php",
+            "file": "E:\\Github\\Cse327Project\\OnlinePharmacyProject\\vendor\\nunomaduro\\collision\\src\\Adapters\\Laravel\\ExceptionHandler.php",
             "line": 54,
             "function": "render",
             "class": "Illuminate\\Foundation\\Exceptions\\Handler",
             "type": "->"
         },
         {
-            "file": "C:\\Users\\Shelby\\Documents\\GitHub\\Cse327Project\\OnlinePharmacyProject\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Pipeline.php",
+            "file": "E:\\Github\\Cse327Project\\OnlinePharmacyProject\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Pipeline.php",
             "line": 51,
             "function": "render",
             "class": "NunoMaduro\\Collision\\Adapters\\Laravel\\ExceptionHandler",
             "type": "->"
         },
         {
-            "file": "C:\\Users\\Shelby\\Documents\\GitHub\\Cse327Project\\OnlinePharmacyProject\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php",
+            "file": "E:\\Github\\Cse327Project\\OnlinePharmacyProject\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php",
             "line": 172,
             "function": "handleException",
             "class": "Illuminate\\Routing\\Pipeline",
             "type": "->"
         },
         {
-            "file": "C:\\Users\\Shelby\\Documents\\GitHub\\Cse327Project\\OnlinePharmacyProject\\vendor\\laravel\\framework\\src\\Illuminate\\View\\Middleware\\ShareErrorsFromSession.php",
+            "file": "E:\\Github\\Cse327Project\\OnlinePharmacyProject\\vendor\\laravel\\framework\\src\\Illuminate\\View\\Middleware\\ShareErrorsFromSession.php",
             "line": 49,
             "function": "Illuminate\\Pipeline\\{closure}",
             "class": "Illuminate\\Pipeline\\Pipeline",
             "type": "->"
         },
         {
-            "file": "C:\\Users\\Shelby\\Documents\\GitHub\\Cse327Project\\OnlinePharmacyProject\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php",
+            "file": "E:\\Github\\Cse327Project\\OnlinePharmacyProject\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php",
             "line": 167,
             "function": "handle",
             "class": "Illuminate\\View\\Middleware\\ShareErrorsFromSession",
             "type": "->"
         },
         {
-            "file": "C:\\Users\\Shelby\\Documents\\GitHub\\Cse327Project\\OnlinePharmacyProject\\vendor\\laravel\\framework\\src\\Illuminate\\Session\\Middleware\\StartSession.php",
+            "file": "E:\\Github\\Cse327Project\\OnlinePharmacyProject\\vendor\\laravel\\framework\\src\\Illuminate\\Session\\Middleware\\StartSession.php",
             "line": 121,
             "function": "Illuminate\\Pipeline\\{closure}",
             "class": "Illuminate\\Pipeline\\Pipeline",
             "type": "->"
         },
         {
-            "file": "C:\\Users\\Shelby\\Documents\\GitHub\\Cse327Project\\OnlinePharmacyProject\\vendor\\laravel\\framework\\src\\Illuminate\\Session\\Middleware\\StartSession.php",
+            "file": "E:\\Github\\Cse327Project\\OnlinePharmacyProject\\vendor\\laravel\\framework\\src\\Illuminate\\Session\\Middleware\\StartSession.php",
             "line": 63,
             "function": "handleStatefulRequest",
             "class": "Illuminate\\Session\\Middleware\\StartSession",
             "type": "->"
         },
         {
-            "file": "C:\\Users\\Shelby\\Documents\\GitHub\\Cse327Project\\OnlinePharmacyProject\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php",
+            "file": "E:\\Github\\Cse327Project\\OnlinePharmacyProject\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php",
             "line": 167,
             "function": "handle",
             "class": "Illuminate\\Session\\Middleware\\StartSession",
             "type": "->"
         },
         {
-            "file": "C:\\Users\\Shelby\\Documents\\GitHub\\Cse327Project\\OnlinePharmacyProject\\vendor\\laravel\\framework\\src\\Illuminate\\Cookie\\Middleware\\AddQueuedCookiesToResponse.php",
+            "file": "E:\\Github\\Cse327Project\\OnlinePharmacyProject\\vendor\\laravel\\framework\\src\\Illuminate\\Cookie\\Middleware\\AddQueuedCookiesToResponse.php",
             "line": 37,
             "function": "Illuminate\\Pipeline\\{closure}",
             "class": "Illuminate\\Pipeline\\Pipeline",
             "type": "->"
         },
         {
-            "file": "C:\\Users\\Shelby\\Documents\\GitHub\\Cse327Project\\OnlinePharmacyProject\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php",
+            "file": "E:\\Github\\Cse327Project\\OnlinePharmacyProject\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php",
             "line": 167,
             "function": "handle",
             "class": "Illuminate\\Cookie\\Middleware\\AddQueuedCookiesToResponse",
             "type": "->"
         },
         {
-            "file": "C:\\Users\\Shelby\\Documents\\GitHub\\Cse327Project\\OnlinePharmacyProject\\vendor\\laravel\\framework\\src\\Illuminate\\Cookie\\Middleware\\EncryptCookies.php",
+            "file": "E:\\Github\\Cse327Project\\OnlinePharmacyProject\\vendor\\laravel\\framework\\src\\Illuminate\\Cookie\\Middleware\\EncryptCookies.php",
             "line": 67,
             "function": "Illuminate\\Pipeline\\{closure}",
             "class": "Illuminate\\Pipeline\\Pipeline",
             "type": "->"
         },
         {
-            "file": "C:\\Users\\Shelby\\Documents\\GitHub\\Cse327Project\\OnlinePharmacyProject\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php",
+            "file": "E:\\Github\\Cse327Project\\OnlinePharmacyProject\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php",
             "line": 167,
             "function": "handle",
             "class": "Illuminate\\Cookie\\Middleware\\EncryptCookies",
             "type": "->"
         },
         {
-            "file": "C:\\Users\\Shelby\\Documents\\GitHub\\Cse327Project\\OnlinePharmacyProject\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php",
+            "file": "E:\\Github\\Cse327Project\\OnlinePharmacyProject\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php",
             "line": 103,
             "function": "Illuminate\\Pipeline\\{closure}",
             "class": "Illuminate\\Pipeline\\Pipeline",
             "type": "->"
         },
         {
-            "file": "C:\\Users\\Shelby\\Documents\\GitHub\\Cse327Project\\OnlinePharmacyProject\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Router.php",
+            "file": "E:\\Github\\Cse327Project\\OnlinePharmacyProject\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Router.php",
             "line": 694,
             "function": "then",
             "class": "Illuminate\\Pipeline\\Pipeline",
             "type": "->"
         },
         {
-            "file": "C:\\Users\\Shelby\\Documents\\GitHub\\Cse327Project\\OnlinePharmacyProject\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Router.php",
+            "file": "E:\\Github\\Cse327Project\\OnlinePharmacyProject\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Router.php",
             "line": 669,
             "function": "runRouteWithinStack",
             "class": "Illuminate\\Routing\\Router",
             "type": "->"
         },
         {
-            "file": "C:\\Users\\Shelby\\Documents\\GitHub\\Cse327Project\\OnlinePharmacyProject\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Router.php",
+            "file": "E:\\Github\\Cse327Project\\OnlinePharmacyProject\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Router.php",
             "line": 635,
             "function": "runRoute",
             "class": "Illuminate\\Routing\\Router",
             "type": "->"
         },
         {
-            "file": "C:\\Users\\Shelby\\Documents\\GitHub\\Cse327Project\\OnlinePharmacyProject\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Router.php",
+            "file": "E:\\Github\\Cse327Project\\OnlinePharmacyProject\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Router.php",
             "line": 624,
             "function": "dispatchToRoute",
             "class": "Illuminate\\Routing\\Router",
             "type": "->"
         },
         {
-            "file": "C:\\Users\\Shelby\\Documents\\GitHub\\Cse327Project\\OnlinePharmacyProject\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Http\\Kernel.php",
+            "file": "E:\\Github\\Cse327Project\\OnlinePharmacyProject\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Http\\Kernel.php",
             "line": 166,
             "function": "dispatch",
             "class": "Illuminate\\Routing\\Router",
             "type": "->"
         },
         {
-            "file": "C:\\Users\\Shelby\\Documents\\GitHub\\Cse327Project\\OnlinePharmacyProject\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php",
+            "file": "E:\\Github\\Cse327Project\\OnlinePharmacyProject\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php",
             "line": 128,
             "function": "Illuminate\\Foundation\\Http\\{closure}",
             "class": "Illuminate\\Foundation\\Http\\Kernel",
             "type": "->"
         },
         {
-            "file": "C:\\Users\\Shelby\\Documents\\GitHub\\Cse327Project\\OnlinePharmacyProject\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Http\\Middleware\\TransformsRequest.php",
+            "file": "E:\\Github\\Cse327Project\\OnlinePharmacyProject\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Http\\Middleware\\TransformsRequest.php",
             "line": 21,
             "function": "Illuminate\\Pipeline\\{closure}",
             "class": "Illuminate\\Pipeline\\Pipeline",
             "type": "->"
         },
         {
-            "file": "C:\\Users\\Shelby\\Documents\\GitHub\\Cse327Project\\OnlinePharmacyProject\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php",
+            "file": "E:\\Github\\Cse327Project\\OnlinePharmacyProject\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php",
             "line": 167,
             "function": "handle",
             "class": "Illuminate\\Foundation\\Http\\Middleware\\TransformsRequest",
             "type": "->"
         },
         {
-            "file": "C:\\Users\\Shelby\\Documents\\GitHub\\Cse327Project\\OnlinePharmacyProject\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Http\\Middleware\\TransformsRequest.php",
+            "file": "E:\\Github\\Cse327Project\\OnlinePharmacyProject\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Http\\Middleware\\TransformsRequest.php",
             "line": 21,
             "function": "Illuminate\\Pipeline\\{closure}",
             "class": "Illuminate\\Pipeline\\Pipeline",
             "type": "->"
         },
         {
-            "file": "C:\\Users\\Shelby\\Documents\\GitHub\\Cse327Project\\OnlinePharmacyProject\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php",
+            "file": "E:\\Github\\Cse327Project\\OnlinePharmacyProject\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php",
             "line": 167,
             "function": "handle",
             "class": "Illuminate\\Foundation\\Http\\Middleware\\TransformsRequest",
             "type": "->"
         },
         {
-            "file": "C:\\Users\\Shelby\\Documents\\GitHub\\Cse327Project\\OnlinePharmacyProject\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Http\\Middleware\\ValidatePostSize.php",
+            "file": "E:\\Github\\Cse327Project\\OnlinePharmacyProject\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Http\\Middleware\\ValidatePostSize.php",
             "line": 27,
             "function": "Illuminate\\Pipeline\\{closure}",
             "class": "Illuminate\\Pipeline\\Pipeline",
             "type": "->"
         },
         {
-            "file": "C:\\Users\\Shelby\\Documents\\GitHub\\Cse327Project\\OnlinePharmacyProject\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php",
+            "file": "E:\\Github\\Cse327Project\\OnlinePharmacyProject\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php",
             "line": 167,
             "function": "handle",
             "class": "Illuminate\\Foundation\\Http\\Middleware\\ValidatePostSize",
             "type": "->"
         },
         {
-            "file": "C:\\Users\\Shelby\\Documents\\GitHub\\Cse327Project\\OnlinePharmacyProject\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Http\\Middleware\\PreventRequestsDuringMaintenance.php",
+            "file": "E:\\Github\\Cse327Project\\OnlinePharmacyProject\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Http\\Middleware\\PreventRequestsDuringMaintenance.php",
             "line": 87,
             "function": "Illuminate\\Pipeline\\{closure}",
             "class": "Illuminate\\Pipeline\\Pipeline",
             "type": "->"
         },
         {
-            "file": "C:\\Users\\Shelby\\Documents\\GitHub\\Cse327Project\\OnlinePharmacyProject\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php",
+            "file": "E:\\Github\\Cse327Project\\OnlinePharmacyProject\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php",
             "line": 167,
             "function": "handle",
             "class": "Illuminate\\Foundation\\Http\\Middleware\\PreventRequestsDuringMaintenance",
             "type": "->"
         },
         {
-            "file": "C:\\Users\\Shelby\\Documents\\GitHub\\Cse327Project\\OnlinePharmacyProject\\vendor\\fruitcake\\laravel-cors\\src\\HandleCors.php",
+            "file": "E:\\Github\\Cse327Project\\OnlinePharmacyProject\\vendor\\fruitcake\\laravel-cors\\src\\HandleCors.php",
             "line": 37,
             "function": "Illuminate\\Pipeline\\{closure}",
             "class": "Illuminate\\Pipeline\\Pipeline",
             "type": "->"
         },
         {
-            "file": "C:\\Users\\Shelby\\Documents\\GitHub\\Cse327Project\\OnlinePharmacyProject\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php",
+            "file": "E:\\Github\\Cse327Project\\OnlinePharmacyProject\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php",
             "line": 167,
             "function": "handle",
             "class": "Fruitcake\\Cors\\HandleCors",
             "type": "->"
         },
         {
-            "file": "C:\\Users\\Shelby\\Documents\\GitHub\\Cse327Project\\OnlinePharmacyProject\\vendor\\fideloper\\proxy\\src\\TrustProxies.php",
+            "file": "E:\\Github\\Cse327Project\\OnlinePharmacyProject\\vendor\\fideloper\\proxy\\src\\TrustProxies.php",
             "line": 57,
             "function": "Illuminate\\Pipeline\\{closure}",
             "class": "Illuminate\\Pipeline\\Pipeline",
             "type": "->"
         },
         {
-            "file": "C:\\Users\\Shelby\\Documents\\GitHub\\Cse327Project\\OnlinePharmacyProject\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php",
+            "file": "E:\\Github\\Cse327Project\\OnlinePharmacyProject\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php",
             "line": 167,
             "function": "handle",
             "class": "Fideloper\\Proxy\\TrustProxies",
             "type": "->"
         },
         {
-            "file": "C:\\Users\\Shelby\\Documents\\GitHub\\Cse327Project\\OnlinePharmacyProject\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php",
+            "file": "E:\\Github\\Cse327Project\\OnlinePharmacyProject\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php",
             "line": 103,
             "function": "Illuminate\\Pipeline\\{closure}",
             "class": "Illuminate\\Pipeline\\Pipeline",
             "type": "->"
         },
         {
-            "file": "C:\\Users\\Shelby\\Documents\\GitHub\\Cse327Project\\OnlinePharmacyProject\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Http\\Kernel.php",
+            "file": "E:\\Github\\Cse327Project\\OnlinePharmacyProject\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Http\\Kernel.php",
             "line": 141,
             "function": "then",
             "class": "Illuminate\\Pipeline\\Pipeline",
             "type": "->"
         },
         {
-            "file": "C:\\Users\\Shelby\\Documents\\GitHub\\Cse327Project\\OnlinePharmacyProject\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Http\\Kernel.php",
+            "file": "E:\\Github\\Cse327Project\\OnlinePharmacyProject\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Http\\Kernel.php",
             "line": 110,
             "function": "sendRequestThroughRouter",
             "class": "Illuminate\\Foundation\\Http\\Kernel",
             "type": "->"
         },
         {
-            "file": "C:\\Users\\Shelby\\Documents\\GitHub\\Cse327Project\\OnlinePharmacyProject\\vendor\\knuckleswtf\\scribe\\src\\Extracting\\Strategies\\Responses\\ResponseCalls.php",
+            "file": "E:\\Github\\Cse327Project\\OnlinePharmacyProject\\vendor\\knuckleswtf\\scribe\\src\\Extracting\\Strategies\\Responses\\ResponseCalls.php",
             "line": 324,
             "function": "handle",
             "class": "Illuminate\\Foundation\\Http\\Kernel",
             "type": "->"
         },
         {
-            "file": "C:\\Users\\Shelby\\Documents\\GitHub\\Cse327Project\\OnlinePharmacyProject\\vendor\\knuckleswtf\\scribe\\src\\Extracting\\Strategies\\Responses\\ResponseCalls.php",
+            "file": "E:\\Github\\Cse327Project\\OnlinePharmacyProject\\vendor\\knuckleswtf\\scribe\\src\\Extracting\\Strategies\\Responses\\ResponseCalls.php",
             "line": 305,
             "function": "callLaravelOrLumenRoute",
             "class": "Knuckles\\Scribe\\Extracting\\Strategies\\Responses\\ResponseCalls",
             "type": "->"
         },
         {
-            "file": "C:\\Users\\Shelby\\Documents\\GitHub\\Cse327Project\\OnlinePharmacyProject\\vendor\\knuckleswtf\\scribe\\src\\Extracting\\Strategies\\Responses\\ResponseCalls.php",
+            "file": "E:\\Github\\Cse327Project\\OnlinePharmacyProject\\vendor\\knuckleswtf\\scribe\\src\\Extracting\\Strategies\\Responses\\ResponseCalls.php",
             "line": 76,
             "function": "makeApiCall",
             "class": "Knuckles\\Scribe\\Extracting\\Strategies\\Responses\\ResponseCalls",
             "type": "->"
         },
         {
-            "file": "C:\\Users\\Shelby\\Documents\\GitHub\\Cse327Project\\OnlinePharmacyProject\\vendor\\knuckleswtf\\scribe\\src\\Extracting\\Strategies\\Responses\\ResponseCalls.php",
+            "file": "E:\\Github\\Cse327Project\\OnlinePharmacyProject\\vendor\\knuckleswtf\\scribe\\src\\Extracting\\Strategies\\Responses\\ResponseCalls.php",
             "line": 51,
             "function": "makeResponseCall",
             "class": "Knuckles\\Scribe\\Extracting\\Strategies\\Responses\\ResponseCalls",
             "type": "->"
         },
         {
-            "file": "C:\\Users\\Shelby\\Documents\\GitHub\\Cse327Project\\OnlinePharmacyProject\\vendor\\knuckleswtf\\scribe\\src\\Extracting\\Strategies\\Responses\\ResponseCalls.php",
+            "file": "E:\\Github\\Cse327Project\\OnlinePharmacyProject\\vendor\\knuckleswtf\\scribe\\src\\Extracting\\Strategies\\Responses\\ResponseCalls.php",
             "line": 41,
             "function": "makeResponseCallIfEnabledAndNoSuccessResponses",
             "class": "Knuckles\\Scribe\\Extracting\\Strategies\\Responses\\ResponseCalls",
             "type": "->"
         },
         {
-            "file": "C:\\Users\\Shelby\\Documents\\GitHub\\Cse327Project\\OnlinePharmacyProject\\vendor\\knuckleswtf\\scribe\\src\\Extracting\\Generator.php",
+            "file": "E:\\Github\\Cse327Project\\OnlinePharmacyProject\\vendor\\knuckleswtf\\scribe\\src\\Extracting\\Generator.php",
             "line": 236,
             "function": "__invoke",
             "class": "Knuckles\\Scribe\\Extracting\\Strategies\\Responses\\ResponseCalls",
             "type": "->"
         },
         {
-            "file": "C:\\Users\\Shelby\\Documents\\GitHub\\Cse327Project\\OnlinePharmacyProject\\vendor\\knuckleswtf\\scribe\\src\\Extracting\\Generator.php",
+            "file": "E:\\Github\\Cse327Project\\OnlinePharmacyProject\\vendor\\knuckleswtf\\scribe\\src\\Extracting\\Generator.php",
             "line": 172,
             "function": "iterateThroughStrategies",
             "class": "Knuckles\\Scribe\\Extracting\\Generator",
             "type": "->"
         },
         {
-            "file": "C:\\Users\\Shelby\\Documents\\GitHub\\Cse327Project\\OnlinePharmacyProject\\vendor\\knuckleswtf\\scribe\\src\\Extracting\\Generator.php",
+            "file": "E:\\Github\\Cse327Project\\OnlinePharmacyProject\\vendor\\knuckleswtf\\scribe\\src\\Extracting\\Generator.php",
             "line": 127,
             "function": "fetchResponses",
             "class": "Knuckles\\Scribe\\Extracting\\Generator",
             "type": "->"
         },
         {
-            "file": "C:\\Users\\Shelby\\Documents\\GitHub\\Cse327Project\\OnlinePharmacyProject\\vendor\\knuckleswtf\\scribe\\src\\Commands\\GenerateDocumentation.php",
+            "file": "E:\\Github\\Cse327Project\\OnlinePharmacyProject\\vendor\\knuckleswtf\\scribe\\src\\Commands\\GenerateDocumentation.php",
             "line": 119,
             "function": "processRoute",
             "class": "Knuckles\\Scribe\\Extracting\\Generator",
             "type": "->"
         },
         {
-            "file": "C:\\Users\\Shelby\\Documents\\GitHub\\Cse327Project\\OnlinePharmacyProject\\vendor\\knuckleswtf\\scribe\\src\\Commands\\GenerateDocumentation.php",
+            "file": "E:\\Github\\Cse327Project\\OnlinePharmacyProject\\vendor\\knuckleswtf\\scribe\\src\\Commands\\GenerateDocumentation.php",
             "line": 73,
             "function": "processRoutes",
             "class": "Knuckles\\Scribe\\Commands\\GenerateDocumentation",
             "type": "->"
         },
         {
-            "file": "C:\\Users\\Shelby\\Documents\\GitHub\\Cse327Project\\OnlinePharmacyProject\\vendor\\laravel\\framework\\src\\Illuminate\\Container\\BoundMethod.php",
+            "file": "E:\\Github\\Cse327Project\\OnlinePharmacyProject\\vendor\\laravel\\framework\\src\\Illuminate\\Container\\BoundMethod.php",
             "line": 36,
             "function": "handle",
             "class": "Knuckles\\Scribe\\Commands\\GenerateDocumentation",
             "type": "->"
         },
         {
-            "file": "C:\\Users\\Shelby\\Documents\\GitHub\\Cse327Project\\OnlinePharmacyProject\\vendor\\laravel\\framework\\src\\Illuminate\\Container\\Util.php",
+            "file": "E:\\Github\\Cse327Project\\OnlinePharmacyProject\\vendor\\laravel\\framework\\src\\Illuminate\\Container\\Util.php",
             "line": 40,
             "function": "Illuminate\\Container\\{closure}",
             "class": "Illuminate\\Container\\BoundMethod",
             "type": "::"
         },
         {
-            "file": "C:\\Users\\Shelby\\Documents\\GitHub\\Cse327Project\\OnlinePharmacyProject\\vendor\\laravel\\framework\\src\\Illuminate\\Container\\BoundMethod.php",
+            "file": "E:\\Github\\Cse327Project\\OnlinePharmacyProject\\vendor\\laravel\\framework\\src\\Illuminate\\Container\\BoundMethod.php",
             "line": 93,
             "function": "unwrapIfClosure",
             "class": "Illuminate\\Container\\Util",
             "type": "::"
         },
         {
-            "file": "C:\\Users\\Shelby\\Documents\\GitHub\\Cse327Project\\OnlinePharmacyProject\\vendor\\laravel\\framework\\src\\Illuminate\\Container\\BoundMethod.php",
+            "file": "E:\\Github\\Cse327Project\\OnlinePharmacyProject\\vendor\\laravel\\framework\\src\\Illuminate\\Container\\BoundMethod.php",
             "line": 37,
             "function": "callBoundMethod",
             "class": "Illuminate\\Container\\BoundMethod",
             "type": "::"
         },
         {
-            "file": "C:\\Users\\Shelby\\Documents\\GitHub\\Cse327Project\\OnlinePharmacyProject\\vendor\\laravel\\framework\\src\\Illuminate\\Container\\Container.php",
+            "file": "E:\\Github\\Cse327Project\\OnlinePharmacyProject\\vendor\\laravel\\framework\\src\\Illuminate\\Container\\Container.php",
             "line": 610,
             "function": "call",
             "class": "Illuminate\\Container\\BoundMethod",
             "type": "::"
         },
         {
-            "file": "C:\\Users\\Shelby\\Documents\\GitHub\\Cse327Project\\OnlinePharmacyProject\\vendor\\laravel\\framework\\src\\Illuminate\\Console\\Command.php",
+            "file": "E:\\Github\\Cse327Project\\OnlinePharmacyProject\\vendor\\laravel\\framework\\src\\Illuminate\\Console\\Command.php",
             "line": 136,
             "function": "call",
             "class": "Illuminate\\Container\\Container",
             "type": "->"
         },
         {
-            "file": "C:\\Users\\Shelby\\Documents\\GitHub\\Cse327Project\\OnlinePharmacyProject\\vendor\\symfony\\console\\Command\\Command.php",
+            "file": "E:\\Github\\Cse327Project\\OnlinePharmacyProject\\vendor\\symfony\\console\\Command\\Command.php",
             "line": 255,
             "function": "execute",
             "class": "Illuminate\\Console\\Command",
             "type": "->"
         },
         {
-            "file": "C:\\Users\\Shelby\\Documents\\GitHub\\Cse327Project\\OnlinePharmacyProject\\vendor\\laravel\\framework\\src\\Illuminate\\Console\\Command.php",
+            "file": "E:\\Github\\Cse327Project\\OnlinePharmacyProject\\vendor\\laravel\\framework\\src\\Illuminate\\Console\\Command.php",
             "line": 121,
             "function": "run",
             "class": "Symfony\\Component\\Console\\Command\\Command",
             "type": "->"
         },
         {
-            "file": "C:\\Users\\Shelby\\Documents\\GitHub\\Cse327Project\\OnlinePharmacyProject\\vendor\\symfony\\console\\Application.php",
+            "file": "E:\\Github\\Cse327Project\\OnlinePharmacyProject\\vendor\\symfony\\console\\Application.php",
             "line": 971,
             "function": "run",
             "class": "Illuminate\\Console\\Command",
             "type": "->"
         },
         {
-            "file": "C:\\Users\\Shelby\\Documents\\GitHub\\Cse327Project\\OnlinePharmacyProject\\vendor\\symfony\\console\\Application.php",
+            "file": "E:\\Github\\Cse327Project\\OnlinePharmacyProject\\vendor\\symfony\\console\\Application.php",
             "line": 290,
             "function": "doRunCommand",
             "class": "Symfony\\Component\\Console\\Application",
             "type": "->"
         },
         {
-            "file": "C:\\Users\\Shelby\\Documents\\GitHub\\Cse327Project\\OnlinePharmacyProject\\vendor\\symfony\\console\\Application.php",
+            "file": "E:\\Github\\Cse327Project\\OnlinePharmacyProject\\vendor\\symfony\\console\\Application.php",
             "line": 166,
             "function": "doRun",
             "class": "Symfony\\Component\\Console\\Application",
             "type": "->"
         },
         {
-            "file": "C:\\Users\\Shelby\\Documents\\GitHub\\Cse327Project\\OnlinePharmacyProject\\vendor\\laravel\\framework\\src\\Illuminate\\Console\\Application.php",
+            "file": "E:\\Github\\Cse327Project\\OnlinePharmacyProject\\vendor\\laravel\\framework\\src\\Illuminate\\Console\\Application.php",
             "line": 93,
             "function": "run",
             "class": "Symfony\\Component\\Console\\Application",
             "type": "->"
         },
         {
-            "file": "C:\\Users\\Shelby\\Documents\\GitHub\\Cse327Project\\OnlinePharmacyProject\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Console\\Kernel.php",
+            "file": "E:\\Github\\Cse327Project\\OnlinePharmacyProject\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Console\\Kernel.php",
             "line": 129,
             "function": "run",
             "class": "Illuminate\\Console\\Application",
             "type": "->"
         },
         {
-            "file": "C:\\Users\\Shelby\\Documents\\GitHub\\Cse327Project\\OnlinePharmacyProject\\artisan",
+            "file": "E:\\Github\\Cse327Project\\OnlinePharmacyProject\\artisan",
             "line": 37,
             "function": "handle",
             "class": "Illuminate\\Foundation\\Console\\Kernel",
@@ -908,7 +918,9 @@ curl -X POST \
     "http://localhost/cregister" \
     -H "Content-Type: application/json" \
     -H "Accept: application/json" \
-    -d '{"data":"aut","emailCount":122795745.91280504,"userCount":132,"message":"blanditiis","user":{"firstName":"aut","lastName":"iusto","userName":"eveniet","email":"eaque","gender":"doloribus","age":162.891,"address":"quasi","phone":1.335255,"password":"sed"}}'
+
+    -d '{"data":"suscipit","emailCount":14303807.156510191,"userCount":6462.92,"message":"enim","user":{"firstName":"nesciunt","lastName":"est","userName":"velit","email":"rerum","gender":"sed","age":7.7,"address":"autem","phone":399636069.7949773,"password":"consectetur"}}'
+
 
 ```
 
@@ -923,20 +935,22 @@ let headers = {
 };
 
 let body = {
-    "data": "aut",
-    "emailCount": 122795745.91280504,
-    "userCount": 132,
-    "message": "blanditiis",
+
+    "data": "suscipit",
+    "emailCount": 14303807.156510191,
+    "userCount": 6462.92,
+    "message": "enim",
     "user": {
-        "firstName": "aut",
-        "lastName": "iusto",
-        "userName": "eveniet",
-        "email": "eaque",
-        "gender": "doloribus",
-        "age": 162.891,
-        "address": "quasi",
-        "phone": 1.335255,
-        "password": "sed"
+        "firstName": "nesciunt",
+        "lastName": "est",
+        "userName": "velit",
+        "email": "rerum",
+        "gender": "sed",
+        "age": 7.7,
+        "address": "autem",
+        "phone": 399636069.7949773,
+        "password": "consectetur"
+
     }
 }
 
@@ -958,20 +972,22 @@ $response = $client->post(
             'Accept' => 'application/json',
         ],
         'json' => [
-            'data' => 'aut',
-            'emailCount' => 122795745.91280504,
-            'userCount' => 132.0,
-            'message' => 'blanditiis',
+
+            'data' => 'suscipit',
+            'emailCount' => 14303807.156510191,
+            'userCount' => 6462.92,
+            'message' => 'enim',
             'user' => [
-                'firstName' => 'aut',
-                'lastName' => 'iusto',
-                'userName' => 'eveniet',
-                'email' => 'eaque',
-                'gender' => 'doloribus',
-                'age' => 162.891,
-                'address' => 'quasi',
-                'phone' => 1.335255,
-                'password' => 'sed',
+                'firstName' => 'nesciunt',
+                'lastName' => 'est',
+                'userName' => 'velit',
+                'email' => 'rerum',
+                'gender' => 'sed',
+                'age' => 7.7,
+                'address' => 'autem',
+                'phone' => 399636069.7949773,
+                'password' => 'consectetur',
+
             ],
         ],
     ]
@@ -987,417 +1003,417 @@ print_r(json_decode((string) $body));
 {
     "message": "CSRF token mismatch.",
     "exception": "Symfony\\Component\\HttpKernel\\Exception\\HttpException",
-    "file": "C:\\Users\\Shelby\\Documents\\GitHub\\Cse327Project\\OnlinePharmacyProject\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Exceptions\\Handler.php",
+    "file": "E:\\Github\\Cse327Project\\OnlinePharmacyProject\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Exceptions\\Handler.php",
     "line": 369,
     "trace": [
         {
-            "file": "C:\\Users\\Shelby\\Documents\\GitHub\\Cse327Project\\OnlinePharmacyProject\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Exceptions\\Handler.php",
+            "file": "E:\\Github\\Cse327Project\\OnlinePharmacyProject\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Exceptions\\Handler.php",
             "line": 314,
             "function": "prepareException",
             "class": "Illuminate\\Foundation\\Exceptions\\Handler",
             "type": "->"
         },
         {
-            "file": "C:\\Users\\Shelby\\Documents\\GitHub\\Cse327Project\\OnlinePharmacyProject\\vendor\\nunomaduro\\collision\\src\\Adapters\\Laravel\\ExceptionHandler.php",
+            "file": "E:\\Github\\Cse327Project\\OnlinePharmacyProject\\vendor\\nunomaduro\\collision\\src\\Adapters\\Laravel\\ExceptionHandler.php",
             "line": 54,
             "function": "render",
             "class": "Illuminate\\Foundation\\Exceptions\\Handler",
             "type": "->"
         },
         {
-            "file": "C:\\Users\\Shelby\\Documents\\GitHub\\Cse327Project\\OnlinePharmacyProject\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Pipeline.php",
+            "file": "E:\\Github\\Cse327Project\\OnlinePharmacyProject\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Pipeline.php",
             "line": 51,
             "function": "render",
             "class": "NunoMaduro\\Collision\\Adapters\\Laravel\\ExceptionHandler",
             "type": "->"
         },
         {
-            "file": "C:\\Users\\Shelby\\Documents\\GitHub\\Cse327Project\\OnlinePharmacyProject\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php",
+            "file": "E:\\Github\\Cse327Project\\OnlinePharmacyProject\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php",
             "line": 172,
             "function": "handleException",
             "class": "Illuminate\\Routing\\Pipeline",
             "type": "->"
         },
         {
-            "file": "C:\\Users\\Shelby\\Documents\\GitHub\\Cse327Project\\OnlinePharmacyProject\\vendor\\laravel\\framework\\src\\Illuminate\\View\\Middleware\\ShareErrorsFromSession.php",
+            "file": "E:\\Github\\Cse327Project\\OnlinePharmacyProject\\vendor\\laravel\\framework\\src\\Illuminate\\View\\Middleware\\ShareErrorsFromSession.php",
             "line": 49,
             "function": "Illuminate\\Pipeline\\{closure}",
             "class": "Illuminate\\Pipeline\\Pipeline",
             "type": "->"
         },
         {
-            "file": "C:\\Users\\Shelby\\Documents\\GitHub\\Cse327Project\\OnlinePharmacyProject\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php",
+            "file": "E:\\Github\\Cse327Project\\OnlinePharmacyProject\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php",
             "line": 167,
             "function": "handle",
             "class": "Illuminate\\View\\Middleware\\ShareErrorsFromSession",
             "type": "->"
         },
         {
-            "file": "C:\\Users\\Shelby\\Documents\\GitHub\\Cse327Project\\OnlinePharmacyProject\\vendor\\laravel\\framework\\src\\Illuminate\\Session\\Middleware\\StartSession.php",
+            "file": "E:\\Github\\Cse327Project\\OnlinePharmacyProject\\vendor\\laravel\\framework\\src\\Illuminate\\Session\\Middleware\\StartSession.php",
             "line": 121,
             "function": "Illuminate\\Pipeline\\{closure}",
             "class": "Illuminate\\Pipeline\\Pipeline",
             "type": "->"
         },
         {
-            "file": "C:\\Users\\Shelby\\Documents\\GitHub\\Cse327Project\\OnlinePharmacyProject\\vendor\\laravel\\framework\\src\\Illuminate\\Session\\Middleware\\StartSession.php",
+            "file": "E:\\Github\\Cse327Project\\OnlinePharmacyProject\\vendor\\laravel\\framework\\src\\Illuminate\\Session\\Middleware\\StartSession.php",
             "line": 63,
             "function": "handleStatefulRequest",
             "class": "Illuminate\\Session\\Middleware\\StartSession",
             "type": "->"
         },
         {
-            "file": "C:\\Users\\Shelby\\Documents\\GitHub\\Cse327Project\\OnlinePharmacyProject\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php",
+            "file": "E:\\Github\\Cse327Project\\OnlinePharmacyProject\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php",
             "line": 167,
             "function": "handle",
             "class": "Illuminate\\Session\\Middleware\\StartSession",
             "type": "->"
         },
         {
-            "file": "C:\\Users\\Shelby\\Documents\\GitHub\\Cse327Project\\OnlinePharmacyProject\\vendor\\laravel\\framework\\src\\Illuminate\\Cookie\\Middleware\\AddQueuedCookiesToResponse.php",
+            "file": "E:\\Github\\Cse327Project\\OnlinePharmacyProject\\vendor\\laravel\\framework\\src\\Illuminate\\Cookie\\Middleware\\AddQueuedCookiesToResponse.php",
             "line": 37,
             "function": "Illuminate\\Pipeline\\{closure}",
             "class": "Illuminate\\Pipeline\\Pipeline",
             "type": "->"
         },
         {
-            "file": "C:\\Users\\Shelby\\Documents\\GitHub\\Cse327Project\\OnlinePharmacyProject\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php",
+            "file": "E:\\Github\\Cse327Project\\OnlinePharmacyProject\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php",
             "line": 167,
             "function": "handle",
             "class": "Illuminate\\Cookie\\Middleware\\AddQueuedCookiesToResponse",
             "type": "->"
         },
         {
-            "file": "C:\\Users\\Shelby\\Documents\\GitHub\\Cse327Project\\OnlinePharmacyProject\\vendor\\laravel\\framework\\src\\Illuminate\\Cookie\\Middleware\\EncryptCookies.php",
+            "file": "E:\\Github\\Cse327Project\\OnlinePharmacyProject\\vendor\\laravel\\framework\\src\\Illuminate\\Cookie\\Middleware\\EncryptCookies.php",
             "line": 67,
             "function": "Illuminate\\Pipeline\\{closure}",
             "class": "Illuminate\\Pipeline\\Pipeline",
             "type": "->"
         },
         {
-            "file": "C:\\Users\\Shelby\\Documents\\GitHub\\Cse327Project\\OnlinePharmacyProject\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php",
+            "file": "E:\\Github\\Cse327Project\\OnlinePharmacyProject\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php",
             "line": 167,
             "function": "handle",
             "class": "Illuminate\\Cookie\\Middleware\\EncryptCookies",
             "type": "->"
         },
         {
-            "file": "C:\\Users\\Shelby\\Documents\\GitHub\\Cse327Project\\OnlinePharmacyProject\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php",
+            "file": "E:\\Github\\Cse327Project\\OnlinePharmacyProject\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php",
             "line": 103,
             "function": "Illuminate\\Pipeline\\{closure}",
             "class": "Illuminate\\Pipeline\\Pipeline",
             "type": "->"
         },
         {
-            "file": "C:\\Users\\Shelby\\Documents\\GitHub\\Cse327Project\\OnlinePharmacyProject\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Router.php",
+            "file": "E:\\Github\\Cse327Project\\OnlinePharmacyProject\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Router.php",
             "line": 694,
             "function": "then",
             "class": "Illuminate\\Pipeline\\Pipeline",
             "type": "->"
         },
         {
-            "file": "C:\\Users\\Shelby\\Documents\\GitHub\\Cse327Project\\OnlinePharmacyProject\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Router.php",
+            "file": "E:\\Github\\Cse327Project\\OnlinePharmacyProject\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Router.php",
             "line": 669,
             "function": "runRouteWithinStack",
             "class": "Illuminate\\Routing\\Router",
             "type": "->"
         },
         {
-            "file": "C:\\Users\\Shelby\\Documents\\GitHub\\Cse327Project\\OnlinePharmacyProject\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Router.php",
+            "file": "E:\\Github\\Cse327Project\\OnlinePharmacyProject\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Router.php",
             "line": 635,
             "function": "runRoute",
             "class": "Illuminate\\Routing\\Router",
             "type": "->"
         },
         {
-            "file": "C:\\Users\\Shelby\\Documents\\GitHub\\Cse327Project\\OnlinePharmacyProject\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Router.php",
+            "file": "E:\\Github\\Cse327Project\\OnlinePharmacyProject\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Router.php",
             "line": 624,
             "function": "dispatchToRoute",
             "class": "Illuminate\\Routing\\Router",
             "type": "->"
         },
         {
-            "file": "C:\\Users\\Shelby\\Documents\\GitHub\\Cse327Project\\OnlinePharmacyProject\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Http\\Kernel.php",
+            "file": "E:\\Github\\Cse327Project\\OnlinePharmacyProject\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Http\\Kernel.php",
             "line": 166,
             "function": "dispatch",
             "class": "Illuminate\\Routing\\Router",
             "type": "->"
         },
         {
-            "file": "C:\\Users\\Shelby\\Documents\\GitHub\\Cse327Project\\OnlinePharmacyProject\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php",
+            "file": "E:\\Github\\Cse327Project\\OnlinePharmacyProject\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php",
             "line": 128,
             "function": "Illuminate\\Foundation\\Http\\{closure}",
             "class": "Illuminate\\Foundation\\Http\\Kernel",
             "type": "->"
         },
         {
-            "file": "C:\\Users\\Shelby\\Documents\\GitHub\\Cse327Project\\OnlinePharmacyProject\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Http\\Middleware\\TransformsRequest.php",
+            "file": "E:\\Github\\Cse327Project\\OnlinePharmacyProject\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Http\\Middleware\\TransformsRequest.php",
             "line": 21,
             "function": "Illuminate\\Pipeline\\{closure}",
             "class": "Illuminate\\Pipeline\\Pipeline",
             "type": "->"
         },
         {
-            "file": "C:\\Users\\Shelby\\Documents\\GitHub\\Cse327Project\\OnlinePharmacyProject\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php",
+            "file": "E:\\Github\\Cse327Project\\OnlinePharmacyProject\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php",
             "line": 167,
             "function": "handle",
             "class": "Illuminate\\Foundation\\Http\\Middleware\\TransformsRequest",
             "type": "->"
         },
         {
-            "file": "C:\\Users\\Shelby\\Documents\\GitHub\\Cse327Project\\OnlinePharmacyProject\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Http\\Middleware\\TransformsRequest.php",
+            "file": "E:\\Github\\Cse327Project\\OnlinePharmacyProject\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Http\\Middleware\\TransformsRequest.php",
             "line": 21,
             "function": "Illuminate\\Pipeline\\{closure}",
             "class": "Illuminate\\Pipeline\\Pipeline",
             "type": "->"
         },
         {
-            "file": "C:\\Users\\Shelby\\Documents\\GitHub\\Cse327Project\\OnlinePharmacyProject\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php",
+            "file": "E:\\Github\\Cse327Project\\OnlinePharmacyProject\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php",
             "line": 167,
             "function": "handle",
             "class": "Illuminate\\Foundation\\Http\\Middleware\\TransformsRequest",
             "type": "->"
         },
         {
-            "file": "C:\\Users\\Shelby\\Documents\\GitHub\\Cse327Project\\OnlinePharmacyProject\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Http\\Middleware\\ValidatePostSize.php",
+            "file": "E:\\Github\\Cse327Project\\OnlinePharmacyProject\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Http\\Middleware\\ValidatePostSize.php",
             "line": 27,
             "function": "Illuminate\\Pipeline\\{closure}",
             "class": "Illuminate\\Pipeline\\Pipeline",
             "type": "->"
         },
         {
-            "file": "C:\\Users\\Shelby\\Documents\\GitHub\\Cse327Project\\OnlinePharmacyProject\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php",
+            "file": "E:\\Github\\Cse327Project\\OnlinePharmacyProject\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php",
             "line": 167,
             "function": "handle",
             "class": "Illuminate\\Foundation\\Http\\Middleware\\ValidatePostSize",
             "type": "->"
         },
         {
-            "file": "C:\\Users\\Shelby\\Documents\\GitHub\\Cse327Project\\OnlinePharmacyProject\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Http\\Middleware\\PreventRequestsDuringMaintenance.php",
+            "file": "E:\\Github\\Cse327Project\\OnlinePharmacyProject\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Http\\Middleware\\PreventRequestsDuringMaintenance.php",
             "line": 87,
             "function": "Illuminate\\Pipeline\\{closure}",
             "class": "Illuminate\\Pipeline\\Pipeline",
             "type": "->"
         },
         {
-            "file": "C:\\Users\\Shelby\\Documents\\GitHub\\Cse327Project\\OnlinePharmacyProject\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php",
+            "file": "E:\\Github\\Cse327Project\\OnlinePharmacyProject\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php",
             "line": 167,
             "function": "handle",
             "class": "Illuminate\\Foundation\\Http\\Middleware\\PreventRequestsDuringMaintenance",
             "type": "->"
         },
         {
-            "file": "C:\\Users\\Shelby\\Documents\\GitHub\\Cse327Project\\OnlinePharmacyProject\\vendor\\fruitcake\\laravel-cors\\src\\HandleCors.php",
+            "file": "E:\\Github\\Cse327Project\\OnlinePharmacyProject\\vendor\\fruitcake\\laravel-cors\\src\\HandleCors.php",
             "line": 37,
             "function": "Illuminate\\Pipeline\\{closure}",
             "class": "Illuminate\\Pipeline\\Pipeline",
             "type": "->"
         },
         {
-            "file": "C:\\Users\\Shelby\\Documents\\GitHub\\Cse327Project\\OnlinePharmacyProject\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php",
+            "file": "E:\\Github\\Cse327Project\\OnlinePharmacyProject\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php",
             "line": 167,
             "function": "handle",
             "class": "Fruitcake\\Cors\\HandleCors",
             "type": "->"
         },
         {
-            "file": "C:\\Users\\Shelby\\Documents\\GitHub\\Cse327Project\\OnlinePharmacyProject\\vendor\\fideloper\\proxy\\src\\TrustProxies.php",
+            "file": "E:\\Github\\Cse327Project\\OnlinePharmacyProject\\vendor\\fideloper\\proxy\\src\\TrustProxies.php",
             "line": 57,
             "function": "Illuminate\\Pipeline\\{closure}",
             "class": "Illuminate\\Pipeline\\Pipeline",
             "type": "->"
         },
         {
-            "file": "C:\\Users\\Shelby\\Documents\\GitHub\\Cse327Project\\OnlinePharmacyProject\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php",
+            "file": "E:\\Github\\Cse327Project\\OnlinePharmacyProject\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php",
             "line": 167,
             "function": "handle",
             "class": "Fideloper\\Proxy\\TrustProxies",
             "type": "->"
         },
         {
-            "file": "C:\\Users\\Shelby\\Documents\\GitHub\\Cse327Project\\OnlinePharmacyProject\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php",
+            "file": "E:\\Github\\Cse327Project\\OnlinePharmacyProject\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php",
             "line": 103,
             "function": "Illuminate\\Pipeline\\{closure}",
             "class": "Illuminate\\Pipeline\\Pipeline",
             "type": "->"
         },
         {
-            "file": "C:\\Users\\Shelby\\Documents\\GitHub\\Cse327Project\\OnlinePharmacyProject\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Http\\Kernel.php",
+            "file": "E:\\Github\\Cse327Project\\OnlinePharmacyProject\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Http\\Kernel.php",
             "line": 141,
             "function": "then",
             "class": "Illuminate\\Pipeline\\Pipeline",
             "type": "->"
         },
         {
-            "file": "C:\\Users\\Shelby\\Documents\\GitHub\\Cse327Project\\OnlinePharmacyProject\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Http\\Kernel.php",
+            "file": "E:\\Github\\Cse327Project\\OnlinePharmacyProject\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Http\\Kernel.php",
             "line": 110,
             "function": "sendRequestThroughRouter",
             "class": "Illuminate\\Foundation\\Http\\Kernel",
             "type": "->"
         },
         {
-            "file": "C:\\Users\\Shelby\\Documents\\GitHub\\Cse327Project\\OnlinePharmacyProject\\vendor\\knuckleswtf\\scribe\\src\\Extracting\\Strategies\\Responses\\ResponseCalls.php",
+            "file": "E:\\Github\\Cse327Project\\OnlinePharmacyProject\\vendor\\knuckleswtf\\scribe\\src\\Extracting\\Strategies\\Responses\\ResponseCalls.php",
             "line": 324,
             "function": "handle",
             "class": "Illuminate\\Foundation\\Http\\Kernel",
             "type": "->"
         },
         {
-            "file": "C:\\Users\\Shelby\\Documents\\GitHub\\Cse327Project\\OnlinePharmacyProject\\vendor\\knuckleswtf\\scribe\\src\\Extracting\\Strategies\\Responses\\ResponseCalls.php",
+            "file": "E:\\Github\\Cse327Project\\OnlinePharmacyProject\\vendor\\knuckleswtf\\scribe\\src\\Extracting\\Strategies\\Responses\\ResponseCalls.php",
             "line": 305,
             "function": "callLaravelOrLumenRoute",
             "class": "Knuckles\\Scribe\\Extracting\\Strategies\\Responses\\ResponseCalls",
             "type": "->"
         },
         {
-            "file": "C:\\Users\\Shelby\\Documents\\GitHub\\Cse327Project\\OnlinePharmacyProject\\vendor\\knuckleswtf\\scribe\\src\\Extracting\\Strategies\\Responses\\ResponseCalls.php",
+            "file": "E:\\Github\\Cse327Project\\OnlinePharmacyProject\\vendor\\knuckleswtf\\scribe\\src\\Extracting\\Strategies\\Responses\\ResponseCalls.php",
             "line": 76,
             "function": "makeApiCall",
             "class": "Knuckles\\Scribe\\Extracting\\Strategies\\Responses\\ResponseCalls",
             "type": "->"
         },
         {
-            "file": "C:\\Users\\Shelby\\Documents\\GitHub\\Cse327Project\\OnlinePharmacyProject\\vendor\\knuckleswtf\\scribe\\src\\Extracting\\Strategies\\Responses\\ResponseCalls.php",
+            "file": "E:\\Github\\Cse327Project\\OnlinePharmacyProject\\vendor\\knuckleswtf\\scribe\\src\\Extracting\\Strategies\\Responses\\ResponseCalls.php",
             "line": 51,
             "function": "makeResponseCall",
             "class": "Knuckles\\Scribe\\Extracting\\Strategies\\Responses\\ResponseCalls",
             "type": "->"
         },
         {
-            "file": "C:\\Users\\Shelby\\Documents\\GitHub\\Cse327Project\\OnlinePharmacyProject\\vendor\\knuckleswtf\\scribe\\src\\Extracting\\Strategies\\Responses\\ResponseCalls.php",
+            "file": "E:\\Github\\Cse327Project\\OnlinePharmacyProject\\vendor\\knuckleswtf\\scribe\\src\\Extracting\\Strategies\\Responses\\ResponseCalls.php",
             "line": 41,
             "function": "makeResponseCallIfEnabledAndNoSuccessResponses",
             "class": "Knuckles\\Scribe\\Extracting\\Strategies\\Responses\\ResponseCalls",
             "type": "->"
         },
         {
-            "file": "C:\\Users\\Shelby\\Documents\\GitHub\\Cse327Project\\OnlinePharmacyProject\\vendor\\knuckleswtf\\scribe\\src\\Extracting\\Generator.php",
+            "file": "E:\\Github\\Cse327Project\\OnlinePharmacyProject\\vendor\\knuckleswtf\\scribe\\src\\Extracting\\Generator.php",
             "line": 236,
             "function": "__invoke",
             "class": "Knuckles\\Scribe\\Extracting\\Strategies\\Responses\\ResponseCalls",
             "type": "->"
         },
         {
-            "file": "C:\\Users\\Shelby\\Documents\\GitHub\\Cse327Project\\OnlinePharmacyProject\\vendor\\knuckleswtf\\scribe\\src\\Extracting\\Generator.php",
+            "file": "E:\\Github\\Cse327Project\\OnlinePharmacyProject\\vendor\\knuckleswtf\\scribe\\src\\Extracting\\Generator.php",
             "line": 172,
             "function": "iterateThroughStrategies",
             "class": "Knuckles\\Scribe\\Extracting\\Generator",
             "type": "->"
         },
         {
-            "file": "C:\\Users\\Shelby\\Documents\\GitHub\\Cse327Project\\OnlinePharmacyProject\\vendor\\knuckleswtf\\scribe\\src\\Extracting\\Generator.php",
+            "file": "E:\\Github\\Cse327Project\\OnlinePharmacyProject\\vendor\\knuckleswtf\\scribe\\src\\Extracting\\Generator.php",
             "line": 127,
             "function": "fetchResponses",
             "class": "Knuckles\\Scribe\\Extracting\\Generator",
             "type": "->"
         },
         {
-            "file": "C:\\Users\\Shelby\\Documents\\GitHub\\Cse327Project\\OnlinePharmacyProject\\vendor\\knuckleswtf\\scribe\\src\\Commands\\GenerateDocumentation.php",
+            "file": "E:\\Github\\Cse327Project\\OnlinePharmacyProject\\vendor\\knuckleswtf\\scribe\\src\\Commands\\GenerateDocumentation.php",
             "line": 119,
             "function": "processRoute",
             "class": "Knuckles\\Scribe\\Extracting\\Generator",
             "type": "->"
         },
         {
-            "file": "C:\\Users\\Shelby\\Documents\\GitHub\\Cse327Project\\OnlinePharmacyProject\\vendor\\knuckleswtf\\scribe\\src\\Commands\\GenerateDocumentation.php",
+            "file": "E:\\Github\\Cse327Project\\OnlinePharmacyProject\\vendor\\knuckleswtf\\scribe\\src\\Commands\\GenerateDocumentation.php",
             "line": 73,
             "function": "processRoutes",
             "class": "Knuckles\\Scribe\\Commands\\GenerateDocumentation",
             "type": "->"
         },
         {
-            "file": "C:\\Users\\Shelby\\Documents\\GitHub\\Cse327Project\\OnlinePharmacyProject\\vendor\\laravel\\framework\\src\\Illuminate\\Container\\BoundMethod.php",
+            "file": "E:\\Github\\Cse327Project\\OnlinePharmacyProject\\vendor\\laravel\\framework\\src\\Illuminate\\Container\\BoundMethod.php",
             "line": 36,
             "function": "handle",
             "class": "Knuckles\\Scribe\\Commands\\GenerateDocumentation",
             "type": "->"
         },
         {
-            "file": "C:\\Users\\Shelby\\Documents\\GitHub\\Cse327Project\\OnlinePharmacyProject\\vendor\\laravel\\framework\\src\\Illuminate\\Container\\Util.php",
+            "file": "E:\\Github\\Cse327Project\\OnlinePharmacyProject\\vendor\\laravel\\framework\\src\\Illuminate\\Container\\Util.php",
             "line": 40,
             "function": "Illuminate\\Container\\{closure}",
             "class": "Illuminate\\Container\\BoundMethod",
             "type": "::"
         },
         {
-            "file": "C:\\Users\\Shelby\\Documents\\GitHub\\Cse327Project\\OnlinePharmacyProject\\vendor\\laravel\\framework\\src\\Illuminate\\Container\\BoundMethod.php",
+            "file": "E:\\Github\\Cse327Project\\OnlinePharmacyProject\\vendor\\laravel\\framework\\src\\Illuminate\\Container\\BoundMethod.php",
             "line": 93,
             "function": "unwrapIfClosure",
             "class": "Illuminate\\Container\\Util",
             "type": "::"
         },
         {
-            "file": "C:\\Users\\Shelby\\Documents\\GitHub\\Cse327Project\\OnlinePharmacyProject\\vendor\\laravel\\framework\\src\\Illuminate\\Container\\BoundMethod.php",
+            "file": "E:\\Github\\Cse327Project\\OnlinePharmacyProject\\vendor\\laravel\\framework\\src\\Illuminate\\Container\\BoundMethod.php",
             "line": 37,
             "function": "callBoundMethod",
             "class": "Illuminate\\Container\\BoundMethod",
             "type": "::"
         },
         {
-            "file": "C:\\Users\\Shelby\\Documents\\GitHub\\Cse327Project\\OnlinePharmacyProject\\vendor\\laravel\\framework\\src\\Illuminate\\Container\\Container.php",
+            "file": "E:\\Github\\Cse327Project\\OnlinePharmacyProject\\vendor\\laravel\\framework\\src\\Illuminate\\Container\\Container.php",
             "line": 610,
             "function": "call",
             "class": "Illuminate\\Container\\BoundMethod",
             "type": "::"
         },
         {
-            "file": "C:\\Users\\Shelby\\Documents\\GitHub\\Cse327Project\\OnlinePharmacyProject\\vendor\\laravel\\framework\\src\\Illuminate\\Console\\Command.php",
+            "file": "E:\\Github\\Cse327Project\\OnlinePharmacyProject\\vendor\\laravel\\framework\\src\\Illuminate\\Console\\Command.php",
             "line": 136,
             "function": "call",
             "class": "Illuminate\\Container\\Container",
             "type": "->"
         },
         {
-            "file": "C:\\Users\\Shelby\\Documents\\GitHub\\Cse327Project\\OnlinePharmacyProject\\vendor\\symfony\\console\\Command\\Command.php",
+            "file": "E:\\Github\\Cse327Project\\OnlinePharmacyProject\\vendor\\symfony\\console\\Command\\Command.php",
             "line": 255,
             "function": "execute",
             "class": "Illuminate\\Console\\Command",
             "type": "->"
         },
         {
-            "file": "C:\\Users\\Shelby\\Documents\\GitHub\\Cse327Project\\OnlinePharmacyProject\\vendor\\laravel\\framework\\src\\Illuminate\\Console\\Command.php",
+            "file": "E:\\Github\\Cse327Project\\OnlinePharmacyProject\\vendor\\laravel\\framework\\src\\Illuminate\\Console\\Command.php",
             "line": 121,
             "function": "run",
             "class": "Symfony\\Component\\Console\\Command\\Command",
             "type": "->"
         },
         {
-            "file": "C:\\Users\\Shelby\\Documents\\GitHub\\Cse327Project\\OnlinePharmacyProject\\vendor\\symfony\\console\\Application.php",
+            "file": "E:\\Github\\Cse327Project\\OnlinePharmacyProject\\vendor\\symfony\\console\\Application.php",
             "line": 971,
             "function": "run",
             "class": "Illuminate\\Console\\Command",
             "type": "->"
         },
         {
-            "file": "C:\\Users\\Shelby\\Documents\\GitHub\\Cse327Project\\OnlinePharmacyProject\\vendor\\symfony\\console\\Application.php",
+            "file": "E:\\Github\\Cse327Project\\OnlinePharmacyProject\\vendor\\symfony\\console\\Application.php",
             "line": 290,
             "function": "doRunCommand",
             "class": "Symfony\\Component\\Console\\Application",
             "type": "->"
         },
         {
-            "file": "C:\\Users\\Shelby\\Documents\\GitHub\\Cse327Project\\OnlinePharmacyProject\\vendor\\symfony\\console\\Application.php",
+            "file": "E:\\Github\\Cse327Project\\OnlinePharmacyProject\\vendor\\symfony\\console\\Application.php",
             "line": 166,
             "function": "doRun",
             "class": "Symfony\\Component\\Console\\Application",
             "type": "->"
         },
         {
-            "file": "C:\\Users\\Shelby\\Documents\\GitHub\\Cse327Project\\OnlinePharmacyProject\\vendor\\laravel\\framework\\src\\Illuminate\\Console\\Application.php",
+            "file": "E:\\Github\\Cse327Project\\OnlinePharmacyProject\\vendor\\laravel\\framework\\src\\Illuminate\\Console\\Application.php",
             "line": 93,
             "function": "run",
             "class": "Symfony\\Component\\Console\\Application",
             "type": "->"
         },
         {
-            "file": "C:\\Users\\Shelby\\Documents\\GitHub\\Cse327Project\\OnlinePharmacyProject\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Console\\Kernel.php",
+            "file": "E:\\Github\\Cse327Project\\OnlinePharmacyProject\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Console\\Kernel.php",
             "line": 129,
             "function": "run",
             "class": "Illuminate\\Console\\Application",
             "type": "->"
         },
         {
-            "file": "C:\\Users\\Shelby\\Documents\\GitHub\\Cse327Project\\OnlinePharmacyProject\\artisan",
+            "file": "E:\\Github\\Cse327Project\\OnlinePharmacyProject\\artisan",
             "line": 37,
             "function": "handle",
             "class": "Illuminate\\Foundation\\Console\\Kernel",
@@ -1590,6 +1606,623 @@ print_r(json_decode((string) $body));
 <small class="badge badge-green">GET</small>
  <b><code>logout</code></b>
 </p>
+</form>
+
+
+## Update User Account
+
+
+
+
+> Example request:
+
+```bash
+curl -X GET \
+    -G "http://localhost/account" \
+    -H "Content-Type: application/json" \
+    -H "Accept: application/json" \
+    -d '{"data":"autem"}'
+
+```
+
+```javascript
+const url = new URL(
+    "http://localhost/account"
+);
+
+let headers = {
+    "Content-Type": "application/json",
+    "Accept": "application/json",
+};
+
+let body = {
+    "data": "autem"
+}
+
+fetch(url, {
+    method: "GET",
+    headers,
+    body: JSON.stringify(body),
+}).then(response => response.json());
+```
+
+```php
+
+$client = new \GuzzleHttp\Client();
+$response = $client->get(
+    'http://localhost/account',
+    [
+        'headers' => [
+            'Content-Type' => 'application/json',
+            'Accept' => 'application/json',
+        ],
+        'json' => [
+            'data' => 'autem',
+        ],
+    ]
+);
+$body = $response->getBody();
+print_r(json_decode((string) $body));
+```
+
+
+> Example response (500):
+
+```json
+{
+    "message": "Attempt to read property \"id\" on null",
+    "exception": "ErrorException",
+    "file": "E:\\Github\\Cse327Project\\OnlinePharmacyProject\\app\\Http\\Controllers\\Front\\UsersController.php",
+    "line": 153,
+    "trace": [
+        {
+            "file": "E:\\Github\\Cse327Project\\OnlinePharmacyProject\\app\\Http\\Controllers\\Front\\UsersController.php",
+            "line": 153,
+            "function": "handleError",
+            "class": "Illuminate\\Foundation\\Bootstrap\\HandleExceptions",
+            "type": "->"
+        },
+        {
+            "file": "E:\\Github\\Cse327Project\\OnlinePharmacyProject\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Controller.php",
+            "line": 54,
+            "function": "account",
+            "class": "App\\Http\\Controllers\\Front\\UsersController",
+            "type": "->"
+        },
+        {
+            "file": "E:\\Github\\Cse327Project\\OnlinePharmacyProject\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\ControllerDispatcher.php",
+            "line": 45,
+            "function": "callAction",
+            "class": "Illuminate\\Routing\\Controller",
+            "type": "->"
+        },
+        {
+            "file": "E:\\Github\\Cse327Project\\OnlinePharmacyProject\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Route.php",
+            "line": 254,
+            "function": "dispatch",
+            "class": "Illuminate\\Routing\\ControllerDispatcher",
+            "type": "->"
+        },
+        {
+            "file": "E:\\Github\\Cse327Project\\OnlinePharmacyProject\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Route.php",
+            "line": 197,
+            "function": "runController",
+            "class": "Illuminate\\Routing\\Route",
+            "type": "->"
+        },
+        {
+            "file": "E:\\Github\\Cse327Project\\OnlinePharmacyProject\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Router.php",
+            "line": 692,
+            "function": "run",
+            "class": "Illuminate\\Routing\\Route",
+            "type": "->"
+        },
+        {
+            "file": "E:\\Github\\Cse327Project\\OnlinePharmacyProject\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php",
+            "line": 128,
+            "function": "Illuminate\\Routing\\{closure}",
+            "class": "Illuminate\\Routing\\Router",
+            "type": "->"
+        },
+        {
+            "file": "E:\\Github\\Cse327Project\\OnlinePharmacyProject\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Middleware\\SubstituteBindings.php",
+            "line": 41,
+            "function": "Illuminate\\Pipeline\\{closure}",
+            "class": "Illuminate\\Pipeline\\Pipeline",
+            "type": "->"
+        },
+        {
+            "file": "E:\\Github\\Cse327Project\\OnlinePharmacyProject\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php",
+            "line": 167,
+            "function": "handle",
+            "class": "Illuminate\\Routing\\Middleware\\SubstituteBindings",
+            "type": "->"
+        },
+        {
+            "file": "E:\\Github\\Cse327Project\\OnlinePharmacyProject\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Http\\Middleware\\VerifyCsrfToken.php",
+            "line": 78,
+            "function": "Illuminate\\Pipeline\\{closure}",
+            "class": "Illuminate\\Pipeline\\Pipeline",
+            "type": "->"
+        },
+        {
+            "file": "E:\\Github\\Cse327Project\\OnlinePharmacyProject\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php",
+            "line": 167,
+            "function": "handle",
+            "class": "Illuminate\\Foundation\\Http\\Middleware\\VerifyCsrfToken",
+            "type": "->"
+        },
+        {
+            "file": "E:\\Github\\Cse327Project\\OnlinePharmacyProject\\vendor\\laravel\\framework\\src\\Illuminate\\View\\Middleware\\ShareErrorsFromSession.php",
+            "line": 49,
+            "function": "Illuminate\\Pipeline\\{closure}",
+            "class": "Illuminate\\Pipeline\\Pipeline",
+            "type": "->"
+        },
+        {
+            "file": "E:\\Github\\Cse327Project\\OnlinePharmacyProject\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php",
+            "line": 167,
+            "function": "handle",
+            "class": "Illuminate\\View\\Middleware\\ShareErrorsFromSession",
+            "type": "->"
+        },
+        {
+            "file": "E:\\Github\\Cse327Project\\OnlinePharmacyProject\\vendor\\laravel\\framework\\src\\Illuminate\\Session\\Middleware\\StartSession.php",
+            "line": 121,
+            "function": "Illuminate\\Pipeline\\{closure}",
+            "class": "Illuminate\\Pipeline\\Pipeline",
+            "type": "->"
+        },
+        {
+            "file": "E:\\Github\\Cse327Project\\OnlinePharmacyProject\\vendor\\laravel\\framework\\src\\Illuminate\\Session\\Middleware\\StartSession.php",
+            "line": 63,
+            "function": "handleStatefulRequest",
+            "class": "Illuminate\\Session\\Middleware\\StartSession",
+            "type": "->"
+        },
+        {
+            "file": "E:\\Github\\Cse327Project\\OnlinePharmacyProject\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php",
+            "line": 167,
+            "function": "handle",
+            "class": "Illuminate\\Session\\Middleware\\StartSession",
+            "type": "->"
+        },
+        {
+            "file": "E:\\Github\\Cse327Project\\OnlinePharmacyProject\\vendor\\laravel\\framework\\src\\Illuminate\\Cookie\\Middleware\\AddQueuedCookiesToResponse.php",
+            "line": 37,
+            "function": "Illuminate\\Pipeline\\{closure}",
+            "class": "Illuminate\\Pipeline\\Pipeline",
+            "type": "->"
+        },
+        {
+            "file": "E:\\Github\\Cse327Project\\OnlinePharmacyProject\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php",
+            "line": 167,
+            "function": "handle",
+            "class": "Illuminate\\Cookie\\Middleware\\AddQueuedCookiesToResponse",
+            "type": "->"
+        },
+        {
+            "file": "E:\\Github\\Cse327Project\\OnlinePharmacyProject\\vendor\\laravel\\framework\\src\\Illuminate\\Cookie\\Middleware\\EncryptCookies.php",
+            "line": 67,
+            "function": "Illuminate\\Pipeline\\{closure}",
+            "class": "Illuminate\\Pipeline\\Pipeline",
+            "type": "->"
+        },
+        {
+            "file": "E:\\Github\\Cse327Project\\OnlinePharmacyProject\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php",
+            "line": 167,
+            "function": "handle",
+            "class": "Illuminate\\Cookie\\Middleware\\EncryptCookies",
+            "type": "->"
+        },
+        {
+            "file": "E:\\Github\\Cse327Project\\OnlinePharmacyProject\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php",
+            "line": 103,
+            "function": "Illuminate\\Pipeline\\{closure}",
+            "class": "Illuminate\\Pipeline\\Pipeline",
+            "type": "->"
+        },
+        {
+            "file": "E:\\Github\\Cse327Project\\OnlinePharmacyProject\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Router.php",
+            "line": 694,
+            "function": "then",
+            "class": "Illuminate\\Pipeline\\Pipeline",
+            "type": "->"
+        },
+        {
+            "file": "E:\\Github\\Cse327Project\\OnlinePharmacyProject\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Router.php",
+            "line": 669,
+            "function": "runRouteWithinStack",
+            "class": "Illuminate\\Routing\\Router",
+            "type": "->"
+        },
+        {
+            "file": "E:\\Github\\Cse327Project\\OnlinePharmacyProject\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Router.php",
+            "line": 635,
+            "function": "runRoute",
+            "class": "Illuminate\\Routing\\Router",
+            "type": "->"
+        },
+        {
+            "file": "E:\\Github\\Cse327Project\\OnlinePharmacyProject\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Router.php",
+            "line": 624,
+            "function": "dispatchToRoute",
+            "class": "Illuminate\\Routing\\Router",
+            "type": "->"
+        },
+        {
+            "file": "E:\\Github\\Cse327Project\\OnlinePharmacyProject\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Http\\Kernel.php",
+            "line": 166,
+            "function": "dispatch",
+            "class": "Illuminate\\Routing\\Router",
+            "type": "->"
+        },
+        {
+            "file": "E:\\Github\\Cse327Project\\OnlinePharmacyProject\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php",
+            "line": 128,
+            "function": "Illuminate\\Foundation\\Http\\{closure}",
+            "class": "Illuminate\\Foundation\\Http\\Kernel",
+            "type": "->"
+        },
+        {
+            "file": "E:\\Github\\Cse327Project\\OnlinePharmacyProject\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Http\\Middleware\\TransformsRequest.php",
+            "line": 21,
+            "function": "Illuminate\\Pipeline\\{closure}",
+            "class": "Illuminate\\Pipeline\\Pipeline",
+            "type": "->"
+        },
+        {
+            "file": "E:\\Github\\Cse327Project\\OnlinePharmacyProject\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php",
+            "line": 167,
+            "function": "handle",
+            "class": "Illuminate\\Foundation\\Http\\Middleware\\TransformsRequest",
+            "type": "->"
+        },
+        {
+            "file": "E:\\Github\\Cse327Project\\OnlinePharmacyProject\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Http\\Middleware\\TransformsRequest.php",
+            "line": 21,
+            "function": "Illuminate\\Pipeline\\{closure}",
+            "class": "Illuminate\\Pipeline\\Pipeline",
+            "type": "->"
+        },
+        {
+            "file": "E:\\Github\\Cse327Project\\OnlinePharmacyProject\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php",
+            "line": 167,
+            "function": "handle",
+            "class": "Illuminate\\Foundation\\Http\\Middleware\\TransformsRequest",
+            "type": "->"
+        },
+        {
+            "file": "E:\\Github\\Cse327Project\\OnlinePharmacyProject\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Http\\Middleware\\ValidatePostSize.php",
+            "line": 27,
+            "function": "Illuminate\\Pipeline\\{closure}",
+            "class": "Illuminate\\Pipeline\\Pipeline",
+            "type": "->"
+        },
+        {
+            "file": "E:\\Github\\Cse327Project\\OnlinePharmacyProject\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php",
+            "line": 167,
+            "function": "handle",
+            "class": "Illuminate\\Foundation\\Http\\Middleware\\ValidatePostSize",
+            "type": "->"
+        },
+        {
+            "file": "E:\\Github\\Cse327Project\\OnlinePharmacyProject\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Http\\Middleware\\PreventRequestsDuringMaintenance.php",
+            "line": 87,
+            "function": "Illuminate\\Pipeline\\{closure}",
+            "class": "Illuminate\\Pipeline\\Pipeline",
+            "type": "->"
+        },
+        {
+            "file": "E:\\Github\\Cse327Project\\OnlinePharmacyProject\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php",
+            "line": 167,
+            "function": "handle",
+            "class": "Illuminate\\Foundation\\Http\\Middleware\\PreventRequestsDuringMaintenance",
+            "type": "->"
+        },
+        {
+            "file": "E:\\Github\\Cse327Project\\OnlinePharmacyProject\\vendor\\fruitcake\\laravel-cors\\src\\HandleCors.php",
+            "line": 37,
+            "function": "Illuminate\\Pipeline\\{closure}",
+            "class": "Illuminate\\Pipeline\\Pipeline",
+            "type": "->"
+        },
+        {
+            "file": "E:\\Github\\Cse327Project\\OnlinePharmacyProject\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php",
+            "line": 167,
+            "function": "handle",
+            "class": "Fruitcake\\Cors\\HandleCors",
+            "type": "->"
+        },
+        {
+            "file": "E:\\Github\\Cse327Project\\OnlinePharmacyProject\\vendor\\fideloper\\proxy\\src\\TrustProxies.php",
+            "line": 57,
+            "function": "Illuminate\\Pipeline\\{closure}",
+            "class": "Illuminate\\Pipeline\\Pipeline",
+            "type": "->"
+        },
+        {
+            "file": "E:\\Github\\Cse327Project\\OnlinePharmacyProject\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php",
+            "line": 167,
+            "function": "handle",
+            "class": "Fideloper\\Proxy\\TrustProxies",
+            "type": "->"
+        },
+        {
+            "file": "E:\\Github\\Cse327Project\\OnlinePharmacyProject\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php",
+            "line": 103,
+            "function": "Illuminate\\Pipeline\\{closure}",
+            "class": "Illuminate\\Pipeline\\Pipeline",
+            "type": "->"
+        },
+        {
+            "file": "E:\\Github\\Cse327Project\\OnlinePharmacyProject\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Http\\Kernel.php",
+            "line": 141,
+            "function": "then",
+            "class": "Illuminate\\Pipeline\\Pipeline",
+            "type": "->"
+        },
+        {
+            "file": "E:\\Github\\Cse327Project\\OnlinePharmacyProject\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Http\\Kernel.php",
+            "line": 110,
+            "function": "sendRequestThroughRouter",
+            "class": "Illuminate\\Foundation\\Http\\Kernel",
+            "type": "->"
+        },
+        {
+            "file": "E:\\Github\\Cse327Project\\OnlinePharmacyProject\\vendor\\knuckleswtf\\scribe\\src\\Extracting\\Strategies\\Responses\\ResponseCalls.php",
+            "line": 324,
+            "function": "handle",
+            "class": "Illuminate\\Foundation\\Http\\Kernel",
+            "type": "->"
+        },
+        {
+            "file": "E:\\Github\\Cse327Project\\OnlinePharmacyProject\\vendor\\knuckleswtf\\scribe\\src\\Extracting\\Strategies\\Responses\\ResponseCalls.php",
+            "line": 305,
+            "function": "callLaravelOrLumenRoute",
+            "class": "Knuckles\\Scribe\\Extracting\\Strategies\\Responses\\ResponseCalls",
+            "type": "->"
+        },
+        {
+            "file": "E:\\Github\\Cse327Project\\OnlinePharmacyProject\\vendor\\knuckleswtf\\scribe\\src\\Extracting\\Strategies\\Responses\\ResponseCalls.php",
+            "line": 76,
+            "function": "makeApiCall",
+            "class": "Knuckles\\Scribe\\Extracting\\Strategies\\Responses\\ResponseCalls",
+            "type": "->"
+        },
+        {
+            "file": "E:\\Github\\Cse327Project\\OnlinePharmacyProject\\vendor\\knuckleswtf\\scribe\\src\\Extracting\\Strategies\\Responses\\ResponseCalls.php",
+            "line": 51,
+            "function": "makeResponseCall",
+            "class": "Knuckles\\Scribe\\Extracting\\Strategies\\Responses\\ResponseCalls",
+            "type": "->"
+        },
+        {
+            "file": "E:\\Github\\Cse327Project\\OnlinePharmacyProject\\vendor\\knuckleswtf\\scribe\\src\\Extracting\\Strategies\\Responses\\ResponseCalls.php",
+            "line": 41,
+            "function": "makeResponseCallIfEnabledAndNoSuccessResponses",
+            "class": "Knuckles\\Scribe\\Extracting\\Strategies\\Responses\\ResponseCalls",
+            "type": "->"
+        },
+        {
+            "file": "E:\\Github\\Cse327Project\\OnlinePharmacyProject\\vendor\\knuckleswtf\\scribe\\src\\Extracting\\Generator.php",
+            "line": 236,
+            "function": "__invoke",
+            "class": "Knuckles\\Scribe\\Extracting\\Strategies\\Responses\\ResponseCalls",
+            "type": "->"
+        },
+        {
+            "file": "E:\\Github\\Cse327Project\\OnlinePharmacyProject\\vendor\\knuckleswtf\\scribe\\src\\Extracting\\Generator.php",
+            "line": 172,
+            "function": "iterateThroughStrategies",
+            "class": "Knuckles\\Scribe\\Extracting\\Generator",
+            "type": "->"
+        },
+        {
+            "file": "E:\\Github\\Cse327Project\\OnlinePharmacyProject\\vendor\\knuckleswtf\\scribe\\src\\Extracting\\Generator.php",
+            "line": 127,
+            "function": "fetchResponses",
+            "class": "Knuckles\\Scribe\\Extracting\\Generator",
+            "type": "->"
+        },
+        {
+            "file": "E:\\Github\\Cse327Project\\OnlinePharmacyProject\\vendor\\knuckleswtf\\scribe\\src\\Commands\\GenerateDocumentation.php",
+            "line": 119,
+            "function": "processRoute",
+            "class": "Knuckles\\Scribe\\Extracting\\Generator",
+            "type": "->"
+        },
+        {
+            "file": "E:\\Github\\Cse327Project\\OnlinePharmacyProject\\vendor\\knuckleswtf\\scribe\\src\\Commands\\GenerateDocumentation.php",
+            "line": 73,
+            "function": "processRoutes",
+            "class": "Knuckles\\Scribe\\Commands\\GenerateDocumentation",
+            "type": "->"
+        },
+        {
+            "file": "E:\\Github\\Cse327Project\\OnlinePharmacyProject\\vendor\\laravel\\framework\\src\\Illuminate\\Container\\BoundMethod.php",
+            "line": 36,
+            "function": "handle",
+            "class": "Knuckles\\Scribe\\Commands\\GenerateDocumentation",
+            "type": "->"
+        },
+        {
+            "file": "E:\\Github\\Cse327Project\\OnlinePharmacyProject\\vendor\\laravel\\framework\\src\\Illuminate\\Container\\Util.php",
+            "line": 40,
+            "function": "Illuminate\\Container\\{closure}",
+            "class": "Illuminate\\Container\\BoundMethod",
+            "type": "::"
+        },
+        {
+            "file": "E:\\Github\\Cse327Project\\OnlinePharmacyProject\\vendor\\laravel\\framework\\src\\Illuminate\\Container\\BoundMethod.php",
+            "line": 93,
+            "function": "unwrapIfClosure",
+            "class": "Illuminate\\Container\\Util",
+            "type": "::"
+        },
+        {
+            "file": "E:\\Github\\Cse327Project\\OnlinePharmacyProject\\vendor\\laravel\\framework\\src\\Illuminate\\Container\\BoundMethod.php",
+            "line": 37,
+            "function": "callBoundMethod",
+            "class": "Illuminate\\Container\\BoundMethod",
+            "type": "::"
+        },
+        {
+            "file": "E:\\Github\\Cse327Project\\OnlinePharmacyProject\\vendor\\laravel\\framework\\src\\Illuminate\\Container\\Container.php",
+            "line": 610,
+            "function": "call",
+            "class": "Illuminate\\Container\\BoundMethod",
+            "type": "::"
+        },
+        {
+            "file": "E:\\Github\\Cse327Project\\OnlinePharmacyProject\\vendor\\laravel\\framework\\src\\Illuminate\\Console\\Command.php",
+            "line": 136,
+            "function": "call",
+            "class": "Illuminate\\Container\\Container",
+            "type": "->"
+        },
+        {
+            "file": "E:\\Github\\Cse327Project\\OnlinePharmacyProject\\vendor\\symfony\\console\\Command\\Command.php",
+            "line": 255,
+            "function": "execute",
+            "class": "Illuminate\\Console\\Command",
+            "type": "->"
+        },
+        {
+            "file": "E:\\Github\\Cse327Project\\OnlinePharmacyProject\\vendor\\laravel\\framework\\src\\Illuminate\\Console\\Command.php",
+            "line": 121,
+            "function": "run",
+            "class": "Symfony\\Component\\Console\\Command\\Command",
+            "type": "->"
+        },
+        {
+            "file": "E:\\Github\\Cse327Project\\OnlinePharmacyProject\\vendor\\symfony\\console\\Application.php",
+            "line": 971,
+            "function": "run",
+            "class": "Illuminate\\Console\\Command",
+            "type": "->"
+        },
+        {
+            "file": "E:\\Github\\Cse327Project\\OnlinePharmacyProject\\vendor\\symfony\\console\\Application.php",
+            "line": 290,
+            "function": "doRunCommand",
+            "class": "Symfony\\Component\\Console\\Application",
+            "type": "->"
+        },
+        {
+            "file": "E:\\Github\\Cse327Project\\OnlinePharmacyProject\\vendor\\symfony\\console\\Application.php",
+            "line": 166,
+            "function": "doRun",
+            "class": "Symfony\\Component\\Console\\Application",
+            "type": "->"
+        },
+        {
+            "file": "E:\\Github\\Cse327Project\\OnlinePharmacyProject\\vendor\\laravel\\framework\\src\\Illuminate\\Console\\Application.php",
+            "line": 93,
+            "function": "run",
+            "class": "Symfony\\Component\\Console\\Application",
+            "type": "->"
+        },
+        {
+            "file": "E:\\Github\\Cse327Project\\OnlinePharmacyProject\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Console\\Kernel.php",
+            "line": 129,
+            "function": "run",
+            "class": "Illuminate\\Console\\Application",
+            "type": "->"
+        },
+        {
+            "file": "E:\\Github\\Cse327Project\\OnlinePharmacyProject\\artisan",
+            "line": 37,
+            "function": "handle",
+            "class": "Illuminate\\Foundation\\Console\\Kernel",
+            "type": "->"
+        }
+    ]
+}
+```
+<div id="execution-results-GETaccount" hidden>
+    <blockquote>Received response<span id="execution-response-status-GETaccount"></span>:</blockquote>
+    <pre class="json"><code id="execution-response-content-GETaccount"></code></pre>
+</div>
+<div id="execution-error-GETaccount" hidden>
+    <blockquote>Request failed with error:</blockquote>
+    <pre><code id="execution-error-message-GETaccount"></code></pre>
+</div>
+<form id="form-GETaccount" data-method="GET" data-path="account" data-authed="0" data-hasfiles="0" data-headers='{"Content-Type":"application\/json","Accept":"application\/json"}' onsubmit="event.preventDefault(); executeTryOut('GETaccount', this);">
+<h3>
+    Request&nbsp;&nbsp;&nbsp;
+        <button type="button" style="background-color: #8fbcd4; padding: 5px 10px; border-radius: 5px; border-width: thin;" id="btn-tryout-GETaccount" onclick="tryItOut('GETaccount');">Try it out ⚡</button>
+    <button type="button" style="background-color: #c97a7e; padding: 5px 10px; border-radius: 5px; border-width: thin;" id="btn-canceltryout-GETaccount" onclick="cancelTryOut('GETaccount');" hidden>Cancel</button>&nbsp;&nbsp;
+    <button type="submit" style="background-color: #6ac174; padding: 5px 10px; border-radius: 5px; border-width: thin;" id="btn-executetryout-GETaccount" hidden>Send Request 💥</button>
+    </h3>
+<p>
+<small class="badge badge-green">GET</small>
+ <b><code>account</code></b>
+</p>
+<p>
+<small class="badge badge-black">POST</small>
+ <b><code>account</code></b>
+</p>
+<h4 class="fancy-heading-panel"><b>Body Parameters</b></h4>
+<p>
+<b><code>data</code></b>&nbsp;&nbsp;<small>array</small>  &nbsp;
+<input type="text" name="data" data-endpoint="GETaccount" data-component="body" required  hidden>
+<br>
+Data from Login Form</p>
+<p>
+<details>
+<summary>
+<b><code>userDetails</code></b>&nbsp;&nbsp;<small>object</small>     <i>optional</i> &nbsp;
+<br>
+</summary>
+<br>
+<p>
+<b><code>userDetails.user_id</code></b>&nbsp;&nbsp;<small>required</small>     <i>optional</i> &nbsp;
+<input type="text" name="userDetails.user_id" data-endpoint="GETaccount" data-component="body"  hidden>
+<br>
+of user</p>
+</details>
+</p>
+<p>
+<details>
+<summary>
+<b><code>user</code></b>&nbsp;&nbsp;<small>object</small>     <i>optional</i> &nbsp;
+<br>
+</summary>
+<br>
+<p>
+<b><code>user.firstName</code></b>&nbsp;&nbsp;<small>required</small>     <i>optional</i> &nbsp;
+<input type="text" name="user.firstName" data-endpoint="GETaccount" data-component="body"  hidden>
+<br>
+firstName of user</p>
+<p>
+<b><code>user.lastName</code></b>&nbsp;&nbsp;<small>string</small>  &nbsp;
+<input type="text" name="user.lastName" data-endpoint="GETaccount" data-component="body" required  hidden>
+<br>
+Last name of user</p>
+<p>
+<b><code>user.email</code></b>&nbsp;&nbsp;<small>email</small>  &nbsp;
+<input type="text" name="user.email" data-endpoint="GETaccount" data-component="body" required  hidden>
+<br>
+Email of user</p>
+<p>
+<b><code>user.age</code></b>&nbsp;&nbsp;<small>number</small>  &nbsp;
+<input type="number" name="user.age" data-endpoint="GETaccount" data-component="body" required  hidden>
+<br>
+Age of user</p>
+<p>
+<b><code>user.address</code></b>&nbsp;&nbsp;<small>string</small>  &nbsp;
+<input type="text" name="user.address" data-endpoint="GETaccount" data-component="body" required  hidden>
+<br>
+Address of user</p>
+<p>
+<b><code>user.phone</code></b>&nbsp;&nbsp;<small>number</small>  &nbsp;
+<input type="number" name="user.phone" data-endpoint="GETaccount" data-component="body" required  hidden>
+<br>
+Phone number of user</p>
+</details>
+</p>
+
 </form>
 
 

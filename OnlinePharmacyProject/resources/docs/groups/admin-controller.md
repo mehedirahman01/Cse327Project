@@ -14,7 +14,9 @@ curl -X GET \
     -G "http://localhost/admin/login" \
     -H "Content-Type: application/json" \
     -H "Accept: application/json" \
-    -d '{"data":"assumenda"}'
+
+    -d '{"data":"et"}'
+
 
 ```
 
@@ -29,7 +31,9 @@ let headers = {
 };
 
 let body = {
-    "data": "assumenda"
+
+    "data": "et"
+
 }
 
 fetch(url, {
@@ -50,7 +54,9 @@ $response = $client->get(
             'Accept' => 'application/json',
         ],
         'json' => [
-            'data' => 'assumenda',
+
+            'data' => 'et',
+
         ],
     ]
 );
@@ -107,7 +113,9 @@ print_r(json_decode((string) $body));
                                         <h1 class="h4 text-gray-900 mb-4">Welcome Back!</h1>
                                     </div>
                                                                         <form method="POST" class="user" action="http://localhost/admin/login">
-                                        <input type="hidden" name="_token" value="kQ7T5q2UWwCRjC1chIIDEEEzbBkRztpcfgt4Li7d">                                        <div class="form-group">
+
+                                        <input type="hidden" name="_token" value="z0YEFnWK1D5I9QDy3oJdOABHYgC09vSERZhswbvV">                                        <div class="form-group">
+
                                             <input id="email" class="form-control form-control-user" type="email" name="email" :value="old('email')" placeholder="Email" required autofocus />
                                         </div>
                                         <div class="form-group">

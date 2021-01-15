@@ -14,7 +14,9 @@ curl -X GET \
     -G "http://localhost/" \
     -H "Content-Type: application/json" \
     -H "Accept: application/json" \
-    -d '{"newMedicines":"cupiditate"}'
+
+    -d '{"newMedicines":"mollitia"}'
+
 
 ```
 
@@ -29,7 +31,9 @@ let headers = {
 };
 
 let body = {
-    "newMedicines": "cupiditate"
+
+    "newMedicines": "mollitia"
+
 }
 
 fetch(url, {
@@ -50,7 +54,9 @@ $response = $client->get(
             'Accept' => 'application/json',
         ],
         'json' => [
-            'newMedicines' => 'cupiditate',
+
+            'newMedicines' => 'mollitia',
+
         ],
     ]
 );
@@ -180,7 +186,9 @@ print_r(json_decode((string) $body));
     </div>
   </div>
 </form>
-      <input type="hidden" name="_token" value="kQ7T5q2UWwCRjC1chIIDEEEzbBkRztpcfgt4Li7d">      <ul class="nav navbar-nav navbar-right">
+
+      <input type="hidden" name="_token" value="z0YEFnWK1D5I9QDy3oJdOABHYgC09vSERZhswbvV">      <ul class="nav navbar-nav navbar-right">
+
                 <li class="dropdown"><a href="#"><span class="glyphicon glyphicon-user"></span> Your Account</a>
           <div class="dropdown-content" aria-label="submenu">
                                     <a href="http://localhost/registration-page">Register</a>

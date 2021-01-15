@@ -111,10 +111,10 @@ print_r(json_decode((string) $body));
     	mapboxgl: mapboxgl, // Set the mapbox-gl instance
     	marker: false, // Do not use the default marker style
       	placeholder: 'Search for pharmacies', // Placeholder text for the search bar
-      	bbox: [position.coords.longitude-0.2, position.coords.latitude-0.2, position.coords.longitude+0.2, position.coords.latitude+0.2], // Boundary for Berkeley
+      	bbox: [88.37764, 21.97117, 90.430764, 24.02741], // Boundary for Berkeley
       	proximity: {
-        	longitude: position.coords.longitude,
-        	latitude: position.coords.latitude
+        	longitude: 90.428764,
+        	latitude: 24.00124
       	}
 	});
 
@@ -142,8 +142,39 @@ print_r(json_decode((string) $body));
 	geocoder.on('result', function(e) {
     map.getSource('single-point').setData(e.result.geometry);
 });
+//map.on('click', function(e) {
+//  var coordinates = e.lngLat;
+ //  new mapboxgl.Popup()
+    // .setLngLat(coordinates)
+     //.setHTML('you clicked here: <br/>' + coordinates)
+    // .addTo(map);
+ //});
 });
+
+
+//var marker = new mapboxgl.Marker({
+//draggable: true
+//})
+//.setLngLat([0, 0])
+//.addTo(map);
+
+//function onDragEnd() {
+//var lngLat = marker.getLngLat();
+//coordinates.style.display = 'block';
+//coordinates.innerHTML =
+//'Longitude: ' + lngLat.lng + '<br />Latitude: ' + lngLat.lat;
+//}
+
+//marker.on('dragend', onDragEnd);
+
+//map.addControl(
+//new mapboxgl.GeolocateControl({
+//positionOptions: {
+//enableHighAccuracy: true
+//},
+//trackUserLocation: true
 });
+//);
 </script>
 
 </body>
